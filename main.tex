@@ -1,17 +1,27 @@
-\documentclass[titlepage]{jsarticle}                                                                                                                                                                                              
+\documentclass[titlepage]{jsbook}
 
+% ----- preambles ------------------
 \usepackage{geometry}
 \usepackage{bm}
 \usepackage{here}
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath,amsthm,amssymb}
 \usepackage{ascmac}
-\usepackage{siunitx}
 \usepackage[dvipdfmx]{graphicx}
+% ----------------------------------
 
+% ----- Settings for amsthm -----
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem*{thm*}{Theorem}
 
+\theoremstyle{definition}
+\newtheorem{dfn}{Definition}
+% -------------------------------
+
+% ----- Geometry setting ---------------------------
 \geometry{left=25mm,right=25mm,top=30mm,bottom=30mm}
+% ---------------------------------------------------
 \begin{document}
-
 
 \title{大統一模型模型研究ノート}
 \author{金沢大学大学院\,\,自然科学研究科数物科学専攻\,(物理学コース)修士課程2年\\学籍番号\,2315011026$\quad$名列番号216\\高村 泰時} 
@@ -19,12 +29,28 @@
 \maketitle
 
 \begin{abstract}
-  これは修士論文に向けた研究のノートです.
+  これは$SU(5)$大統一理論の研究のノートです.
 \end{abstract}
 
-\section{素粒子標準模型}
+\chapter{素粒子標準模型}
 \input{Standard_Model.tex}
 
+\chapter{素粒子標準模型の問題点}
+\input{SM_problems.tex}
 
+\chapter{階層性問題}
+\input{hierarchy_problem.tex}
+
+\chapter{大統一理論}
+\input{grand_unified_theory.tex}
+
+\chapter{群論}
+\input{group_theory.tex}
+
+
+% ----- Bibliography -----
+\bibliographystyle{abbrv}
+\bibliography{bibs.bib}
+% -----------------------
 \end{document}
 

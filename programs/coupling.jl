@@ -1,26 +1,30 @@
-using DifferentialEquations
-using Plots;gr()
+using OrdinaryDiffEq, Plots
+gr()
 
-#微分方程式を定義
-f(y , t) = 3.0*y + 2
+#Setup
+#Physics constants
+g_u = 137.035999177
+tspan = (0.0, 10^(15))
 
-#初期値を設定
-y0 = 1.0
 
-#時間間隔を設定
-tspan = (0.0 , 1.0)
+F=3 #Family number
+n_0=2F  
 
-#ODEProblemで解く
-prob = ODEProblem(f , y0 , tspan)
-sol = solve(prob)
+c_2=0
+T_f=5*F/3
 
-#plotする
-plot(sol,linewidth=5,title="Solution to the linear ODE with a thick line",
-     xaxis="Time (t)",yaxis="y(t) (in micro.m)",label="My Thick Line!")
+#Define coefficients
+b=(-1/(4π)^2)*((11*c_2)/3-4T_f/3)
 
-#厳密解を用意する
-g(t) = 5//3 * exp.(3*t) - 2//3
+#Define the problem
+radioactivedecay(g_u, p, t) = g_u^2 * b
 
-#加えてplotする
-plot!(g , lw=3 , ls=:dash , label="True Solution!")
+#Pass to solver
+prob = ODEProblem(radioactivedecay, g_u, tspan)
+sol = solve(prob, Tsit5())
+
+#Plot
+plot(sol, linewidth = 2, title = "Carbon-14 half-life",
+    xaxis = "Time in thousands of years", yaxis = "Percentage left",
+    label = "Numerical Solution")
 

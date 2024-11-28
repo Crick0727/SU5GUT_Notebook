@@ -1,0 +1,6 @@
+PWD /Users/yasutoki/Documents/Laboratory/2024/SU(5)_Grand_Unified_Theory/diff
+INPUT /opt/local/etc/texmf/texmf.cnf
+INPUT /opt/local/etc/texmf/texmf.cnf
+INPUT /opt/local/var/db/texmf/web2c/euptex/platex.fmt
+INPUT hierarchy_problem.tex
+OUTPUT hierarchy_problem.log

@@ -1,0 +1,16 @@
+# Fdb version 4
+["dvipdf"] 0 "hierarchy_problem.dvi" "hierarchy_problem.pdf" "hierarchy_problem" 0 -1
+  "hierarchy_problem.dvi" 0 -1 0 "latex"
+  (generated)
+  "hierarchy_problem.pdf"
+  (rewritten before read)
+["latex"] 1729246389 "hierarchy_problem.tex" "hierarchy_problem.dvi" "hierarchy_problem" 1729246390 2
+  "/opt/local/etc/texmf/texmf.cnf" 1728353526 39564 8a3ff05e3a1316dd90a4b0fb66476f14 ""
+  "/opt/local/var/db/texmf/web2c/euptex/platex.fmt" 1728882914 8155627 53c177e7b0c0190269318536cdca5300 ""
+  "hierarchy_problem.aux" 1729246389 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "hierarchy_problem.tex" 1729242392 3125 805d229e0c7be399d6368642c60a7b3f ""
+  (generated)
+  "hierarchy_problem.aux"
+  "hierarchy_problem.dvi"
+  "hierarchy_problem.log"
+  (rewritten before read)

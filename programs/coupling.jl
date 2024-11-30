@@ -4,7 +4,7 @@ gr()
 #Setup
 #Physics constants
 g_u = 137.035999177
-tspan = (0.0, 10^(15))
+tspan = (10^2, 10^(20))
 
 
 F=3 #Family number

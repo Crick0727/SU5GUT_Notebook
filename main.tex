@@ -1,5 +1,6 @@
 \RequirePackage{plautopatch}
 \documentclass[uplatex,dvipdfmx,a4paper,titlepage]{jsbook}
+%\documentclass[titlepage]{jsbook}
 
 % ----- preambles ------------------
 \usepackage{geometry}
@@ -10,7 +11,20 @@
 \usepackage{color}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage[compat=1.1.0]{tikz-feynhand}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper} %
+\hypersetup{%
+  setpagesize=false, %
+%  bookmarks=true, %
+%  bookmarksdepth=tocdepth, %
+  bookmarksnumbered=true, %
+  colorlinks=true, %
+  pdftitle={}, %
+  pdfauthor={}, %
+  pdfkeywords={}
+}
 % ----------------------------------
+
 
 % ----- Settings for amsthm -----
 \theoremstyle{plain}

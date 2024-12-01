@@ -3,31 +3,43 @@
 %  Standard model
 %  Standard_Model.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Nov 29 2024
+%  Last Modified Dec 01 2024
 %
 % ---------------------------------------
 この章では素粒子物理学における標準模型についてまとめた.
 素粒子標準模型は現在の高エネルギー実験をほぼ説明することができるものであるが, 標準模型だけでは説明できない事実が存在する.
 大統一理論はそれらを解決するための理論の一つであるが, そもそも標準模型がどのような理論であるのかをここで振り返る.
-\subsection{概観}
+\section{概観}
 素粒子標準模型は量子場の理論により記述される.
 素粒子の相互作用はYang-Millsによる理論によって, 数学的にリー群に属する局所非可換ゲージ変換のもとで不変になるようにラグランジアン密度を記述することができる.
 具体的には, 次のようなゲージ対称性を持つ理論である.
 \begin{align}
-  \mathcal{G}_{\text{SM}}\mathrm{SU}_\mathrm{c}\times \mathrm{SU}_\mathrm{L}\times \mathrm{U}(1)_\mathrm{Y}\label{SM-Gauge}
+  \mathcal{G}_{\text{SM}}=\mathrm{SU}(3)_\mathrm{c}\times \mathrm{SU}_\mathrm{L}(2)\times \mathrm{U}(1)_\mathrm{Y}\label{SM-Gauge}
 \end{align}
 それぞれゲージ群の添字は量子数に対応している.
-"C"はカラー量子数, "L"は左巻きのカイラリティ, "Y"は超電荷である.
-$\mathrm{SU}3_c$群は核子にはたらく強い相互作用を記述する群であり, 量子色力学(QCD)によって記述される.
+``C''はカラー量子数, ``L''は左巻きのカイラリティ, ``Y''は超電荷である.
+$\mathrm{SU}(3)_c$群は核子に作用する強い相互作用を記述する群であり, 量子色力学(QCD)によって記述される.
 一方で$\mathrm{SU}(2)_L\times \mathrm{U}(1)_Y$は弱い相互作用と電磁相互作用を統一的に記述する電弱理論を記述する群である.
 
 ゲージ対称性の他に, 理論に現れる粒子がどのようなものであるのか, 標準模型のゲージ対称性の中でどのような対称性を持つ粒子であるのかを決めることにより, 理論を具体的に決定することができる.
 他にも, ラグランジアン密度に含める項は, 繰り込み可能であり, ローレンツ対称性を満足するものを決めることで全て書き下すことができる.
 以下では, 標準模型に現れる粒子について具体的に記述をする.
-\subsection{ゲージ粒子}
-\subsection{フェルミオン}
-\subsection{ゲージ理論}
-\subsection{ヒッグス機構}
+\section{ゲージ粒子}
 
+ベクトル場は次のような場の強さテンソルで表される.
+\begin{align}
+  B_{\mu\nu} &= \partial_\mu B - \partial_\nu B_\mu \label{gauge.B}\\
+  W_{\mu\nu}^i &= \partial_\mu W_\nu^i - \partial_\nu W_\mu^i+g_2\varepsilon^{ijk}W_\mu^j W_\nu^k \label{gauge.W}\\
+  G_{\mu\nu}^a &= \partial_\mu G^a - \partial_\nu G_\mu^a +g_3 f^{abc}G_\mu^b G_\mu^c\label{gauge.G}
+\end{align}
+ここでは, $g_2, g_3$はそれぞれ$\mathrm{SU}(3)_\mathrm{c}$, $\mathrm{SU}(2)_\mathrm{L}$ゲージ群の結合定数ある.
+また, $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
+これより, 標準模型のゲージ場の運動項は次のように表せる.
+\begin{align}
+  \mathcal{L}_{\text{gauge}} = -\frac{1}{4}B_{\mu\nu} B^{\mu\nu} - \frac{1}{4}W_{\mu\nu}^i W^{i\mu\nu} -\frac{1}{4}G_{\mu\nu}^i G^{i\mu\nu}\label{gauge.kin}
+\end{align}
+\section{フェルミオン}
+\section{ゲージ理論}
+\section{ヒッグス機構}
 
 %EOF

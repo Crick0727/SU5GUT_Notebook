@@ -1,7 +1,7 @@
 // ------------------------------------------
 // Solve for Gauge coupling 
 //
-// Last Modified: Nov 30 2024
+// Last Modified: Dec 12 2024
 // Author: Yasutoki Takamura
 // email: y_takamura@hep.s.kanazawa-u.ac.jp
 // -----------------------------------------
@@ -28,9 +28,9 @@ int main(void){
   double mu, mu_max;
   
 /* Table of Standard model
-  rge.g1.initialValue = 0.463
-  rge.g2.initialValue = 0.654
-  rge.g3.initialValue = 1.220
+  rge.g1.initialValue = 0.461425
+  rge.g2.initialValue = 0.65184
+  rge.g3.initialValue = 1.2143
   energy scale = 91.876
 */
 

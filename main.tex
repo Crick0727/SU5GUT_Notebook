@@ -1,6 +1,6 @@
 \RequirePackage{plautopatch}
 \documentclass[uplatex,dvipdfmx,a4paper,titlepage]{jsbook}
-%\documentclass[titlepage]{jsbook}
+
 
 % ----- preambles ------------------
 \usepackage{geometry}
@@ -14,7 +14,7 @@
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{pxjahyper} %
 \hypersetup{%
-  setpagesize=false, %
+  setpagesize=true, %
 %  bookmarks=true, %
 %  bookmarksdepth=tocdepth, %
   bookmarksnumbered=true, %
@@ -35,31 +35,54 @@
 \newtheorem{dfn}{Definition}
 % -------------------------------
 
+
 % ----- Geometry setting ---------------------------
 \geometry{left=25mm,right=25mm,top=30mm,bottom=30mm}
 % ---------------------------------------------------
 \begin{document}
 
+
+% ----- Title Page ---------------------------
 \title{大統一模型模型研究ノート}
 \author{金沢大学大学院\,\,自然科学研究科数物科学専攻\,(物理学コース)修士課程2年\\学籍番号\,2315011026$\quad$名列番号216\\高村 泰時} 
 \date{\today}
 \maketitle
+% ---------------------------------------------------
 
+
+% ----- Contents page -------------------------------
 \tableofcontents
 \clearpage
+% ---------------------------------------------------
 
+
+% ----- Abstract ------------------------------------
 \begin{abstract}
   これは$SU(5)$大統一理論の研究のノートです.
+  勉強のためにまとめた部分が第1部, 実際に論文として挙げられているものに対する議論は第2部にまとめています.
+  全部分のNotationはまだまとめていません.
 \end{abstract}
+% ---------------------------------------------------
+
+
+% ----- Main Contents -----
+% ----- 1st part -----
+\part{教科書の部分}
+
+\chapter{記法}
+\input{notations.tex}
 
 \chapter{素粒子標準模型}
 \input{Standard_Model.tex}
 
-\chapter{素粒子標準模型の問題点}
+\chapter{素粒子標準模型では説明できない物理}
 \input{SM_problems.tex}
 
 \section{階層性問題}
 \input{hierarchy_problem.tex}
+
+\section{ニュートリノ質量}
+\input{neutrino.tex}
 
 \chapter{大統一理論}
 \input{grand_unified_theory.tex}
@@ -68,9 +91,13 @@
 \input{group_theory.tex}
 
 
+% ----- 2nd part -----
+\part{研究の部分}
+
 % ----- Bibliography -----
 \bibliographystyle{abbrv}
 \bibliography{bibs.bib}
 % -----------------------
 \end{document}
 
+%EOF

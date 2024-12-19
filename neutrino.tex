@@ -1,0 +1,124 @@
+% ---------------------------------------
+%
+%  Neutrino Mass
+%  neutrino.tex
+%  Program modified by Yasutoki Takamura
+%  Last Modified Dec 12 2024
+%
+% ---------------------------------------
+素粒子標準模型では, ニュートリノには質量がない.
+これは, レプトンセクターではニュートリノは$SU(2)_L$二重項にのみ存在し, カイラルパートナーである右巻きニュートリノが存在せず, 他の粒子のようにヒッグス機構を考えることができないためである.
+ところが, すでにカミオカンデによる観測により, ニュートリノ振動と呼ばれるニュートリノのフレーバーが変化する現象が発見されたことからニュートリノにも質量があると考えなければならない.
+\subsection{マヨナラ質量項}
+ここでは, ニュートリノの質量項を導入するためにマヨラナ場を導入する.
+量子場の理論では, 質量を持った粒子は4成分のディラックスピノール場を用いて記述されていた.
+このディラックスピノール場を$\psi_D$とする.
+ディラックスピノールとカイラルスピノールには射影演算子$P_L = \cfrac{1-\gamma^5}{2}$, $P_R = \cfrac{1+\gamma^5}{2}$を用いて次のように示される.
+\begin{align}
+  \psi_R = P_R \psi,\quad \psi_L = P_L \psi\nonumber
+\end{align}
+4成分スピノール場$\psi$は2つのカイラルスピノールの和で書くことができる.
+\begin{align}
+  \psi &= \psi_L + \psi_R\nonumber\\
+       &= \frac{1+\gamma^5}{2}\psi + \frac{1-\gamma^5}{2}\psi\nonumber\\
+       &= P_L\psi + P_R\psi\label{Mj_1}
+\end{align}
+ここから, $\gamma$行列はカイラル基底をとる.
+これによってカイラルスピノールを2成分のスピノールとして扱うことができる.
+具体的には,パウリ行列$\sigma^{i}\,(i=1,2,3)$に対して
+\begin{align}
+  \sigma ^\mu &= ( I, \sigma^i )\nonumber\\
+  \bar{\sigma} ^\mu &= (I, -\sigma^i ) \nonumber
+\end{align}
+と定義すると, 
+$\gamma$行列は
+\begin{align}
+  \gamma ^{\mu} = \left(\begin{array}{cc}
+                             0 &  \sigma ^{\mu}     \\
+                             \bar{\sigma}^{\mu} & 0 \\
+                           \end{array}
+                           \right)
+\end{align}
+と書くことができる.
+このことから, カイラルスピノールは
+\begin{align}
+  \psi_L = \left( \begin{array}{c}
+                   \eta_\alpha \\
+                   0 \\
+                 \end{array}
+                 \right);\,\,(\alpha =1,2)\nonumber\\
+  \psi_R = \left(\begin{array}{c}
+                   0 \\
+                   \bar{\xi}^{\dot{\alpha}} \\
+                 \end{array}
+           \right);\,\,(\dot{\alpha} = 1,2)
+\end{align}
+となり, それぞれ2成分の複素ベクトルで表すことができる.
+また, ローレンツ群の生成子$\sigma^{\mu\nu}$は
+\begin{align}
+  \Sigma ^{\mu\nu} = \frac{i}{2}\left(\begin{array}{cc}
+      \sigma ^{\mu\nu} & 0 \\
+                             0                & \bar{\sigma}^{\mu\nu} \\
+                           \end{array}
+                         \right),\qquad(\sigma^{\mu\nu}\equiv \sigma^\mu\bar{\sigma}^\nu,\quad\bar{\sigma}^{\mu\nu}\equiv\bar{\sigma}^\mu\sigma^\nu\quad(\mu\neq\nu))
+\end{align}
+となり, ローレンツ変換の下で異なるカイラリティを持つ場が混合しない.
+数学的には群$SL(2,\mathbb{C})$の既約表現を成すことが明確になる.
+
+カイラル基底ではC変換は $C = i\gamma^0\gamma^2$と行列で表すことができた.
+これよりカイラルフェルミオンは
+\begin{align}
+  (\psi_L)^c &= C\bar{\psi}_L^t = -i\gamma^2 (\psi_L)^*\nonumber\\
+             &= \left(\begin{array}{c}
+                        0 \\
+                        \bar{\eta}^{\dot{\alpha}}
+                      \end{array}\right)
+\end{align}
+と異なるカイラリティを持つカイラルフェルミオンを構成することができる.
+
+これまでで, ディラックスピノールは
+\begin{align}
+  \psi_D = \psi_L + \psi_R = \left(\begin{array}{c}
+                                  \eta_\alpha \\
+                                  \bar{\xi}^{\dot{\alpha}}
+                                \end{array}
+                                \right)
+\end{align}
+と表せる.
+さらに, C変換はカイラリティを変化させることから, ある左巻きのカイラルフェルミオンとその反粒子でスピノールを構成することが可能であることがわかる.
+\begin{align}
+  \psi_{ML} = \psi_L + (\psi_L)^c = \left(\begin{array}{c}
+                                  \eta_\alpha \\
+                                  \bar{\eta}^{\dot{\alpha}}
+                                \end{array}
+                                \right)
+\end{align}
+あるいは右巻きのカイラルフェルミオンを用いると
+\begin{align}
+  \psi_{MR} = \psi_R + (\psi_R)^c = \left(\begin{array}{c}
+                                  \xi_\alpha \\
+                                  \bar{\xi}^{\dot{\alpha}}
+                                \end{array}
+                                \right)
+\end{align}
+のように, スピノールを構成することが可能となる.
+このようにして構成されたスピノールはマヨラナスピノールと呼ばれる.
+
+マヨラナスピノールの重要な点として, P変換とC変換を2回施すと元の状態に戻る.
+以上のことから, マヨラナスピノールは粒子と反粒子の区別がない中性のフェルミオンを表す.
+
+ここで, 数学的な側面に言及する.
+$\eta, \bar{\xi}$ はローレンツ群$SL(2,\mathbb{C})$の基本表現とその反表現としての振る舞いをする.
+これらはLevi-Civitaテンソルを用いて
+\begin{align}
+  \bar{\eta}^{\dot{\alpha}} = \epsilon^{\dot{\alpha}\dot{\beta}}\bar{\eta}_{\dot{\beta}}
+\end{align}
+となり, Levi-Civitaテンソルが計量としての役割を持つ.
+
+ここで, 任意の2つの左巻きスピノール$\eta, \chi$の縮約を考える.
+\begin{align}
+  \eta_\alpha \chi ^\alpha = \epsilon^{\alpha\beta}\eta_\alpha \chi_\beta \nonumber
+\end{align}
+は$SL(2,\mathbb{C})$変換のもとで不変であるから, ローレンツ不変量であることがわかる.
+これは$SU(2)$群において基本表現の2重項を反対称に組むことによって1重項を成し, $SU(2)$不変量を成すことを表している.\footnote{これは時空をミンコフスキー的ではなくユークリッド的とすると, ローレンツ変換が$SO(4)\simeq SU(2)\times SU(2)$となり, 独立な$SU(2)$で記述できることと対応している.}
+\subsection{シーソー機構}

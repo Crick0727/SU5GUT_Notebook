@@ -3,7 +3,7 @@
 %  Standard model
 %  Standard_Model.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 02 2025
+%  Last Modified Jan 09 2025
 %
 % ---------------------------------------
 この章では素粒子物理学における標準模型についてまとめた.
@@ -104,7 +104,7 @@ $\theta^a$は実定数であり, $n=\mathrm{dim}(G)$はリー群の次元であ�
 \begin{align}
   B_{\mu\nu} &= \partial_\mu B_\nu - \partial_\nu B_\mu \label{gauge.B}\\
   W_{\mu\nu}^i &= \partial_\mu W_\nu^i - \partial_\nu W_\mu^i+g_2\varepsilon^{ijk}W_\mu^j W_\nu^k \label{gauge.W}\\
-  G_{\mu\nu}^a &= \partial_\mu G^a - \partial_\nu G_\mu^a +g_3 f^{abc}G_\mu^b G_\mu^c\label{gauge.G}
+  G_{\mu\nu}^a &= \partial_\mu G_\nu^a - \partial_\nu G_\mu^a +g_3 f^{abc}G_\mu^b G_\mu^c\label{gauge.G}
 \end{align}
 ここでは, $g_2, g_3$はそれぞれ$\mathrm{SU}(3)_\mathrm{c}$, $\mathrm{SU}(2)_\mathrm{L}$ゲージ群の結合定数ある.
 $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
@@ -122,6 +122,43 @@ $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 物質粒子はカイラリティと呼ばれる右巻き粒子と左巻き粒子の状態によって区別される.
 \textcolor{red}{カイラリティの説明をするべきか?}
 \section{ヒッグス機構}
+素粒子標準模型において, ヒッグス場は$SU(2)_L$の複素二重項として次のように書く.
+\begin{align}
+  \Phi(x) = \left(
+  \begin{array}{c}
+    \phi^+ \\
+    \phi^0
+  \end{array}
+  \right)
+\end{align}
+ヒッグス場のラグランジアン密度は
+\begin{align}
+  \mathcal{L}_H = \left(D_\mu \Phi\right)^\dagger (D^\mu \Phi) -V(\Phi) \label{L_H}
+\end{align}
+となる.
+第2項はヒッグス場のスカラーポテンシャルであり,
+\begin{align}
+  V(\Phi) = -\mu^x (\Phi^\dagger\Phi)+ \frac{\lambda}{4}(\Phi^\dagger \Phi)^2\label{V_H}
+\end{align}
+となり, ポテンシャルは
+\begin{align}
+  (\Phi^\dagger \Phi) = \frac{2\mu^2}{\lambda}\nonumber
+\end{align}
+のときに最小となる.
+
+ヒッグス場を真空期待値の周りで次のように展開する
+\begin{align}
+  \Phi(x) = \exp\left(i\frac{\pi(x)}{v}\right)\left(
+  \begin{array}{c}
+    0 \\
+    \frac{1}{\sqrt{2}}\left(v + h(x)\right)
+  \end{array}
+\right),\quad \left(\pi(x) = \sum_{a=1}^3\pi^a(x)\frac{\sigma^a}{2}\right)\label{higgs}
+\end{align}
+ただし, $\pi(x)$は南部・ゴールドストンボゾンであり, ユニタリーゲージを取るとゲージ変換で取り除くことができる非物理的自由度である.
+$\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに吸収され, 1つが$Z^0$ボゾンに吸収されることで, それぞれのゲージボゾンが質量を獲得する.
+
+
 \section{フェルミオン質量の獲得}
 
 

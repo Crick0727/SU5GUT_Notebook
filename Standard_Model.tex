@@ -3,7 +3,7 @@
 %  Standard model
 %  Standard_Model.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 09 2025
+%  Last Modified Jan 10 2025
 %
 % ---------------------------------------
 この章では素粒子物理学における標準模型についてまとめた.
@@ -122,6 +122,14 @@ $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 物質粒子はカイラリティと呼ばれる右巻き粒子と左巻き粒子の状態によって区別される.
 \textcolor{red}{カイラリティの説明をするべきか?}
 \section{ヒッグス機構}
+標準模型はゲージ対称性により記述される理論で大きな成功をおさめた.
+ところが, この対称性が破れない場合, 次のような問題が残る.
+\begin{itemize}
+  \item 短距離力である弱い相互作用を記述するゲージボゾンは質量を持つ必要がある. ところがゲージボゾンが局所対称性を維持してしまうと, 質量を持つ項を書くことができない.
+  \item クォークやレプトンの質量項を考えると, 右巻きフェルミオンは$SU(2)_L$一重項に属するため, ゲージ不変な質量項を書くことが許されない.
+\end{itemize}
+これらの問題を解決するためにはゲージ対称性を自発的に破る必要がある.
+
 素粒子標準模型において, ヒッグス場は$SU(2)_L$の複素二重項として次のように書く.
 \begin{align}
   \Phi(x) = \left(
@@ -159,56 +167,85 @@ $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 一方で, $h(x)$が実ヒッグス粒子として考えられる.
 $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに吸収され, 1つが$Z^0$ボゾンに吸収されることで, それぞれのゲージボゾンが質量を獲得する.
 
-以降はゲージ粒子の質量の獲得について考える.
-ヒッグス場のラグランジアン密度は式(\ref{L_H})で与えられており, ヒッグス粒子の運動項は
+ここから, ゲージ粒子の質量の獲得について考える.
+ヒッグス場のラグランジアン密度は式(\ref{L_H})で与えられており, ヒッグス粒子の運動項には
 \begin{align}
-  \mathcal{L}_H \supset \frac{1}{4}\left((g_2W^a_\mu\frac{\sigma^a}{2}+g_1B_\mu)\Phi\right)^\dagger \left((g_2W^{a\,\mu}\frac{\sigma^a}{2}+g_1B^\mu)\Phi\right)
+  \mathcal{L}_H \supset \frac{1}{4}\left((g_2W^a_\mu\frac{\sigma^a}{2}+g_1B_\mu)\Phi\right)^\dagger \left((g_2W^{a\,\mu}\frac{\sigma^a}{2}+g_1B^\mu)\Phi\right)\label{eq2-18}
 \end{align}
-であることがわかる.
-真空期待値を取ると, 
+という項が含まれている.
+真空期待値を
 \begin{align}
-\mathcal{L}_H \supset \frac{v^2}{8}\left[\left(g_2^2(W^1_\mu  W^{1\mu}+W^2_\mu  W^{2\mu}\right)+ (g_2W_\mu^3 -g_1B_\mu)(g_2W^{3\mu}-g_1 B^{\mu})\right]
+  \langle 0 |\Phi |0\rangle = \left(\begin{array}{c}
+      0 \\
+      \frac{v}{\sqrt{2}}
+      \end{array}\right)
+\end{align}
+のように取る.
+これによりゲージ対称性は
+\begin{align}
+  SU(3)_c\times SU(2)_L\times U(1)_Y \rightarrow SU(3)_c\times U(1)_{em}
+\end{align}
+のように自発的に破れる.
+したがって, (\ref{eq2-18})から
+\begin{align}
+  \mathcal{L}_H \supset \frac{v^2}{8}\left[\left(g_2^2(W^1_\mu  W^{1\mu}+W^2_\mu  W^{2\mu}\right)+ (g_2W_\mu^3 -g_1B_\mu)(g_2W^{3\mu}-g_1 B^{\mu})\right] \label{2-21}
 \end{align}
 となる.
 ここで, ゲージ場$W_\mu^a$と$B_\mu$を次の様に再定義する.
 \begin{align}
-  W_\mu^\pm = \frac{1}{\sqrt{2}}(W_\mu ^1 \mp i W_\mu^2)\nonumber\\
+  W_\mu^\pm &= \frac{1}{\sqrt{2}}(W_\mu ^1 \mp i W_\mu^2)\\
   \left(\begin{array}{c}
       Z_\mu^0 \\
       A_\mu
-      \end{array}\right)=\frac{1}{\sqrt{g_1^2+g_2^2}}\left(\begin{array}{c}
+      \end{array}\right)&=\frac{1}{\sqrt{g_1^2+g_2^2}}\left(\begin{array}{c}
       g_2 W_\mu^3-g_1 B_\mu \\
-      g_1 W_\mu^3 _ g_2 B_\mu 
+      g_1 W_\mu^3-g_2 B_\mu 
     \end{array}\right)
     \equiv \left(\begin{array}{cc}
         \cos\theta_W W_\mu^3 - \sin\theta_W B_\mu \\
         \sin\theta_W W_\mu^3 + \cos\theta_W B_\mu
       \end{array}
-      \right)
-\end{elign}
+    \right)\label{eq2-22}
+\end{align}
 ただし, この混合角$\theta_W$は
 \begin{align}
   \cos\theta_W = \frac{g_2}{\sqrt{g_1^2 + g_2^2}},\quad \sin\theta_W = \frac{g_1}{\sqrt{g_1^2 + g_2^2}}\nonumber
 \end{align}
-で定義される.
-これによって$W^\pm$ボゾンと$Z^0$ボゾンの質量は
+で定義され, ワインバーグ角と呼ばれる.
+実験によりこの値は$\sin^2\theta_W \simeq 0.23$となる.
+式(\ref{2-21})から$W^\pm$ボゾンと$Z^0$ボゾンの質量は
 \begin{align}
   m_W^2 W_\mu^+W^{-\mu} + \frac{1}{2}\left(\begin{array}{cc}
       A_\mu & Z_\mu
-    \end{array}\right) \begin{array}{cc}
+    \end{array}\right) \left(\begin{array}{cc}
       0 & 0 \\
       0 & m_Z^2 
       \end{array}\right)\left(\begin{array}{c}
       A^\mu \\
       Z^\mu
-    \end{array}\right)
+  \end{array}\right)\label{eq2-23}
 \end{align}
-から, 
+さらに,
 \begin{align}
   m_W = \frac{1}{2}g_2v,\quad m_Z = \frac{1}{2}\sqrt{g_1^2+g_2^2}v\nonumber
 \end{align}
+となる.
+これらも質量は
+\begin{align}
+  m_W \simeq 80.4\,\mathrm{[GeV]},\qquad m_Z \simeq 91.2\,\mathrm{[GeV]} \nonumber
+\end{align}
+と観測されている.
+また, 式(\ref{eq2-22}), (\ref{eq2-23})に表れる$A_\mu$は質量がないことがわかり, $U(1)_{em}$ゲージ場の相互作用をする光子であることがわかる.
 
+ヒッグス場の真空期待値の値は, 4体フェルミ相互作用の観測によって, フェルミ結合定数$(G_F\simeq 1.166\times 10^{-5}\,\mathrm{[GeV]}^{-2})$から導かれた.
+場の理論の計算によれば
+\begin{align}
+  2\sqrt{2}G_F = \frac{g_2^2}{2m_W^2} = \frac{2}{v^2}\nonumber
+\end{align}
+と与えられるので, $v \simeq 246\,\mathrm{[GeV]}$と定めることができる.
+2012年に発見されたヒッグス粒子は$h(x)$であると考えられており, その質量は$m_H = \sqrt{2\lambda}v \simeq 125\,\mathrm{[GeV]}$と明らかになり, ヒッグス場の結合定数が$\lambda \simeq 0.13$と決まった.
 \section{フェルミオン質量の獲得}
-
+\section{走るゲージ結合定数}
 
 %EOF
+

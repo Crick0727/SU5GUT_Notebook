@@ -3,7 +3,7 @@
 %  Grand Unified Theory
 %  grand_unified_theory.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 10 2025
+%  Last Modified Jan 11 2025
 %
 % ----------------------------------------
 %\section{大統一理論}
@@ -89,13 +89,44 @@ ${\bm{10}}$表現は
 $e^-_L$に対して荷電共役変換を行った$(e^-_L)^c$を考える.
 これは右巻きの電子$e_R^-$となるが, 左巻きの陽電子である$e_L^+$と同じである.
 \subsection{ゲージ粒子の表現}
+ゲージ粒子を$SU(5)$大統一理論で考えるために, 群の生成子について考える.
+一般に$SU(n)$ゲージ群の変換は, 
+\begin{align}
+  U =\exp\left(-i \sum_{i=1}^{n^2-1}\beta_i L_i\right)=\exp(-\bm{\beta}\cdot \bm{L})
+\end{align}
+で表される.
+ここで, $L_i$は群の生成子であり, エルミート性があり, トレースレス($\mathrm{tr} L_i =0$)である.
+これにより$U$はユニタリーであり, $\mathrm{det}U =1$を満たす.
+$L_i$は
+\begin{align}
+  \mathrm{tr}(L_iL_j) = \frac{1}{2}{\delta_{ij}}
+\end{align}
+と規格化する.
+ここで, 表現行列を昇降演算子との類推で今後のために
+\begin{align}
+  (L^a_b)^c_d \equiv \delta^c_b\delta^a_d -\frac{1}{n}\delta^a_b\delta^c_d,\quad ((L^a_b)^\dagger=L^b_a)
+\end{align}
+と定義する.
+交換関係は
+\begin{align}
+  [L^a_b,L^c_d] = \delta^a_bL^c_b - \delta^c_bL^a_d
+\end{align}
+を満たす.
+これまで$n$表現について考えたが, 共役な表現$\bar{n}$を考えた場合,
+\begin{align}
+  L^a_b(\bar{n}) = -L^{aT}_b = -L^b_a
+\end{align}
+を満たす.
+
+ここから具体的にゲージ場について考える.
 $SU(n)$ゲージ理論では, $n^2-1$個のゲージ場が存在する.
-$SU(5)$群の生成演算子を, $[L_i]^a_b\,(i=1,\cdots,24, a,b=1,\cdots,5)$として構成する.
+これらは随伴表現で表される.
+$SU(5)$群の生成演算子をこれまでのように$[L_i]^a_b\,(i=1,\cdots,24, a,b=1,\cdots,5)$として構成する.
 基本表現である$5$表現の類推からは$a,b=1,2,3$はカラー量子数, $a,b=4,5$がアイソスピン量子数と考えられる.
 そのため$i=1,\cdots,8$を$SU(3)$部分, $i=9,10,11$を$SU(2)$の部分群として考えると
 \begin{align}
   L_i(i=1,\cdots,8) = \left(\begin{array}{@{}c|c@{}}
-      \mbox{$\lambda_i$} &
+      \mbox{$\frac{1}{2}\lambda_i$} &
       \begin{matrix}
         0 & 0 \\
         0 & 0 \\
@@ -118,13 +149,15 @@ $SU(5)$群の生成演算子を, $[L_i]^a_b\,(i=1,\cdots,24, a,b=1,\cdots,5)$と
       \begin{matrix}
         0 & 0 & 0\\
         0 & 0 & 0
-      \end{matrix} &{\mbox{$\sigma_j$}}
+      \end{matrix} & {\mbox{$\frac{1}{2}\sigma_j$}}
   \end{array}\right)
 \end{align}
 ただし, $\sigma_{j=i-8}\,(j=1,2,3)$である.
+
+対角行列は$L_3, L_8, L_{11}$と$L_{12}=\frac{1}{2\sqrt{15}}\mathrm{diag}(-2,-2,-2,3,3)$である.
 24個のゲージボゾンは随伴表現として存在し, 次のように分解できる.
 \begin{align}
-  \bm{24} = G^i(8,1,0)\oplus W^i(1,3,0)\oplus B(1,1,0)\oplus \bar{X}(3,\bar{2},-\frac{5}{6})\oplus X(\bar{3},2,+\frac{5}{6})
+  \bm{24} = G(8,1,0)\oplus W(1,3,0)\oplus B(1,1,0)\oplus \bar{X}(3,\bar{2},-\frac{5}{6})\oplus X(\bar{3},2,+\frac{5}{6})
 \end{align}
 ゲージボゾンを$V_\mu$とすると,
 \begin{align}
@@ -148,7 +181,59 @@ $SU(5)$群の生成演算子を, $[L_i]^a_b\,(i=1,\cdots,24, a,b=1,\cdots,5)$と
   W^\pm = \frac{W^1\mp iW^2}{\sqrt{2}}\nonumber
 \end{align}
 である.
+ここで, $SU(5)$ゲージ粒子として新しく$X, Y$ボゾンが導入される.
+これらは
+\begin{align}
+  X, Y = \left(\bar{3},2, \frac{5}{3}\right)\nonumber
+\end{align}
+という量子数をもつ.
+
+ここまででゲージ場を導入できたので, $SU(5)$ゲージ群のラグランジアンを書くことができる.
+はじめに共変微分を考える.
+$n$表現, $\bar{n}$表現の共変微分は
+\begin{align}
+  (D_\mu \psi)^a = \left[\partial_\mu \delta^a_b - \frac{ig}{\sqrt{2}}(V_\mu)^a_b\right]\psi^b\nonumber\\
+  (D_\mu \chi)_a = \left[\partial_\mu \delta^b_a + \frac{ig}{\sqrt{2}}(V_\mu)^b_a\right]\chi^b\nonumber
+\end{align}
+と表せる.
+また, $\frac{n(n-1)}{2}$表現の場合
+\begin{align}
+  (D_\mu \psi)^{ab} = \partial_\mu \psi^{ab} - \frac{ig}{\sqrt{2}}(V_\mu)^a_c\psi^{cb}- \frac{ig}{\sqrt{2}}(V_\mu)^b_d\psi^{ad}\nonumber
+\end{align}
+となる.
+場の強さを
+\begin{align}
+  (F_{\mu\nu})^a_b = \partial_\mu(A_\nu)^a_b -\frac{ig}{\sqrt{2}}(A_\mu)^a_c (A_\nu)^c_b - (\mu\leftrightarrow\nu)
+\end{align}
+とすると, ゲージ場の運動項は
+\begin{align}
+  \mathcal{L}_K = -\frac{1}{4}\mathrm{Tr}(F^{\mu\nu}F_{\mu\nu})=-\frac{1}{4}(F^{\mu\nu})^a_b(F_{\mu\nu})
+\end{align}
+となる.
+また$\psi_{\bar{5}}$について
+\begin{align}
+  \mathcal{L}_{5K} &= i\overline{\psi_{\bar{5}}}\gamma^\mu D_\mu\psi_{\bar{5}}\nonumber\\
+                   &= i\overline{\psi_{\bar{5}}}_a\gamma^\mu \left(\delta^a_b \partial_\mu + \frac{ig}{\sqrt{2}}(V_\mu)^a_b\right)\psi_{\bar{5}}^b\nonumber
+\end{align}
+さらに$\psi_{10}$について
+\begin{align}
+  \mathcal{L}_{10K} &= i\overline{\psi_{10}}_{ab}\gamma^\mu \left(D_\mu\psi_{10}\right)^{ab}\nonumber\\
+                    &= i\overline{\psi_{10}}_{ab}\gamma^\mu \left(\delta^a_c \partial_\mu + \frac{2ig}{\sqrt{2}}(V_\mu)^a_c\right)\psi_{10}^{cb}\nonumber
+\end{align}
+となる.
+
 \subsection{対称性の破れ}
+$SU(5)$模型は$X, Y$ゲージボゾンの存在を予言するが, これらの粒子はクォークととレプトンの相互作用を引き起こすため, 陽子崩壊が起こる.
+陽子は標準模型では安定であるため, 現在の実験データと矛盾させないためには大統一スケールが十分大きくなければならない.
+したがって, 大統一スケールで対称性が
+\begin{align}
+  SU(5)\rightarrow SU(3)_c\times SU(2)_L\times U(1)_Y\label{SU5GSM}
+\end{align}
+と自発的に破れると考えられている.
+標準模型ではゲージボゾンは12個存在していた.
+$SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現れない残りの12個の粒子が質量をもつ必要があるため, 少なくとも12個の南部・ゴールドストンボゾンが存在しなければならない.
+また, 自発的対称性の破れは, 式(\ref{SU5GSM})のようにゲージ群を単純群から標準模型へ破るものであり, この際群のランクを保存するものでなければならない.
+したがって, そのような対称性の破れを行うものは随伴表現であり, 最小模型では$24$表現ヒッグスを用いる.
 \subsection{予言される現象}
 \subsection{破綻}
 

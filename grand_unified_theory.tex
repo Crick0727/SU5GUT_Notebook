@@ -94,21 +94,34 @@ $SU(5)$群の生成演算子を, $[L_i]^a_b\,(i=1,\cdots,24, a,b=1,\cdots,5)$と
 基本表現である$5$表現の類推からは$a,b=1,2,3$はカラー量子数, $a,b=4,5$がアイソスピン量子数と考えられる.
 そのため$i=1,\cdots,8$を$SU(3)$部分, $i=9,10,11$を$SU(2)$の部分群として考えると
 \begin{align}
-  L_i(i=1,\cdots,8) = \left(\begin{array}{ccccc}
-        &           &   & 0 & 0 \\
-        & \lambda_i &   & 0 & 0 \\
-        &           &   & 0 & 0 \\
-      0 &         0 & 0 & 0 & 0 \\
-      0 &         0 & 0 & 0 & 0 
+  L_i(i=1,\cdots,8) = \left(\begin{array}{@{}c|c@{}}
+      \mbox{$\lambda_i$} &
+      \begin{matrix}
+        0 & 0 \\
+        0 & 0 \\
+        0 & 0 
+      \end{matrix}\\
+      \hline
+      \begin{matrix}
+        0 & 0 & 0\\
+        0 & 0 & 0
+      \end{matrix} &{\large{\mbox{$0$}}}
   \end{array}\right),\quad
-  L_i(i=9,10,11) = \left(\begin{array}{ccclcc}
-      0 &  0 & 0 & & 0 & 0 \\
-      0 &  0 & 0 & & 0 & 0 \\
-      0 &  0 & 0 & & 0 & 0 \\
-      0 &  0 & 0 & & \sigma_i      \\
-      0 &  0 & 0 & &       \\
-  \end{array}\right),\quad
+  L_i(i=9,10,11) = \left(\begin{array}{@{}c|c@{}}
+      \mbox{\Large 0} &
+      \begin{matrix}
+        0 & 0 \\
+        0 & 0 \\
+        0 & 0 
+      \end{matrix}\\
+      \hline
+      \begin{matrix}
+        0 & 0 & 0\\
+        0 & 0 & 0
+      \end{matrix} &{\mbox{$\sigma_j$}}
+  \end{array}\right)
 \end{align}
+ただし, $\sigma_{j=i-8}\,(j=1,2,3)$である.
 24個のゲージボゾンは随伴表現として存在し, 次のように分解できる.
 \begin{align}
   \bm{24} = G^i(8,1,0)\oplus W^i(1,3,0)\oplus B(1,1,0)\oplus \bar{X}(3,\bar{2},-\frac{5}{6})\oplus X(\bar{3},2,+\frac{5}{6})

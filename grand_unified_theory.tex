@@ -3,7 +3,7 @@
 %  Grand Unified Theory
 %  grand_unified_theory.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 11 2025
+%  Last Modified Jan 12 2025
 %
 % ----------------------------------------
 %\section{大統一理論}
@@ -223,17 +223,139 @@ $n$表現, $\bar{n}$表現の共変微分は
 となる.
 
 \subsection{対称性の破れ}
-$SU(5)$模型は$X, Y$ゲージボゾンの存在を予言するが, これらの粒子はクォークととレプトンの相互作用を引き起こすため, 陽子崩壊が起こる.
-陽子は標準模型では安定であるため, 現在の実験データと矛盾させないためには大統一スケールが十分大きくなければならない.
+$SU(5)$模型は$X, Y$ゲージボゾンの存在を予言する.
+これらの粒子はクォークととレプトンの相互作用を引き起こすため, 陽子崩壊が起こる.
+陽子は標準模型では安定である.
+現在の実験データと矛盾させないためには大統一スケールが十分大きくなければならない.\footnote{これについては次の小区分で詳細を述べる.}
 したがって, 大統一スケールで対称性が
 \begin{align}
   SU(5)\rightarrow SU(3)_c\times SU(2)_L\times U(1)_Y\label{SU5GSM}
 \end{align}
 と自発的に破れると考えられている.
 標準模型ではゲージボゾンは12個存在していた.
-$SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現れない残りの12個の粒子が質量をもつ必要があるため, 少なくとも12個の南部・ゴールドストンボゾンが存在しなければならない.
-また, 自発的対称性の破れは, 式(\ref{SU5GSM})のようにゲージ群を単純群から標準模型へ破るものであり, この際群のランクを保存するものでなければならない.
-したがって, そのような対称性の破れを行うものは随伴表現であり, 最小模型では$24$表現ヒッグスを用いる.
+$SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現れない残りの12個の粒子が質量をもつ必要がある.
+そのため少なくとも12個の南部・ゴールドストンボゾンが存在しなければならない.
+また, 自発的対称性の破れは, 式(\ref{SU5GSM})のようにゲージ群を単純群から直積の群へ破るものである.
+このときに群のランクを保存するものでなければならない.
+したがって, そのような対称性の破れを行うものは随伴表現である.
+最小模型では$24$表現ヒッグス$\phi_{\bm{24}}$を用いる.
+ゲージ粒子と同じように, 
+\begin{align}
+  (\phi_{\bm{24}})_a^b \equiv \sum_{i=1}^{24}\frac{1}{\sqrt{2}}\phi_{\bm{24}}^i L_i
+\end{align}
+となる.
+ゲージ場との結合は
+\begin{align}
+\mathcal{L}_K = \frac{1}{2}\sum_{i=1}^{24}[D_\mu\phi_{\bm{24}}]^\dagger [D^\mu\phi_{\bm{24}}]\nonumber
+\end{align}
+となる.
+共変微分を具体的に求める.
+24表現は$\bm{24}\oplus \bm{1} = \bm{5}\otimes \bar{\bm{5}}$であるため,
+\begin{align}
+  \phi_{\bm{24}b}^{\,\,a} = \psi_{\bm{5}}^a \psi_{\bm{\bar{5}}b} -\frac{1}{5}\delta^a_b \psi^c_{\bm{5}}\psi_{\bm{\bar{5}}c}
+\end{align}
+と構成されている.
+それぞれの表現の変換は
+\begin{align}
+  \psi_{\bm{5}}^a \rightarrow \psi^a_{\bm{5}}+\delta \psi_{\bm{5}}^a = \psi_{\bm{5}}^a -i\frac{g}{2}\varepsilon^i L^a_{ic}\psi_{\bm{5}}^c \nonumber\\
+  \psi_{\bm{\bar{5}}a} \rightarrow \psi_{\bm{\bar{5}}a}+\delta \psi_{\bm{5}}^a = \psi_{\bm{5}}^a +i\frac{g}{2}\varepsilon^i L^c_{ia}\psi_{\bm{5}c}\nonumber
+\end{align}
+となるから, $\phi_{\bm{24}}$は
+\begin{align}
+  \phi_{\bm{24}b}^a \rightarrow \phi_{\bm{24}b}^a -i\frac{g}{2}[L_i,\phi_{\bm{24}}]^a_b
+\end{align}
+と変換を受ける.
+したがって共変微分は
+\begin{align}
+  (D_\mu\phi_{\bm{24}})^a_b = \partial_\mu \phi_{\bm{24}a}^{\,\,b}  -\frac{ig}{\sqrt{2}}[V_\mu, \phi_{\bm{24}}]^b_{a}
+\end{align}
+となる.
+ヒッグスの運動項は
+\begin{align}
+  \mathcal{L}_K = \mathrm{Tr}[(D_\mu \phi_{\bm{24}})^\dagger (D^\mu \phi_{\bm{24}})]
+\end{align}
+とまとめることができる.
+ゲージボゾンの質量は24表現ヒッグスの真空期待値を$\Sigma = \langle 0|\phi_{\bm{24}}| 0\rangle$としたとき
+\begin{align}
+  \mathcal{L}_M &= \mathrm{Tr}[(D_\mu \phi_{\bm{24}})^\dagger (D^\mu \phi_{\bm{24}})]|_{\phi_{\bm{24}}=\Sigma}\nonumber\\
+                &= \frac{g^2}{2}\mathrm{Tr}\left([V_\mu, \Sigma]^\dagger [V^\mu,\Sigma]\right) = m_{ij}^2 V_\mu^{i\dagger}V^{\mu j}
+\end{align}
+これによりポテンシャルは
+\begin{align}
+  V(\phi_{\bm{24}})) = -\frac{\mu^2}{2}\mathrm{Tr}(\phi_{\bm{24}}^2) +\frac{1}{4}a(\mathrm{Tr}(\phi_{\bm{24}}^2))^2 + \frac{1}{2}b\mathrm{Tr}(\phi_{\bm{24}}^4) + \frac{1}{3}c\mathrm{Tr}\phi_{\bm{24}}^3\nonumber
+\end{align}
+となる.
+% NOTE: 下の文章は一般的な対称性の破れで考えられているものだが, 既に具体的なので省いた.
+% これは$\phi_{\bm{24}}\rightarrow U\phi_{\bm{24}} U^\dagger$と変換する.
+簡単のために$\mathbb{Z}_2$対称性を課すと, $c=0$となる.
+真空期待値は次のようなとり方が考えられる.
+\begin{align}
+  \Sigma &= v\,\mathrm{diag}(1,1,1,1,-4),\quad(b<0)\label{vev1}\\
+  \Sigma &= v\,\mathrm{diag}\left(1,1,1,-\frac{3}{2},-\frac{3}{2}\right),\quad(b>0)\label{vev2}
+\end{align}
+式(\ref{vev1})の場合, ゲージ対称性は$SU(4)\times U(1)$に破れ, 式(\ref{vev2})の場合は$SU(3)_c\times SU(2)_L\times U(1)_Y$に破れる.
+したがって, 後者の場合を考える.
+この場合のポテンシャルの最小値は$b>0,\, a>-{7b}/{15}$の条件のもとで
+\begin{align}
+  \left.\frac{\partial V(\phi_{\bm{24}})}{\partial \phi_{\bm{24}}} \right|_{\phi_{\bm{24}}=\Sigma} = 0
+\end{align}
+より求められ, 
+\begin{align}
+  v^2 = \frac{2\mu^2}{15a+7b}\nonumber
+\end{align}
+となる.
+ゲージボゾンの質量は24表現ヒッグスに真空期待値をもたせると
+\begin{align}
+  [V_\mu, \Sigma] \sim \left(\begin{array}{@{}c|c@{}}
+      {\Large{\mbox{$0$}}} &
+      \begin{matrix}
+        -\frac{5}{2}\bar{X_1} & -\frac{5}{2}\bar{Y_1} &   \\
+        -\frac{5}{2}\bar{X_2} & -\frac{5}{2}\bar{Y_2} &   \\
+        -\frac{5}{2}\bar{X_3} & -\frac{5}{2}\bar{Y_3} &   \\
+      \end{matrix} \\
+      \hline
+      \begin{matrix}
+        \frac{5}{2}X_1 & \frac{5}{2}X_2 & \frac{5}{2}X_3 \\
+        \frac{5}{2}Y_1 & \frac{5}{2}Y_2 & \frac{5}{2}Y_3 \\
+      \end{matrix} & {\large{\mbox{$0$}}}
+  \end{array}\right)
+\end{align}  
+となる.
+これにより$X, Y$ボゾンの質量は
+\begin{align}
+  m_X^2 = m_Y^2 = \frac{25}{8}g^2v^2
+\end{align}
+となる.
+
+標準模型で表れるヒッグス粒子$\Psi$は5表現に属する.
+\begin{align}
+  \phi_{\bm{5}} = \left(
+  \begin{array}{c}
+      h^1 \\
+      h^2 \\
+      h^3 \\
+      \phi^+ \\
+      -\phi^0
+  \end{array}\right) =\left(\bm{3}, 1,-\frac{1}{3}\right)\oplus\left(1,\bm{2},\frac{1}{2}\right)
+\end{align}
+真空期待値は
+\begin{align}
+  \langle\phi_{\bm{5}}\rangle = \frac{1}{\sqrt{2}}\left(
+  \begin{array}{c}
+      0 \\
+      0 \\
+      0 \\
+      0 \\
+      v_0
+  \end{array}\right) =\left(\bm{3}, 1,-\frac{1}{3}\right)\oplus\left(1,\bm{2},\frac{1}{2}\right),\quad(v_0\sim 246\,[\mathrm{GeV}])
+\end{align}
+のように標準模型と同じ値を取る.
+もし24表現ヒッグスと5表現ヒッグスに何らかの交わりがない場合, ポテンシャルは
+\begin{align}
+  V(\phi_{\bm{5}}) = -{\mu_5}^2\phi_{\bm{5}}^\dagger \phi_{\bm{5}} + \frac{\lambda}{4}(\phi_{\bm{5}}^\dagger \phi_{\bm{5}})^2
+\end{align}
+である.
+%NOTE: Notationが微妙にちがう. BEGNに合わせると \frac{\mu^2}{2}になる.
 \subsection{予言される現象}
 \subsection{破綻}
 

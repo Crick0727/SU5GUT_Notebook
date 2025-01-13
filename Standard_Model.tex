@@ -3,7 +3,7 @@
 %  Standard model
 %  Standard_Model.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 10 2025
+%  Last Modified Jan 13 2025
 %
 % ---------------------------------------
 この章では素粒子物理学における標準模型についてまとめた.
@@ -146,20 +146,33 @@ $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 となる.
 第2項はヒッグス場のスカラーポテンシャルであり,
 \begin{align}
-  V(\Phi) = -\mu^x (\Phi^\dagger\Phi)+ {\lambda}(\Phi^\dagger \Phi)^2\label{V_H}
+  V(\Phi) = -\mu^2 (\Phi^\dagger\Phi)+ {\lambda}(\Phi^\dagger \Phi)^2,\quad(\mu^2, \lambda>0)\label{V_H}
 \end{align}
-となり, ポテンシャルは
+である.
+ヒッグス場のポテンシャルは
 \begin{align}
   (\Phi^\dagger \Phi) = \frac{\mu^2}{2\lambda}\nonumber
 \end{align}
-のときに最小となる.
+のときに最小の値をとる.
+真空期待値は一般的に
+\begin{align}
+  \langle 0 |\Phi |0\rangle = \frac{1}{\sqrt{2}}\left(\begin{array}{c}
+      0 \\
+      v
+      \end{array}\right)
+\end{align}
+のように取ることができるので, 真空期待値は
+\begin{align}
+  v^2 = \frac{\mu^2}{\lambda}\nonumber
+\end{align}
+となる.
 
 ヒッグス場を真空期待値の周りで次のように展開する
 \begin{align}
   \Phi(x) = \exp\left(i\frac{\pi(x)}{v}\right)\left(
   \begin{array}{c}
     0 \\
-    \frac{1}{\sqrt{2}}\left(v + h(x)\right)
+    \cfrac{1}{\sqrt{2}}\left(v + h(x)\right)
   \end{array}
 \right),\quad \left(\pi(x) = \sum_{a=1}^3\pi^a(x)\frac{\sigma^a}{2}\right)\label{higgs}
 \end{align}
@@ -173,14 +186,6 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
   \mathcal{L}_H \supset \frac{1}{4}\left((g_2W^a_\mu\frac{\sigma^a}{2}+g_1B_\mu)\Phi\right)^\dagger \left((g_2W^{a\,\mu}\frac{\sigma^a}{2}+g_1B^\mu)\Phi\right)\label{eq2-18}
 \end{align}
 という項が含まれている.
-真空期待値を
-\begin{align}
-  \langle 0 |\Phi |0\rangle = \left(\begin{array}{c}
-      0 \\
-      \frac{v}{\sqrt{2}}
-      \end{array}\right)
-\end{align}
-のように取る.
 これによりゲージ対称性は
 \begin{align}
   SU(3)_c\times SU(2)_L\times U(1)_Y \rightarrow SU(3)_c\times U(1)_{em}

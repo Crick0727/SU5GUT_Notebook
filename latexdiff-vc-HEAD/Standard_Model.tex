@@ -1,0 +1,256 @@
+% ---------------------------------------
+%
+%  Standard model
+%  Standard_Model.tex
+%  Program modified by Yasutoki Takamura
+%  Last Modified Jan 13 2025
+%
+% ---------------------------------------
+この章では素粒子物理学における標準模型についてまとめた.
+素粒子標準模型は現在の高エネルギー実験をほぼ説明することができるものであるが, 標準模型だけでは説明できない事実が存在する.
+大統一理論はそれらを解決するための理論の一つであるが, そもそも標準模型がどのような理論であるのかをここで振り返る.
+\section{概観}
+素粒子標準模型は量子場の理論により記述される.
+素粒子の相互作用はYang-Millsによる理論によって, 数学的にリー群に属する局所非可換ゲージ変換のもとで不変になるようにラグランジアン密度を記述することができる.
+具体的には, 次のようなゲージ対称性を持つ理論である.
+\begin{align}
+  \mathcal{G}_{\text{SM}}=\mathrm{SU}(3)_\mathrm{c}\times \mathrm{SU}_\mathrm{L}(2)\times \mathrm{U}(1)_\mathrm{Y}\label{SM-Gauge}
+\end{align}
+それぞれゲージ群の添字は量子数に対応している.
+``C''はカラー量子数, ``L''は左巻きのカイラリティ, ``Y''は超電荷である.
+$\mathrm{SU}(3)_c$群は核子に作用する強い相互作用を記述する群であり, 量子色力学(QCD)によって記述される.
+一方で$\mathrm{SU}(2)_L\times \mathrm{U}(1)_Y$は弱い相互作用と電磁相互作用を統一的に記述する電弱理論を記述する群である.
+
+ゲージ対称性の他に, 理論に現れる粒子がどのようなものであるのか, 標準模型のゲージ対称性の中でどのような対称性を持つ粒子であるのかを決めることにより, 理論を具体的に決定することができる.
+他にも, ラグランジアン密度に含める項は, 繰り込み可能であり, ローレンツ対称性を満足するものを決めることで全て書き下すことができる.
+ここからは標準模型に現れる粒子と, その対称性について考える.
+\section{ローレンツ代数とスピノール表現}
+物質場の基本的な構成をするために, スピノール場を定義する.
+スピノール場はローレンツ群$SL(2,\mathbb{C})$の変換をうける.
+
+はじめに, ローレンツ群の表現行列は
+\begin{eqnarray}
+  D(\Lambda) = \exp\left(-\frac{i}{2\hbar}\omega^{\alpha\beta}S_{\alpha\beta}\right)
+\end{eqnarray}
+と表される.
+$\omega_{\alpha\beta}$は
+に対して, 基本表現は
+\begin{eqnarray}
+  \psi_\alpha' = U_\alpha^\beta \psi_\beta\label{spi_1}
+\end{eqnarray}
+
+\section{ゲージ粒子}
+量子場の理論は量子力学と特殊相対論を組み合わせたものである.
+素粒子の反応を記述することは量子場の理論のみではできないが, ゲージ対称性を理論に課すことにより相互作用を記述することができる.
+物質粒子どうしの相互作用を媒介する粒子はゲージ粒子と呼ばれ, スピン$1$のボーズ粒子である.
+素粒子標準模型では強い相互作用を媒介するグルーオン($g$), 弱い相互作用を媒介する($W, Z$)ボゾン, 電磁相互作用を記述する光子($\gamma$)がある.
+これらはゲージ原理によって理論のラグランジアンに含まれることになる.
+\subsection{ゲージ原理}
+ゲージ原理とは, 局所変換と呼ばれる時空の各点で独立なゲージ変換を行ったとしても, 物理法則が不変でなければならない主導原理である.
+
+ゲージ粒子は, このゲージ原理によって理論に導入することができる.
+先に述べたが, 量子場の理論にゲージ対称性を課すことで相互作用を記述することができる.
+この対称性は数学的にリー群によって記述される.
+ゲージ原理の一般的な説明のために, 以下では物質場$\Psi(x)$がリー群$G$に属し, $r$重項を成しているとする.
+
+リー群の要素は一般的に$\exp\left(i\sum_{a=1}^n \theta^a T^a\right)$と書かれる.
+$\theta^a$は実定数であり, $n=\mathrm{dim}(G)$はリー群の次元である.
+ここで, $T^a$はリー群の生成子であり, 交換関係
+\begin{align}
+  [T^a, T^b] = if_{abc}T^c \label{gauge-1}
+\end{align}
+を満たす.
+ここで$f^{abc}$はリー群の構造定数である.
+
+ここで, ゲージ原理を用いてリー群の対称性によって局所変換のもとで不変な理論を考える.
+物質場$\Psi(x)$の局所変換を次のように考える.
+\begin{align}
+  \Psi(x)\quad\rightarrow\quad\Psi(x)' = \exp\left(i\theta^a(x)T^a(\bm{r})\right)\Psi(x) \equiv U(x)\Psi(x) \label{gauge-2}
+\end{align}
+このとき, $\theta^a(x)$は積分可能な実関数, $T^a(\bm{r})$は$\bm{r}$次元のリー群の表現行列である.
+非可換ゲージ場$A^a_\mu(x)$と共変微分$D_\mu\equiv\partial_\mu+ig A^a_\mu(x)T^a(x)$を導入する
+ここで定数$g$はゲージ結合定数である.
+この共変微分を導入したことによりゲージ場と物質場の相互作用を記述している.
+
+物質場の共変性からゲージ場の変換を考えることができる.
+物質場の共変性は, 局所変換の変換性のもとで
+\begin{align}
+  D_\mu\Psi(x) \rightarrow D'_\mu \Psi'(x) = U(x) D_\mu \Psi(x)\label{gauge-3}
+\end{align}
+と変換することである.
+このことから, ゲージ場の変換は
+\begin{align}
+   A_\mu^a(x) T^a(\bm{r}) &\rightarrow A_\mu'^a(x) T^a(\bm{r})\nonumber\\
+                          & U(x)A_\mu^a T^a(\bm{r}) U^{-1}(x) -\frac{i}{g}U(x)\partial_\mu U^{-1}(x) \label{gauge-4}
+\end{align}
+となる.
+ここからゲージ場の強さを定義することができる.
+共変微分の交換関係は$[D_\mu,D_\nu] = igF_{\mu\nu}^a(x)T^a(\bm{r})$であり, この$F_{\mu\nu}^a$は
+\begin{align}
+  F_{\mu\nu}^a(x) = \partial_\mu A_\nu^a(x) - \partial_\nu A_\mu^a(x) - gf^{abc}A_\mu^b(x)A_\nu^c(x)\label{gauge-5}
+\end{align}
+と表され, 場の強さテンソルとして定義される物理量となる.
+ここで用いた場の強さテンソル$F_{\mu\nu}^a$は理論のゲージ対称性によりそれぞれ異なる.
+非可換ゲージ場のローレンツ不変性とゲージ不変性を要求すると, 運動項は
+\begin{align}
+  F_{\mu\nu}^a = -\frac{1}{4}F_{\mu\nu}^a F^{a\,\mu\nu}\label{gauge-6}
+\end{align}
+となる.
+ここでは一般的なリー群に基づいたゲージ変換を考えたが, $SU(2), SU(3)$群を考えることで弱い相互作用と強い相互作用を記述することができる.
+また, ここで述べたものは非可換ゲージ理論であるが, 電磁相互作用を記述する$U(1)$対称性はこれらの記述を可換なものとして扱えば良い.
+その場合, 式(\ref{gauge-5})の第3項は存在しない.
+\subsection{ゲージ粒子のラグランジアン}
+これまで述べたことを踏まえて, $B_{\mu\nu}$を電磁相互作用を記述する$U(1)$ゲージ場, $W_{\mu\nu}^i\,(i=1,2,3)$を弱い相互作用を記述する$SU(2)$ゲージ場, $G_{\mu\nu}^a\,(a=1,\cdots,8)$を強い相互作用を記述する$SU(3)$ゲージ場とすると, 素粒子標準模型に現れる場の強さテンソルは式(\ref{gauge-5})より次のように表される.
+\begin{align}
+  B_{\mu\nu} &= \partial_\mu B_\nu - \partial_\nu B_\mu \label{gauge.B}\\
+  W_{\mu\nu}^i &= \partial_\mu W_\nu^i - \partial_\nu W_\mu^i+g_2\varepsilon^{ijk}W_\mu^j W_\nu^k \label{gauge.W}\\
+  G_{\mu\nu}^a &= \partial_\mu G_\nu^a - \partial_\nu G_\mu^a +g_3 f^{abc}G_\mu^b G_\mu^c\label{gauge.G}
+\end{align}
+ここでは, $g_2, g_3$はそれぞれ$\mathrm{SU}(3)_\mathrm{c}$, $\mathrm{SU}(2)_\mathrm{L}$ゲージ群の結合定数ある.
+$f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
+また, 標準模型のゲージ場の運動項は式(\ref{gauge-6})より
+\begin{align}
+  \mathcal{L}_{\text{gauge}} = -\frac{1}{4}B_{\mu\nu} B^{\mu\nu} - \frac{1}{4}W_{\mu\nu}^i W^{i\mu\nu} -\frac{1}{4}G_{\mu\nu}^i G^{i\mu\nu}\label{gauge.kin}
+\end{align}
+と表せる.
+\section{フェルミオン}
+標準模型粒子ではクォーク, レプトンは物質粒子という枠組みで説明され, スピンが$\frac{1}{2}$のフェルミ粒子である.
+
+標準模型では物質粒子は世代と呼ばれる構造をもつ.
+現在の標準模型は3世代模型として考えられており, 弱い相互作用でのCP対称性の破れに重要な役割を果たす.[]
+
+物質粒子はカイラリティと呼ばれる右巻き粒子と左巻き粒子の状態によって区別される.
+\textcolor{red}{カイラリティの説明をするべきか?}
+\section{ヒッグス機構}
+標準模型はゲージ対称性により記述される理論で大きな成功をおさめた.
+ところが, この対称性が破れない場合, 次のような問題が残る.
+\begin{itemize}
+  \item 短距離力である弱い相互作用を記述するゲージボゾンは質量を持つ必要がある. ところがゲージボゾンが局所対称性を維持してしまうと, 質量を持つ項を書くことができない.
+  \item クォークやレプトンの質量項を考えると, 右巻きフェルミオンは$SU(2)_L$一重項に属するため, ゲージ不変な質量項を書くことが許されない.
+\end{itemize}
+これらの問題を解決するためにはゲージ対称性を自発的に破る必要がある.
+
+素粒子標準模型において, ヒッグス場は$SU(2)_L$の複素二重項として次のように書く.
+\begin{align}
+  \Phi(x) = \left(
+  \begin{array}{c}
+    \phi^+ \\
+    \phi^0
+  \end{array}
+  \right)
+\end{align}
+ヒッグス場のラグランジアン密度は
+\begin{align}
+  \mathcal{L}_H = \left(D_\mu \Phi\right)^\dagger (D^\mu \Phi) -V(\Phi) \label{L_H}
+\end{align}
+となる.
+第2項はヒッグス場のスカラーポテンシャルであり,
+\begin{align}
+  V(\Phi) = -\mu^2 (\Phi^\dagger\Phi)+ {\lambda}(\Phi^\dagger \Phi)^2,\quad(\mu^2, \lambda>0)\label{V_H}
+\end{align}
+である.
+ヒッグス場のポテンシャルは
+\begin{align}
+  (\Phi^\dagger \Phi) = \frac{\mu^2}{2\lambda}\nonumber
+\end{align}
+のときに最小の値をとる.
+真空期待値は一般的に
+\begin{align}
+  \langle 0 |\Phi |0\rangle = \frac{1}{\sqrt{2}}\left(\begin{array}{c}
+      0 \\
+      v
+      \end{array}\right)
+\end{align}
+のように取ることができるので, 真空期待値は
+\begin{align}
+  v^2 = \frac{\mu^2}{\lambda}\nonumber
+\end{align}
+となる.
+
+ヒッグス場を真空期待値の周りで次のように展開する
+\begin{align}
+  \Phi(x) = \exp\left(i\frac{\pi(x)}{v}\right)\left(
+  \begin{array}{c}
+    0 \\
+    \cfrac{1}{\sqrt{2}}\left(v + h(x)\right)
+  \end{array}
+\right),\quad \left(\pi(x) = \sum_{a=1}^3\pi^a(x)\frac{\sigma^a}{2}\right)\label{higgs}
+\end{align}
+ただし, $\pi(x)$は南部・ゴールドストンボゾンであり, ユニタリーゲージを取るとゲージ変換で取り除くことができる非物理的自由度である.
+一方で, $h(x)$が実ヒッグス粒子として考えられる.
+$\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに吸収され, 1つが$Z^0$ボゾンに吸収されることで, それぞれのゲージボゾンが質量を獲得する.
+
+ここから, ゲージ粒子の質量の獲得について考える.
+ヒッグス場のラグランジアン密度は式(\ref{L_H})で与えられており, ヒッグス粒子の運動項には
+\begin{align}
+  \mathcal{L}_H \supset \frac{1}{4}\left((g_2W^a_\mu\frac{\sigma^a}{2}+g_1B_\mu)\Phi\right)^\dagger \left((g_2W^{a\,\mu}\frac{\sigma^a}{2}+g_1B^\mu)\Phi\right)\label{eq2-18}
+\end{align}
+という項が含まれている.
+これによりゲージ対称性は
+\begin{align}
+  SU(3)_c\times SU(2)_L\times U(1)_Y \rightarrow SU(3)_c\times U(1)_{em}
+\end{align}
+のように自発的に破れる.
+したがって, (\ref{eq2-18})から
+\begin{align}
+  \mathcal{L}_H \supset \frac{v^2}{8}\left[\left(g_2^2(W^1_\mu  W^{1\mu}+W^2_\mu  W^{2\mu}\right)+ (g_2W_\mu^3 -g_1B_\mu)(g_2W^{3\mu}-g_1 B^{\mu})\right] \label{2-21}
+\end{align}
+となる.
+ここで, ゲージ場$W_\mu^a$と$B_\mu$を次の様に再定義する.
+\begin{align}
+  W_\mu^\pm &= \frac{1}{\sqrt{2}}(W_\mu ^1 \mp i W_\mu^2)\\
+  \left(\begin{array}{c}
+      Z_\mu^0 \\
+      A_\mu
+      \end{array}\right)&=\frac{1}{\sqrt{g_1^2+g_2^2}}\left(\begin{array}{c}
+      g_2 W_\mu^3-g_1 B_\mu \\
+      g_1 W_\mu^3-g_2 B_\mu 
+    \end{array}\right)
+    \equiv \left(\begin{array}{cc}
+        \cos\theta_W W_\mu^3 - \sin\theta_W B_\mu \\
+        \sin\theta_W W_\mu^3 + \cos\theta_W B_\mu
+      \end{array}
+    \right)\label{eq2-22}
+\end{align}
+ただし, この混合角$\theta_W$は
+\begin{align}
+  \cos\theta_W = \frac{g_2}{\sqrt{g_1^2 + g_2^2}},\quad \sin\theta_W = \frac{g_1}{\sqrt{g_1^2 + g_2^2}}\nonumber
+\end{align}
+で定義され, ワインバーグ角と呼ばれる.
+実験によりこの値は$\sin^2\theta_W \simeq 0.23$となる.
+式(\ref{2-21})から$W^\pm$ボゾンと$Z^0$ボゾンの質量は
+\begin{align}
+  m_W^2 W_\mu^+W^{-\mu} + \frac{1}{2}\left(\begin{array}{cc}
+      A_\mu & Z_\mu
+    \end{array}\right) \left(\begin{array}{cc}
+      0 & 0 \\
+      0 & m_Z^2 
+      \end{array}\right)\left(\begin{array}{c}
+      A^\mu \\
+      Z^\mu
+  \end{array}\right)\label{eq2-23}
+\end{align}
+さらに,
+\begin{align}
+  m_W = \frac{1}{2}g_2v,\quad m_Z = \frac{1}{2}\sqrt{g_1^2+g_2^2}v\nonumber
+\end{align}
+となる.
+これらも質量は
+\begin{align}
+  m_W \simeq 80.4\,\mathrm{[GeV]},\qquad m_Z \simeq 91.2\,\mathrm{[GeV]} \nonumber
+\end{align}
+と観測されている.
+また, 式(\ref{eq2-22}), (\ref{eq2-23})に表れる$A_\mu$は質量がないことがわかり, $U(1)_{em}$ゲージ場の相互作用をする光子であることがわかる.
+
+ヒッグス場の真空期待値の値は, 4体フェルミ相互作用の観測によって, フェルミ結合定数$(G_F\simeq 1.166\times 10^{-5}\,\mathrm{[GeV]}^{-2})$から導かれた.
+場の理論の計算によれば
+\begin{align}
+  2\sqrt{2}G_F = \frac{g_2^2}{2m_W^2} = \frac{2}{v^2}\nonumber
+\end{align}
+と与えられるので, $v \simeq 246\,\mathrm{[GeV]}$と定めることができる.
+2012年に発見されたヒッグス粒子は$h(x)$であると考えられており, その質量は$m_H = \sqrt{2\lambda}v \simeq 125\,\mathrm{[GeV]}$と明らかになり, ヒッグス場の結合定数が$\lambda \simeq 0.13$と決まった.
+\section{フェルミオン質量の獲得}
+\section{走るゲージ結合定数}
+
+%EOF
+

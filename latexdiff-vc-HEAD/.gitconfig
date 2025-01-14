@@ -1,0 +1,2 @@
+[alias]
+	ldiff = !sh -c 'latexdiff-vc -e utf8 -t CFONT --git --flatten --force -d diff -r "${1:-HEAD}" main.tex && cd diff && latexmk' -

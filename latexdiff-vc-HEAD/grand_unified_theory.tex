@@ -1,0 +1,384 @@
+% ----------------------------------------
+% 
+%  Grand Unified Theory
+%  grand_unified_theory.tex
+%  Program modified by Yasutoki Takamura
+%  Last Modified Jan 14 2025
+%
+% ----------------------------------------
+%\section{大統一理論}
+大統一理論はH.GeorgiとS.L.Glashowにより1974年に提唱された\cite{PhysRevLett.32.438}.
+大統一理論では重力を除いた3つの相互作用を1つに統一することを目的としている.
+したがって, ゲージ対称性は単純群によって記述されると考えられており, 標準模型のゲージ群である$\mathcal{G}_\text{SM}= SU(3)_c\times SU(2)_L\times U(1)_Y$を部分群として内包する群を考える.
+このことから, 前節で述べられているような標準模型の問題点はいくつか解決されると考えられている.
+
+\textcolor{red}{要修正: どの点で何が解決できているのか}
+
+大統一理論にも様々な単純群を考えることが可能であり, $SU(5)$や$SO(10)$, $E_6$などの模型を考えることが可能であるが, このノートでは最小模型である$SU(5)$について取り扱い, 理論の拡張を試みる.
+
+はじめに, $SU(5)$大統一理論が最小模型である理由を考える.
+標準模型のゲージ対称性である$SU(3)_c\times SU(2)_L\times U(1)_Y$は, 群の階数が$\text{rank}=4$であり, これを内包できる群を考える必要がある.
+その中で考えられる単純群は, $\text{O}(8)$, $\mathrm{O}(9)$, $\mathrm{Sp}(8)$, $\mathrm{F}_4$, そして $\mathrm{SU}(5)$である.
+このうち, $SU(3)$のもつ3重項をもち, $SU(2)$がもつ2重項の複素表現をもつという性質は$SU(5)$群を用いて記述することができるため, 最小模型として$SU(5)$群を考えて理論を構築することが可能となる.
+
+\section{Georgi-Glashow モデル}
+ここから$SU(5)$群を考える.
+ゲージ群を決定すると, ラグランジアンに導入する場の既約表現を指定すれば理論を定めることができる.
+$SU(5)$の基本表現は$5$表現であり, $5$表現か, その複素表現である$\overline{5}$を用いることですべての表現を構成することができる.
+$SU(5)$群の階数は4であるから, 生成演算子を$L_i$$(i=1,\cdots,24)$ のうち対角化可能なものが4つ存在する.
+$SU(3)_c$の対角化可能な生成演算子を$\lambda_3,\lambda_8$, $\mathrm{SU}(2)$のものを$I_3$ (アイソスピン), $U(1)$の超電荷を$Y$に対応させて考えることができる.
+
+次にフェルミオンの次元を$\mathrm{SU}(3), \mathrm{SU}(2)$の表現次元, $U(1)$の超電荷$Y$で $(1, 2, -1)$のように表し, どのように$SU(5)$模型に当てはめられるか考える.
+\begin{center}
+\begin{tabular}{clc}
+             &                         & 多重度 \\
+  $(u, d)_L$ & $(3  , 2, \frac{1}{6})$ &      6 \\
+    $d_L^c $ & $(3^*, 1, \frac{1}{3})$ &      3 \\ 
+    $u_L^c $ & $(3^*, 1,-\frac{2}{3})$ &      3 \\ 
+$(\nu, e)_L$ & $(1  , 2,-\frac{1}{2})$ &      2 \\ 
+     $e_L^c$ & $(1  , 1,           1)$ &      1 \\ 
+   $\nu_L^c$ & $(1  , 1,           0)$ &      1 \\ 
+\end{tabular}
+\end{center}
+
+基本表現をこの中から選ぶことで
+\begin{align}
+  (q_L^c, \nu_L, e_L) = (3^*, 1, Y)\oplus\left(1,2,-\frac{1}{2}\right) = \overline{5}
+\end{align}
+と考えられる.
+ここではまだ$q$の正体が$u, d$クォークのどちらかは定かではないが, $\mathrm{SU}(5)$群のトレースは0でなければならないため, $Q$を電荷とすると上記の電荷は
+\begin{align}
+  \sum_{a=1}^5 Q_a = 3Q_{qc}+Q_\nu + Q_e\nonumber\\
+  \therefore\quad Q_q = -Q_{qc} = -\frac{1}{3}\label{quantum_Q}
+\end{align}
+となる.
+したがって, $q=d$と選択することにより, 次のように$\bm{5}$表現を決めることができる.
+\begin{align}
+ \bar{\bm{5}}=\begin{pmatrix}
+    d_1 ^c \\
+    d_2 ^c \\
+    d_3 ^c \\
+    l      \\
+    -\nu_l
+  \end{pmatrix}=\left({3}^*,1,\frac{1}{3}\right)\oplus \left(1,2,-\frac{1}{2}\right)\label{GUT-5rep}
+\end{align}
+これによりクォークの電荷が荷電レプトンの$\frac{1}{3}$の整数倍となっていることが説明できる.
+残りのフェルミオンを次元の大きい表現に当てはめることを考える.
+基本表現よりも大きな表現は, すべて基本表現の積で表すことができる.
+${\bm{10}}$表現は
+\begin{align}
+  \bm{5}\otimes\bm{5} = \bm{15}\oplus\bm{10}\nonumber
+\end{align}
+として構成することができる.
+この$\bf{10}$表現は$\bm{10}\rightarrow (3^*,1,-\frac{2}{3})\oplus(3,2,\frac{1}{6})\oplus(1,1,1)$
+と分解できるので, 次のように当てはめることができる.
+\begin{align}
+  \overline{\bm{10}}= \frac{1}{\sqrt{2}}\begin{pmatrix}
+         0 &  u_3^c & -u_2^c & u_1 & d_1 \\
+    -u_3^c &      0 &  u_1^c & u_2 & d_2 \\
+     u_2^c & -u_1^c &      0 & u_3 & d_3 \\
+    -u_1   &   -u_2 &   -u_3 &   0 & e^c \\
+      -d_1 &   -d_2 &   -d_3 &-e^c &   0 \\
+    \end{pmatrix}\label{GUT-10rep}
+% Note
+% 10表現であれば内部に規格化定数を入れる場合があるがここで必要ではないのか確認しなければならない.
+% Dec 10: up quark massを出す際に規格化されている必要があるので, この規格化定数は必要.
+\end{align}
+ただし, $x^c$は$x$を同じカイラリティで荷電共役したものを表している.
+この$x$の例として, 左巻きの電子$e^-_L$を考える.
+$e^-_L$に対して荷電共役変換を行った$(e^-_L)^c$を考える.
+これは右巻きの電子$e_R^-$となるが, 左巻きの陽電子である$e_L^+$と同じである.
+\subsection{ゲージ粒子の表現}
+ゲージ粒子を$SU(5)$大統一理論で考えるために, 群の生成子について考える.
+一般に$SU(n)$ゲージ群の変換は, 
+\begin{align}
+  U =\exp\left(-i \sum_{i=1}^{n^2-1}\beta_i L_i\right)=\exp(-\bm{\beta}\cdot \bm{L})
+\end{align}
+で表される.
+ここで, $L_i$は群の生成子であり, エルミート性があり, トレースレス($\mathrm{tr} L_i =0$)である.
+これにより$U$はユニタリーであり, $\mathrm{det}U =1$を満たす.
+$L_i$は
+\begin{align}
+  \mathrm{tr}(L_iL_j) = \frac{1}{2}{\delta_{ij}}
+\end{align}
+と規格化する.
+ここで, 表現行列を昇降演算子との類推で今後のために
+\begin{align}
+  (L^a_b)^c_d \equiv \delta^c_b\delta^a_d -\frac{1}{n}\delta^a_b\delta^c_d,\quad ((L^a_b)^\dagger=L^b_a)
+\end{align}
+と定義する.
+交換関係は
+\begin{align}
+  [L^a_b,L^c_d] = \delta^a_bL^c_b - \delta^c_bL^a_d
+\end{align}
+を満たす.
+これまで$n$表現について考えたが, 共役な表現$\bar{n}$を考えた場合,
+\begin{align}
+  L^a_b(\bar{n}) = -L^{aT}_b = -L^b_a
+\end{align}
+を満たす.
+
+ここから具体的にゲージ場について考える.
+$SU(n)$ゲージ理論では, $n^2-1$個のゲージ場が存在する.
+これらは随伴表現で表される.
+$SU(5)$群の生成演算子をこれまでのように$[L_i]^a_b\,(i=1,\cdots,24, a,b=1,\cdots,5)$として構成する.
+基本表現である$5$表現の類推からは$a,b=1,2,3$はカラー量子数, $a,b=4,5$がアイソスピン量子数と考えられる.
+そのため$i=1,\cdots,8$を$SU(3)$部分, $i=9,10,11$を$SU(2)$の部分群として考えると
+\begin{align}
+  L_i(i=1,\cdots,8) = \left(\begin{array}{@{}c|c@{}}
+      \mbox{$\frac{1}{2}\lambda_i$} &
+      \begin{matrix}
+        0 & 0 \\
+        0 & 0 \\
+        0 & 0 
+      \end{matrix}\\
+      \hline
+      \begin{matrix}
+        0 & 0 & 0\\
+        0 & 0 & 0
+      \end{matrix} &{\large{\mbox{$0$}}}
+  \end{array}\right),\quad
+  L_i(i=9,10,11) = \left(\begin{array}{@{}c|c@{}}
+      \mbox{\Large 0} &
+      \begin{matrix}
+        0 & 0 \\
+        0 & 0 \\
+        0 & 0 
+      \end{matrix}\\
+      \hline
+      \begin{matrix}
+        0 & 0 & 0\\
+        0 & 0 & 0
+      \end{matrix} & {\mbox{$\frac{1}{2}\sigma_j$}}
+  \end{array}\right)
+\end{align}
+ただし, $\sigma_{j=i-8}\,(j=1,2,3)$である.
+
+対角行列は$L_3, L_8, L_{11}$と$L_{12}=\frac{1}{2\sqrt{15}}\mathrm{diag}(-2,-2,-2,3,3)$である.
+24個のゲージボゾンは随伴表現として存在し, 次のように分解できる.
+\begin{align}
+  \bm{24} = G(8,1,0)\oplus W(1,3,0)\oplus B(1,1,0)\oplus \bar{X}(3,\bar{2},-\frac{5}{6})\oplus X(\bar{3},2,+\frac{5}{6})
+\end{align}
+ゲージボゾンを$V_\mu$とすると,
+\begin{align}
+  \frac{1}{\sqrt{2}}V_\mu &= \sum_{i=1}^{24}\frac{1}{2}V_\mu^i L_i\\
+  V_\mu &= \left(\begin{array}{ccccc}
+    G^1_1 - \frac{2B}{\sqrt{30}} & G^1_2 & G^1_3 & \bar{X_1} & \bar{Y_1} \\
+    G^2_1 & G^2_2 - \frac{2B}{\sqrt{30}} & G^2_3 & \bar{X_2} & \bar{Y_2} \\
+    G^3_1 & G^3_2 & G^3_3 - \frac{2B}{\sqrt{30}} & \bar{X_3} & \bar{Y_3} \\
+    X_1   & X_2 & X_3 & \frac{W^3}{\sqrt{2}} + \frac{3B}{\sqrt{30}} & W^+ \\
+    Y_1   & Y_2 & Y_3 & W^- &    -\frac{W^3}{\sqrt{2}} + \frac{3B}{\sqrt{30}} 
+      \end{array}
+  \right)
+\end{align}
+ただし, $SU(3)$ゲージ場の部分は$G^i\,(i=1,\cdots,8)$をグルーオン場として
+\begin{align}
+  G^1_2 = G^1,\quad G^2_1 = G^2,\quad G^3_1 = G^5,\quad G^2_3 = G^6,\quad G^3_2 = G_7\nonumber\\
+  G^1_1 = \frac{G^3}{\sqrt{2}} + \frac{G^8}{\sqrt{6}},\quad G^2_2=-\frac{G^3}{\sqrt{2}}+\frac{G^8}{\sqrt{6}},\quad G^3_3 = -\frac{2G^8}{\sqrt{6}}\nonumber
+\end{align}
+であり, $SU(2)$ゲージ場は
+\begin{align}
+  W^\pm = \frac{W^1\mp iW^2}{\sqrt{2}}\nonumber
+\end{align}
+である.
+ここで, $SU(5)$ゲージ粒子として新しく$X, Y$ボゾンが導入される.
+これらは
+\begin{align}
+  X, Y = \left(\bar{3},2, \frac{5}{3}\right)\label{XY_bosons}
+\end{align}
+という量子数をもつ.
+
+ここまででゲージ場を導入できたので, $SU(5)$ゲージ群のラグランジアンを書くことができる.
+はじめに共変微分を考える.
+$n$表現, $\bar{n}$表現の共変微分は
+\begin{align}
+  (D_\mu \psi)^a = \left[\partial_\mu \delta^a_b - \frac{ig}{\sqrt{2}}(V_\mu)^a_b\right]\psi^b\nonumber\\
+  (D_\mu \chi)_a = \left[\partial_\mu \delta^b_a + \frac{ig}{\sqrt{2}}(V_\mu)^b_a\right]\chi^b\nonumber
+\end{align}
+と表せる.
+また, $\frac{n(n-1)}{2}$表現の場合
+\begin{align}
+  (D_\mu \psi)^{ab} = \partial_\mu \psi^{ab} - \frac{ig}{\sqrt{2}}(V_\mu)^a_c\psi^{cb}- \frac{ig}{\sqrt{2}}(V_\mu)^b_d\psi^{ad}\nonumber
+\end{align}
+となる.
+場の強さを
+\begin{align}
+  (F_{\mu\nu})^a_b = \partial_\mu(A_\nu)^a_b -\frac{ig}{\sqrt{2}}(A_\mu)^a_c (A_\nu)^c_b - (\mu\leftrightarrow\nu)
+\end{align}
+とすると, ゲージ場の運動項は
+\begin{align}
+  \mathcal{L}_K = -\frac{1}{4}\mathrm{Tr}(F^{\mu\nu}F_{\mu\nu})=-\frac{1}{4}(F^{\mu\nu})^a_b(F_{\mu\nu})
+\end{align}
+となる.
+また$\psi_{\bar{5}}$について
+\begin{align}
+  \mathcal{L}_{5K} &= i\overline{\psi_{\bar{5}}}\gamma^\mu D_\mu\psi_{\bar{5}}\nonumber\\
+                   &= i\overline{\psi_{\bar{5}}}_a\gamma^\mu \left(\delta^a_b \partial_\mu + \frac{ig}{\sqrt{2}}(V_\mu)^a_b\right)\psi_{\bar{5}}^b\nonumber
+\end{align}
+さらに$\psi_{10}$について
+\begin{align}
+  \mathcal{L}_{10K} &= i\overline{\psi_{10}}_{ab}\gamma^\mu \left(D_\mu\psi_{10}\right)^{ab}\nonumber\\
+                    &= i\overline{\psi_{10}}_{ab}\gamma^\mu \left(\delta^a_c \partial_\mu + \frac{2ig}{\sqrt{2}}(V_\mu)^a_c\right)\psi_{10}^{cb}\nonumber
+\end{align}
+となる.
+
+\subsection{対称性の破れ}
+$SU(5)$模型は$X, Y$ゲージボゾンの存在を予言する.
+これらの粒子はクォークととレプトンの相互作用を引き起こすため, 陽子崩壊が起こる.
+陽子は標準模型では安定である.
+現在の実験データと矛盾させないためには大統一スケールが十分大きくなければならない.\footnote{これについては次の小区分で詳細を述べる.}
+したがって, 大統一スケールで対称性が
+\begin{align}
+  SU(5)\rightarrow SU(3)_c\times SU(2)_L\times U(1)_Y\label{SU5GSM}
+\end{align}
+と自発的に破れると考えられている.
+標準模型ではゲージボゾンは12個存在していた.
+$SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現れない残りの12個の粒子が質量をもつ必要がある.
+そのため少なくとも12個の南部・ゴールドストンボゾンが存在しなければならない.
+また, 自発的対称性の破れは, 式(\ref{SU5GSM})のようにゲージ群を単純群から直積の群へ破るものである.
+このときに群のランクを保存するものでなければならない.
+したがって, そのような対称性の破れを行うものは随伴表現である.
+最小模型では$24$表現ヒッグス$\phi_{\bm{24}}$を用いる.
+ゲージ粒子と同じように, 
+\begin{align}
+  (\phi_{\bm{24}})_a^b \equiv \sum_{i=1}^{24}\frac{1}{\sqrt{2}}\phi_{\bm{24}}^i L_i
+\end{align}
+となる.
+ゲージ場との結合は
+\begin{align}
+\mathcal{L}_K = \frac{1}{2}\sum_{i=1}^{24}[D_\mu\phi_{\bm{24}}]^\dagger [D^\mu\phi_{\bm{24}}]\nonumber
+\end{align}
+となる.
+共変微分を具体的に求める.
+24表現は$\bm{24}\oplus \bm{1} = \bm{5}\otimes \bar{\bm{5}}$であるため,
+\begin{align}
+  \phi_{\bm{24}b}^{\,\,a} = \psi_{\bm{5}}^a \psi_{\bm{\bar{5}}b} -\frac{1}{5}\delta^a_b \psi^c_{\bm{5}}\psi_{\bm{\bar{5}}c}
+\end{align}
+と構成されている.
+それぞれの表現の変換は
+\begin{align}
+  \psi_{\bm{5}}^a \rightarrow \psi^a_{\bm{5}}+\delta \psi_{\bm{5}}^a = \psi_{\bm{5}}^a -i\frac{g}{2}\varepsilon^i L^a_{ic}\psi_{\bm{5}}^c \nonumber\\
+  \psi_{\bm{\bar{5}}a} \rightarrow \psi_{\bm{\bar{5}}a}+\delta \psi_{\bm{5}}^a = \psi_{\bm{5}}^a +i\frac{g}{2}\varepsilon^i L^c_{ia}\psi_{\bm{5}c}\nonumber
+\end{align}
+となるから, $\phi_{\bm{24}}$は
+\begin{align}
+  \phi_{\bm{24}b}^a \rightarrow \phi_{\bm{24}b}^a -i\frac{g}{2}[L_i,\phi_{\bm{24}}]^a_b
+\end{align}
+と変換を受ける.
+したがって共変微分は
+\begin{align}
+  (D_\mu\phi_{\bm{24}})^a_b = \partial_\mu \phi_{\bm{24}a}^{\,\,b}  -\frac{ig}{\sqrt{2}}[V_\mu, \phi_{\bm{24}}]^b_{a}
+\end{align}
+となる.
+ヒッグスの運動項は
+\begin{align}
+  \mathcal{L}_K = \mathrm{Tr}[(D_\mu \phi_{\bm{24}})^\dagger (D^\mu \phi_{\bm{24}})]
+\end{align}
+とまとめることができる.
+ゲージボゾンの質量は24表現ヒッグスの真空期待値を$\Sigma = \langle 0|\phi_{\bm{24}}| 0\rangle$としたとき
+\begin{align}
+  \mathcal{L}_M &= \mathrm{Tr}[(D_\mu \phi_{\bm{24}})^\dagger (D^\mu \phi_{\bm{24}})]|_{\phi_{\bm{24}}=\Sigma}\nonumber\\
+                &= \frac{g^2}{2}\mathrm{Tr}\left([V_\mu, \Sigma]^\dagger [V^\mu,\Sigma]\right) = m_{ij}^2 V_\mu^{i\dagger}V^{\mu j}
+\end{align}
+これによりポテンシャルは
+\begin{align}
+  V(\phi_{\bm{24}})) = -\frac{\mu^2}{2}\mathrm{Tr}(\phi_{\bm{24}}^2) +\frac{1}{4}a(\mathrm{Tr}(\phi_{\bm{24}}^2))^2 + \frac{1}{2}b\mathrm{Tr}(\phi_{\bm{24}}^4) + \frac{1}{3}c\mathrm{Tr}\phi_{\bm{24}}^3\nonumber
+\end{align}
+となる.
+% NOTE: 下の文章は一般的な対称性の破れで考えられているものだが, 既に具体的なので省いた.
+% これは$\phi_{\bm{24}}\rightarrow U\phi_{\bm{24}} U^\dagger$と変換する.
+簡単のために$\mathbb{Z}_2$対称性を課すと, $c=0$となる.
+真空期待値は次のようなとり方が考えられる.
+\begin{align}
+  \Sigma &= v\,\mathrm{diag}(1,1,1,1,-4),\quad(b<0)\label{vev1}\\
+  \Sigma &= v\,\mathrm{diag}\left(1,1,1,-\frac{3}{2},-\frac{3}{2}\right),\quad(b>0)\label{vev2}
+\end{align}
+式(\ref{vev1})の場合, ゲージ対称性は$SU(4)\times U(1)$に破れ, 式(\ref{vev2})の場合は$SU(3)_c\times SU(2)_L\times U(1)_Y$に破れる.
+したがって, 後者の場合を考える.
+この場合のポテンシャルの最小値は$b>0,\, a>-{7b}/{15}$の条件のもとで
+\begin{align}
+  \left.\frac{\partial V(\phi_{\bm{24}})}{\partial \phi_{\bm{24}}} \right|_{\phi_{\bm{24}}=\Sigma} = 0
+\end{align}
+より求められ, 
+\begin{align}
+  v^2 = \frac{2\mu^2}{15a+7b}\nonumber
+\end{align}
+となる.
+ゲージボゾンの質量は24表現ヒッグスに真空期待値をもたせると
+\begin{align}
+  [V_\mu, \Sigma] \sim \left(\begin{array}{@{}c|c@{}}
+      {\Large{\mbox{$0$}}} &
+      \begin{matrix}
+        -\frac{5}{2}\bar{X_1} & -\frac{5}{2}\bar{Y_1} &   \\
+        -\frac{5}{2}\bar{X_2} & -\frac{5}{2}\bar{Y_2} &   \\
+        -\frac{5}{2}\bar{X_3} & -\frac{5}{2}\bar{Y_3} &   \\
+      \end{matrix} \\
+      \hline
+      \begin{matrix}
+        \frac{5}{2}X_1 & \frac{5}{2}X_2 & \frac{5}{2}X_3 \\
+        \frac{5}{2}Y_1 & \frac{5}{2}Y_2 & \frac{5}{2}Y_3 \\
+      \end{matrix} & {\large{\mbox{$0$}}}
+  \end{array}\right)
+\end{align}  
+となる.
+これにより$X, Y$ボゾンの質量は
+\begin{align}
+  m_X^2 = m_Y^2 = \frac{25}{8}g^2v^2
+\end{align}
+となる.
+
+標準模型で表れるヒッグス粒子$\Psi$は5表現に属する.
+\begin{align}
+  \phi_{\bm{5}} = \left(
+  \begin{array}{c}
+      t^1 \\
+      t^2 \\
+      3^3 \\
+      \phi^+ \\
+      -\phi^0
+  \end{array}\right) =\left(\bm{3}, 1,-\frac{1}{3}\right)\oplus\left(1,\bm{2},\frac{1}{2}\right)
+\end{align}
+真空期待値は
+\begin{align}
+  \langle\phi_{\bm{5}}\rangle = \frac{1}{\sqrt{2}}\left(
+  \begin{array}{c}
+      0 \\
+      0 \\
+      0 \\
+      0 \\
+      v_0
+  \end{array}\right),\quad(v_0\sim 246\,[\mathrm{GeV}])
+\end{align}
+のようにして, 標準模型と同じ値を取る.
+もし24表現ヒッグスと5表現ヒッグスに交わりがない場合, ポテンシャルは
+\begin{align}
+  V(\phi_{\bm{5}}) = -\frac{{\mu_5}^2}{2}\phi_{\bm{5}}^\dagger \phi_{\bm{5}} + \frac{\lambda}{4}(\phi_{\bm{5}}^\dagger \phi_{\bm{5}})^2
+\end{align}
+である.\footnote{第2章のポテンシャルの規格化とは異なる}
+%NOTE: Notationが微妙にちがう. BEGNに合わせると \frac{\mu^2}{2}になるので注意.
+このとき, $v_0^2 =\frac{2\mu_5^2}{\lambda}$となり, 標準模型に表れるゲージボゾンは
+\begin{align}
+  m_W^2 = \frac{g^2 v_0^2}{4}
+\end{align}
+と質量を持つことになる.
+\textcolor{red}{検討中(20250113): ヒッグスのDTsplitting問題をここに入れる?}
+\subsection{フェルミオン質量}
+
+\subsection{SU(5)大統一理論の予言}
+$SU(5)$大統一理論では, 素粒子標準模型粒子を$SU(5)$群の$\bar{\bm{5}}$表現や$\bm{10}$表現に当てはめた.
+これにより素粒子標準模型には存在しない現象が予言される.
+\subsubsection{陽子崩壊}
+$SU(5)$大統一理論では式(\ref{XY_bosons})で見たように, 新たに$X, Y$ゲージボゾンの存在が予言される.
+\subsubsection{電荷の量子化}
+式(\ref{quantum_Q})で述べているが, 標準模型では予言されない電荷の量子化が行える.
+これは$SU(5)$大統一理論がクォーク, レプトンを $SU(5)$の単純群で記述し, $\bar{\bm{5}}$表現に当てはめることで
+\begin{align}
+  \mathrm{Tr}(d^c_1, d^c_2, d^c_3, e^+, -\nu)=0 \nonumber
+\end{align}
+と電荷に制限を与えたためである.
+\subsubsection{ワインバーグ角の予言}
+
+\subsection{破綻}
+
+
+%EOF

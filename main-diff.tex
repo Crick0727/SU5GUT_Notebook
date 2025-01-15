@@ -1,0 +1,1225 @@
+% ------------------------------------------------------------------
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL /tmp/ebhejHIhye/latexdiff-vc-/main.tex   Tue Jan 14 20:55:16 2025
+%DIF ADD main.tex                                 Sun Jan 12 21:46:58 2025
+%   The basic memos for the standard model of particle physics
+%   and SU(5) Grand Unified Theory 
+%
+%   Last Modified: Dec 19 2024
+%   Author: Yasutoki Takamura
+%   Kanazawa University / Institute of theoretical particle physics
+% ------------------------------------------------------------------
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx,a4paper,titlepage]{jsbook}
+
+
+% ----- preambles ------------------
+\usepackage{geometry}
+\usepackage{bm}
+\usepackage{here}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{ascmac}
+\usepackage{color}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[compat=1.1.0]{tikz-feynhand}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper} %
+\hypersetup{%
+  setpagesize=true, %
+%  bookmarks=true, %
+%  bookmarksdepth=tocdepth, %
+  bookmarksnumbered=true, %
+  colorlinks=true, %
+  pdftitle={}, %
+  pdfauthor={}, %
+  pdfkeywords={}
+}
+% ----------------------------------
+
+
+% ----- Settings for amsthm -----
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem*{thm*}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{dfn}{Definition}
+% -------------------------------
+
+
+% ----- Geometry setting ---------------------------
+\geometry{left=25mm,right=25mm,top=30mm,bottom=30mm}
+% ---------------------------------------------------
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}} %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF AMSMATHULEM PREAMBLE %DIF PREAMBLE
+\makeatletter %DIF PREAMBLE
+\let\sout@orig\sout %DIF PREAMBLE
+\renewcommand{\sout}[1]{\ifmmode\text{\sout@orig{\ensuremath{#1}}}\else\sout@orig{#1}\fi} %DIF PREAMBLE
+\makeatother %DIF PREAMBLE
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+\lstset{extendedchars=\true,inputencoding=utf8}
+
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+
+% ----- Title Page ---------------------------
+\title{大統一模型模型研究ノート}
+\author{金沢大学大学院\,\,自然科学研究科数物科学専攻\,(物理学コース)修士課程2年\\学籍番号\,2315011026$\quad$名列番号216\\高村 泰時} 
+\date{\today}
+\maketitle
+% ---------------------------------------------------
+
+
+% ----- Contents page -------------------------------
+\tableofcontents
+\clearpage
+% ---------------------------------------------------
+
+
+% ----- Abstract ------------------------------------
+\begin{abstract}
+  これは$SU(5)$大統一理論の研究のノートです.
+  勉強のためにまとめた部分が第1部, 実際に論文として挙げられているものに対する議論は第2部にまとめています.
+  勉強したものであっても一度まとめておかないと, 後々忘れてしまうものですので冗長にまとめている部分もあります.
+  全部分のNotationはまだまとめていません.
+\end{abstract}
+% ---------------------------------------------------
+
+
+% ----- Main Contents -----
+% ----- 1st part -----
+\part{教科書の部分}
+
+\chapter{記法}
+$B$3$NK\$GMQ$$$k5-K!$K$D$$$F$O<!$N$b$N$K$7$?$,$&(B.
+$B?o;~99?7$9$k$3$H(B.
+
+
+\chapter{素粒子標準模型}
+% ---------------------------------------
+%
+%  Standard model
+%  Standard_Model.tex
+%  Program modified by Yasutoki Takamura
+%  Last Modified Jan 13 2025
+%
+% ---------------------------------------
+この章では素粒子物理学における標準模型についてまとめた.
+素粒子標準模型は現在の高エネルギー実験をほぼ説明することができるものであるが, 標準模型だけでは説明できない事実が存在する.
+大統一理論はそれらを解決するための理論の一つであるが, そもそも標準模型がどのような理論であるのかをここで振り返る.
+\section{概観}
+素粒子標準模型は量子場の理論により記述される.
+素粒子の相互作用はYang-Millsによる理論によって, 数学的にリー群に属する局所非可換ゲージ変換のもとで不変になるようにラグランジアン密度を記述することができる.
+具体的には, 次のようなゲージ対称性を持つ理論である.
+\begin{align}
+  \mathcal{G}_{\text{SM}}=\mathrm{SU}(3)_\mathrm{c}\times \mathrm{SU}_\mathrm{L}(2)\times \mathrm{U}(1)_\mathrm{Y}\label{SM-Gauge}
+\end{align}
+それぞれゲージ群の添字は量子数に対応している.
+``C''はカラー量子数, ``L''は左巻きのカイラリティ, ``Y''は超電荷である.
+$\mathrm{SU}(3)_c$群は核子に作用する強い相互作用を記述する群であり, 量子色力学(QCD)によって記述される.
+一方で$\mathrm{SU}(2)_L\times \mathrm{U}(1)_Y$は弱い相互作用と電磁相互作用を統一的に記述する電弱理論を記述する群である.
+
+ゲージ対称性の他に, 理論に現れる粒子がどのようなものであるのか, 標準模型のゲージ対称性の中でどのような対称性を持つ粒子であるのかを決めることにより, 理論を具体的に決定することができる.
+他にも, ラグランジアン密度に含める項は, 繰り込み可能であり, ローレンツ対称性を満足するものを決めることで全て書き下すことができる.
+ここからは標準模型に現れる粒子と, その対称性について考える.
+\section{ローレンツ代数とスピノール表現}
+物質場の基本的な構成をするために, スピノール場を定義する.
+スピノール場はローレンツ群$SL(2,\mathbb{C})$の変換をうける.
+
+はじめに, ローレンツ群の表現行列は
+\begin{eqnarray}
+  D(\Lambda) = \exp\left(-\frac{i}{2\hbar}\omega^{\alpha\beta}S_{\alpha\beta}\right)
+\end{eqnarray}
+と表される.
+$\omega_{\alpha\beta}$は
+に対して, 基本表現は
+\begin{eqnarray}
+  \psi_\alpha' = U_\alpha^\beta \psi_\beta\label{spi_1}
+\end{eqnarray}
+
+\section{ゲージ粒子}
+量子場の理論は量子力学と特殊相対論を組み合わせたものである.
+素粒子の反応を記述することは量子場の理論のみではできないが, ゲージ対称性を理論に課すことにより相互作用を記述することができる.
+物質粒子どうしの相互作用を媒介する粒子はゲージ粒子と呼ばれ, スピン$1$のボーズ粒子である.
+素粒子標準模型では強い相互作用を媒介するグルーオン($g$), 弱い相互作用を媒介する($W, Z$)ボゾン, 電磁相互作用を記述する光子($\gamma$)がある.
+これらはゲージ原理によって理論のラグランジアンに含まれることになる.
+\subsection{ゲージ原理}
+ゲージ原理とは, 局所変換と呼ばれる時空の各点で独立なゲージ変換を行ったとしても, 物理法則が不変でなければならない主導原理である.
+
+ゲージ粒子は, このゲージ原理によって理論に導入することができる.
+先に述べたが, 量子場の理論にゲージ対称性を課すことで相互作用を記述することができる.
+この対称性は数学的にリー群によって記述される.
+ゲージ原理の一般的な説明のために, 以下では物質場$\Psi(x)$がリー群$G$に属し, $r$重項を成しているとする.
+
+リー群の要素は一般的に$\exp\left(i\sum_{a=1}^n \theta^a T^a\right)$と書かれる.
+$\theta^a$は実定数であり, $n=\mathrm{dim}(G)$はリー群の次元である.
+ここで, $T^a$はリー群の生成子であり, 交換関係
+\begin{align}
+  [T^a, T^b] = if_{abc}T^c \label{gauge-1}
+\end{align}
+を満たす.
+ここで$f^{abc}$はリー群の構造定数である.
+
+ここで, ゲージ原理を用いてリー群の対称性によって局所変換のもとで不変な理論を考える.
+物質場$\Psi(x)$の局所変換を次のように考える.
+\begin{align}
+  \Psi(x)\quad\rightarrow\quad\Psi(x)' = \exp\left(i\theta^a(x)T^a(\bm{r})\right)\Psi(x) \equiv U(x)\Psi(x) \label{gauge-2}
+\end{align}
+このとき, $\theta^a(x)$は積分可能な実関数, $T^a(\bm{r})$は$\bm{r}$次元のリー群の表現行列である.
+非可換ゲージ場$A^a_\mu(x)$と共変微分$D_\mu\equiv\partial_\mu+ig A^a_\mu(x)T^a(x)$を導入する
+ここで定数$g$はゲージ結合定数である.
+この共変微分を導入したことによりゲージ場と物質場の相互作用を記述している.
+
+物質場の共変性からゲージ場の変換を考えることができる.
+物質場の共変性は, 局所変換の変換性のもとで
+\begin{align}
+  D_\mu\Psi(x) \rightarrow D'_\mu \Psi'(x) = U(x) D_\mu \Psi(x)\label{gauge-3}
+\end{align}
+と変換することである.
+このことから, ゲージ場の変換は
+\begin{align}
+   A_\mu^a(x) T^a(\bm{r}) &\rightarrow A_\mu'^a(x) T^a(\bm{r})\nonumber\\
+                          & U(x)A_\mu^a T^a(\bm{r}) U^{-1}(x) -\frac{i}{g}U(x)\partial_\mu U^{-1}(x) \label{gauge-4}
+\end{align}
+となる.
+ここからゲージ場の強さを定義することができる.
+共変微分の交換関係は$[D_\mu,D_\nu] = igF_{\mu\nu}^a(x)T^a(\bm{r})$であり, この$F_{\mu\nu}^a$は
+\begin{align}
+  F_{\mu\nu}^a(x) = \partial_\mu A_\nu^a(x) - \partial_\nu A_\mu^a(x) - gf^{abc}A_\mu^b(x)A_\nu^c(x)\label{gauge-5}
+\end{align}
+と表され, 場の強さテンソルとして定義される物理量となる.
+ここで用いた場の強さテンソル$F_{\mu\nu}^a$は理論のゲージ対称性によりそれぞれ異なる.
+非可換ゲージ場のローレンツ不変性とゲージ不変性を要求すると, 運動項は
+\begin{align}
+  F_{\mu\nu}^a = -\frac{1}{4}F_{\mu\nu}^a F^{a\,\mu\nu}\label{gauge-6}
+\end{align}
+となる.
+ここでは一般的なリー群に基づいたゲージ変換を考えたが, $SU(2), SU(3)$群を考えることで弱い相互作用と強い相互作用を記述することができる.
+また, ここで述べたものは非可換ゲージ理論であるが, 電磁相互作用を記述する$U(1)$対称性はこれらの記述を可換なものとして扱えば良い.
+その場合, 式(\ref{gauge-5})の第3項は存在しない.
+\subsection{ゲージ粒子のラグランジアン}
+これまで述べたことを踏まえて, $B_{\mu\nu}$を電磁相互作用を記述する$U(1)$ゲージ場, $W_{\mu\nu}^i\,(i=1,2,3)$を弱い相互作用を記述する$SU(2)$ゲージ場, $G_{\mu\nu}^a\,(a=1,\cdots,8)$を強い相互作用を記述する$SU(3)$ゲージ場とすると, 素粒子標準模型に現れる場の強さテンソルは式(\ref{gauge-5})より次のように表される.
+\begin{align}
+  B_{\mu\nu} &= \partial_\mu B_\nu - \partial_\nu B_\mu \label{gauge.B}\\
+  W_{\mu\nu}^i &= \partial_\mu W_\nu^i - \partial_\nu W_\mu^i+g_2\varepsilon^{ijk}W_\mu^j W_\nu^k \label{gauge.W}\\
+  G_{\mu\nu}^a &= \partial_\mu G_\nu^a - \partial_\nu G_\mu^a +g_3 f^{abc}G_\mu^b G_\mu^c\label{gauge.G}
+\end{align}
+ここでは, $g_2, g_3$はそれぞれ$\mathrm{SU}(3)_\mathrm{c}$, $\mathrm{SU}(2)_\mathrm{L}$ゲージ群の結合定数ある.
+$f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
+また, 標準模型のゲージ場の運動項は式(\ref{gauge-6})より
+\begin{align}
+  \mathcal{L}_{\text{gauge}} = -\frac{1}{4}B_{\mu\nu} B^{\mu\nu} - \frac{1}{4}W_{\mu\nu}^i W^{i\mu\nu} -\frac{1}{4}G_{\mu\nu}^i G^{i\mu\nu}\label{gauge.kin}
+\end{align}
+と表せる.
+\section{フェルミオン}
+標準模型粒子ではクォーク, レプトンは物質粒子という枠組みで説明され, スピンが$\frac{1}{2}$のフェルミ粒子である.
+
+標準模型では物質粒子は世代と呼ばれる構造をもつ.
+現在の標準模型は3世代模型として考えられており, 弱い相互作用でのCP対称性の破れに重要な役割を果たす.[]
+
+物質粒子はカイラリティと呼ばれる右巻き粒子と左巻き粒子の状態によって区別される.
+\textcolor{red}{カイラリティの説明をするべきか?}
+\section{ヒッグス機構}
+標準模型はゲージ対称性により記述される理論で大きな成功をおさめた.
+ところが, この対称性が破れない場合, 次のような問題が残る.
+\begin{itemize}
+  \item 短距離力である弱い相互作用を記述するゲージボゾンは質量を持つ必要がある. ところがゲージボゾンが局所対称性を維持してしまうと, 質量を持つ項を書くことができない.
+  \item クォークやレプトンの質量項を考えると, 右巻きフェルミオンは$SU(2)_L$一重項に属するため, ゲージ不変な質量項を書くことが許されない.
+\end{itemize}
+これらの問題を解決するためにはゲージ対称性を自発的に破る必要がある.
+
+素粒子標準模型において, ヒッグス場は$SU(2)_L$の複素二重項として次のように書く.
+\begin{align}
+  \Phi(x) = \left(
+  \begin{array}{c}
+    \phi^+ \\
+    \phi^0
+  \end{array}
+  \right)
+\end{align}
+ヒッグス場のラグランジアン密度は
+\begin{align}
+  \mathcal{L}_H = \left(D_\mu \Phi\right)^\dagger (D^\mu \Phi) -V(\Phi) \label{L_H}
+\end{align}
+となる.
+第2項はヒッグス場のスカラーポテンシャルであり,
+\begin{align}
+  V(\Phi) = -\mu^2 (\Phi^\dagger\Phi)+ {\lambda}(\Phi^\dagger \Phi)^2,\quad(\mu^2, \lambda>0)\label{V_H}
+\end{align}
+である.
+ヒッグス場のポテンシャルは
+\begin{align}
+  (\Phi^\dagger \Phi) = \frac{\mu^2}{2\lambda}\nonumber
+\end{align}
+のときに最小の値をとる.
+真空期待値は一般的に
+\begin{align}
+  \langle 0 |\Phi |0\rangle = \frac{1}{\sqrt{2}}\left(\begin{array}{c}
+      0 \\
+      v
+      \end{array}\right)
+\end{align}
+のように取ることができるので, 真空期待値は
+\begin{align}
+  v^2 = \frac{\mu^2}{\lambda}\nonumber
+\end{align}
+となる.
+
+ヒッグス場を真空期待値の周りで次のように展開する
+\begin{align}
+  \Phi(x) = \exp\left(i\frac{\pi(x)}{v}\right)\left(
+  \begin{array}{c}
+    0 \\
+    \cfrac{1}{\sqrt{2}}\left(v + h(x)\right)
+  \end{array}
+\right),\quad \left(\pi(x) = \sum_{a=1}^3\pi^a(x)\frac{\sigma^a}{2}\right)\label{higgs}
+\end{align}
+ただし, $\pi(x)$は南部・ゴールドストンボゾンであり, ユニタリーゲージを取るとゲージ変換で取り除くことができる非物理的自由度である.
+一方で, $h(x)$が実ヒッグス粒子として考えられる.
+$\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに吸収され, 1つが$Z^0$ボゾンに吸収されることで, それぞれのゲージボゾンが質量を獲得する.
+
+ここから, ゲージ粒子の質量の獲得について考える.
+ヒッグス場のラグランジアン密度は式(\ref{L_H})で与えられており, ヒッグス粒子の運動項には
+\begin{align}
+  \mathcal{L}_H \supset \frac{1}{4}\left((g_2W^a_\mu\frac{\sigma^a}{2}+g_1B_\mu)\Phi\right)^\dagger \left((g_2W^{a\,\mu}\frac{\sigma^a}{2}+g_1B^\mu)\Phi\right)\label{eq2-18}
+\end{align}
+という項が含まれている.
+これによりゲージ対称性は
+\begin{align}
+  SU(3)_c\times SU(2)_L\times U(1)_Y \rightarrow SU(3)_c\times U(1)_{em}
+\end{align}
+のように自発的に破れる.
+したがって, (\ref{eq2-18})から
+\begin{align}
+  \mathcal{L}_H \supset \frac{v^2}{8}\left[\left(g_2^2(W^1_\mu  W^{1\mu}+W^2_\mu  W^{2\mu}\right)+ (g_2W_\mu^3 -g_1B_\mu)(g_2W^{3\mu}-g_1 B^{\mu})\right] \label{2-21}
+\end{align}
+となる.
+ここで, ゲージ場$W_\mu^a$と$B_\mu$を次の様に再定義する.
+\begin{align}
+  W_\mu^\pm &= \frac{1}{\sqrt{2}}(W_\mu ^1 \mp i W_\mu^2)\\
+  \left(\begin{array}{c}
+      Z_\mu^0 \\
+      A_\mu
+      \end{array}\right)&=\frac{1}{\sqrt{g_1^2+g_2^2}}\left(\begin{array}{c}
+      g_2 W_\mu^3-g_1 B_\mu \\
+      g_1 W_\mu^3-g_2 B_\mu 
+    \end{array}\right)
+    \equiv \left(\begin{array}{cc}
+        \cos\theta_W W_\mu^3 - \sin\theta_W B_\mu \\
+        \sin\theta_W W_\mu^3 + \cos\theta_W B_\mu
+      \end{array}
+    \right)\label{eq2-22}
+\end{align}
+ただし, この混合角$\theta_W$は
+\begin{align}
+  \cos\theta_W = \frac{g_2}{\sqrt{g_1^2 + g_2^2}},\quad \sin\theta_W = \frac{g_1}{\sqrt{g_1^2 + g_2^2}}\nonumber
+\end{align}
+で定義され, ワインバーグ角と呼ばれる.
+実験によりこの値は$\sin^2\theta_W \simeq 0.23$となる.
+式(\ref{2-21})から$W^\pm$ボゾンと$Z^0$ボゾンの質量は
+\begin{align}
+  m_W^2 W_\mu^+W^{-\mu} + \frac{1}{2}\left(\begin{array}{cc}
+      A_\mu & Z_\mu
+    \end{array}\right) \left(\begin{array}{cc}
+      0 & 0 \\
+      0 & m_Z^2 
+      \end{array}\right)\left(\begin{array}{c}
+      A^\mu \\
+      Z^\mu
+  \end{array}\right)\label{eq2-23}
+\end{align}
+さらに,
+\begin{align}
+  m_W = \frac{1}{2}g_2v,\quad m_Z = \frac{1}{2}\sqrt{g_1^2+g_2^2}v\nonumber
+\end{align}
+となる.
+これらも質量は
+\begin{align}
+  m_W \simeq 80.4\,\mathrm{[GeV]},\qquad m_Z \simeq 91.2\,\mathrm{[GeV]} \nonumber
+\end{align}
+と観測されている.
+また, 式(\ref{eq2-22}), (\ref{eq2-23})に表れる$A_\mu$は質量がないことがわかり, $U(1)_{em}$ゲージ場の相互作用をする光子であることがわかる.
+
+ヒッグス場の真空期待値の値は, 4体フェルミ相互作用の観測によって, フェルミ結合定数$(G_F\simeq 1.166\times 10^{-5}\,\mathrm{[GeV]}^{-2})$から導かれた.
+場の理論の計算によれば
+\begin{align}
+  2\sqrt{2}G_F = \frac{g_2^2}{2m_W^2} = \frac{2}{v^2}\nonumber
+\end{align}
+と与えられるので, $v \simeq 246\,\mathrm{[GeV]}$と定めることができる.
+2012年に発見されたヒッグス粒子は$h(x)$であると考えられており, その質量は$m_H = \sqrt{2\lambda}v \simeq 125\,\mathrm{[GeV]}$と明らかになり, ヒッグス場の結合定数が$\lambda \simeq 0.13$と決まった.
+\section{フェルミオン質量の獲得}
+\section{走るゲージ結合定数}
+
+%EOF
+
+
+
+\chapter{素粒子標準模型では説明できない物理}
+% ---------------------------------------
+%
+%  Some difficulties of Standard Model
+%  SM_problems.tex
+%  Program modified by Yasutoki Takamura
+%  Last Modified Nov 26 2024
+%
+% ---------------------------------------
+\section{標準模型の抱える問題}
+素粒子標準模型は高エネルギー物理学の実験をほぼ正確に予言することができるため, 大きな成功を収めた.
+特に2011年にCERNにある大型ハドロン衝突型加速器(Large Hadron Corrider; LHC)が標準模型に現れるHiggs粒子を発見したことにより, 標準模型は揺るぎないものとなった.
+しかし, 次のような課題があり, 理論の拡張が迫られている.
+\begin{itemize}
+        \item ニュートリノ質量, およびニュートリノ振動\\
+              標準模型ではニュートリノは質量を持たない粒子として存在する.
+              しかし1998年にニュートリノ振動がスーパーカミオカンデで観測されたことにより, ニュートリノは質量を持つことが示唆されたため, 標準模型を何かしら拡張する必要があると考えられている.
+      \item 重力相互作用\\
+            粒子の持つ相互作用のうち, 重力相互作用は他の相互作用と異なり, 一般相対論で記述されるものであり, これを量子化しようとするとくりこみができない問題が生じる.
+      \item 真の統一理論\\
+            標準模型はゲージ対称性を$SU(3)_c\times SU(2)_L\times U(1)_Y$とした理論であるが, 直積としてゲージ群が記述されていることは群の操作は独立に行われていることを意味しており, 真の統一理論とは言えない.
+      \item 電荷の量子化\\
+            素粒子の電荷は単位電荷の整数倍の値を持つ.
+            非可換群の固有値であれば量子化が実現できるが, ハイパーチャージ$Y$は可換群である$U(1)$対称性における無限小演算子であり, 固有値$Y$量子化は行えない.
+            したがって標準模型で電荷$Q$は$Q = I^3 + \frac{Y}{2}$という関係に基づいて決定されるが, この電荷が量子化される根拠は標準模型に存在しない.
+      \item 階層性問題\\
+            標準模型の典型的なエネルギースケールは$M_W\simeq 80\text{GeV}$である.
+	    プランクスケール$M_{\mathrm{pl}}$や大統一スケール$M_{\mathrm{GUT}}$に至れば理論が標準模型と入れ替わると考えられているが, エネルギースケールに大きな隔たりがあり, この階層性を如何にして自然と説明できるかは重要な問題である.
+      \item 予言できないパラメーターの数\\
+            素粒子標準模型はゲージ相互作用と量子場の理論で構成されるが, 唯一のスカラー場であるヒッグス粒子は標準模型であっても相互作用を規定する主導原理は存在せず, クォークやレプトンとの湯川相互作用やヒッグス自身の自己相互作用は理論の中では任意の値をとることが可能であり, 予言することができない.
+      \item 暗黒物質\\
+            標準模型に存在する粒子のみを考えた場合, 観測事実として宇宙全体のエネルギーに対して$4\%$のみしか説明することができず, 残りの$96\%$のうち$23\%$は暗黒物質と考えられている.
+	    ここで言う暗黒物質とは, 物質粒子との相互作用が極めて弱いものの重力相互作用を微弱に持つものであると考えられているが, そのような粒子は素粒子標準模型のみでは説明することができない.
+      \item 暗黒エネルギー\\
+            先に述べた暗黒物質を考えた場合であっても, およそ$73\%$は未知のエネルギーとして考えられており, これは暗黒エネルギーと呼ばれる.
+	    暗黒エネルギーは初期宇宙においてインフレーションと呼ばれる加速膨張を引き起こした宇宙項と関係があると考えられている
+\end{itemize}
+%EOF
+
+
+
+\section{階層性問題}
+% ---------------------------------------
+%
+%  Hierarchy Problems
+%  hierarchy_problem.tex
+%  Program modified by Yasutoki Takamura
+%  Last Modified Jul 20 2024
+%
+% ---------------------------------------
+大統一理論や超弦理論を考えた場合, 一般的にエネルギースケールの階層性が問題となる.
+ここでは大統一理論に表れる階層性に集中してこの問題について取り扱う.
+\subsection{階層性問題とは}
+% 1st version: Based on 素粒子の標準模型を超えて
+素粒子標準模型は電弱スケールである$M_W\sim100\,[\mathrm{GeV}]$まで高エネルギー加速器実験結果を説明することができる.
+一方で標準模型を超えた物理(Beyond the Standard Model; BSM)が加速器実験で検証されるには電弱スケールよりも高いエネルギーにより, その実験を検証することが可能となる.
+
+この見方を変えると, 現在の標準模型はこのようなBSMの有効理論であると考えることができる.
+したがって素粒子標準模型の理論の適用範囲は何らかのエネルギースケールである$\Lambda$まで有効であり, $\Lambda$以上のエネルギーでは別の理論へ移り変わると考えられている.
+
+大統一理論や重力が含まれる理論では, このカットオフは$\Lambda\sim M_{\mathrm{GUT}}$や$\Lambda\sim M_{\mathrm{pl}}$程度であるとそれぞれ考えられており, $M_W$に比べて13桁程度の乖離が存在する.
+
+標準模型に登場する粒子はヒッグス粒子の真空期待値に比例するため, これらは電弱スケールに質量が存在することとなる.
+これらはゲージ理論により説明されるが, ヒッグス粒子の質量を説明できる主導原理は標準模型に存在しない.
+標準模型に表れるヒッグス粒子の質量を$m_h$とした場合, いかにして$m_h \ll \Lambda$を保つかが大きな問題となっている.
+
+\subsection{Doublet-triplet splitting problem}
+ここでは$SU(5)$大統一理論を考える.
+$SU(5)$大統一理論では, 5表現ヒッグスと24表現ヒッグスを考えることができた.
+それぞれ$H$,\,$\Phi$とおく.
+これらのヒッグス粒子によるポテンシャルを考える.
+$\mathbb{Z}_2$対称性を課すと,
+\begin{align}
+  V(H,\,\Phi) = -\frac{1}{2}\nu^2 H^\dagger H + \frac{\lambda}{4}(H^\dagger H)^2 + H^\dagger[\alpha \mathrm{Tr}(\Phi^2)+\beta(\Phi^2)]H \label{eq5-1} 
+\end{align}
+となる.
+ここで, $\Phi$の最小化は式(\ref{eq5-1})の第3項の内部のみで行われていると考える.
+これは式(\ref{eq5-1})は階層性のもとでは, 多項式全体の最小化の影響よりも, 十分影響を与えるためである.
+
+ただし, このように真空期待値を取った場合, $Y$ボゾンに質量を与えうる$H^\alpha$と$\Phi^\alpha_5$という2つのカラー三重項ヒッグス場が存在したとしても片方のヒッグス場のみ質量を与え, もう一方は質量がないままとなる.
+
+%EOF
+
+
+\section{ニュートリノ質量}
+% ---------------------------------------
+%
+%  Neutrino Mass
+%  neutrino.tex
+%  Program modified by Yasutoki Takamura
+%  Last Modified Jan 09 2025
+%
+% ---------------------------------------
+$BAGN3;RI8=`LO7?$G$O(B, $B%K%e!<%H%j%N$K$O<ANL$,$J$$(B.
+$B$3$l$O(B, $B%l%W%H%s%;%/%?!<$G$O%K%e!<%H%j%N$O(B$SU(2)_L$$BFs=E9`$K$N$_B8:_$7(B, $B%+%$%i%k%Q!<%H%J!<$G$"$k1&4,$-%K%e!<%H%j%N$,B8:_$;$:(B, $BB>$NN3;R$N$h$&$K%R%C%0%95!9=$r9M$($k$3$H$,$G$-$J$$$?$a$G$"$k(B.
+$B$H$3$m$,(B, $B$9$G$K%+%_%*%+%s%G$K$h$k4QB,$K$h$j(B, $B%K%e!<%H%j%N?6F0$H8F$P$l$k%K%e!<%H%j%N$N%U%l!<%P!<$,JQ2=$9$k8=>]$,H/8+$5$l$?$3$H$+$i%K%e!<%H%j%N$K$b<ANL$,$"$k$H9M$($J$1$l$P$J$i$J$$(B.
+\subsection{$B%^%h%i%J%U%'%k%_%*%s$H<ANL9`(B}
+$B$3$3$G$O(B, $B%K%e!<%H%j%N$N<ANL9`$rF3F~$9$k$?$a$K%^%h%i%J>l$rF3F~$9$k(B.
+$BNL;R>l$NM}O@$G$O(B, $B<ANL$r;$$$C$?N3;R$O(B4$B@.J,$N%G%#%i%C%/%9%T%N!<%k>l$rMQ}$F5-=R$5$l$F$$$?(B.
+$B$3$N%G%#%i%C%/%9%T%N!<%k>l$r(B$\psi_D$$B$H$9$k(B.
+$B%G%#%i%C%/%9%T%N!<%k$H%+%$%i%k%9%T%N!<%k$K$O<M1F1i;;;R(B$P_L = \cfrac{1-\gamma^5}{2}$, $P_R = \cfrac{1+\gamma^5}{2}$$B$rMQ$$$F<!$N$h$&$K<($5$l$k(B.
+\begin{align}
+  \psi_R = P_R \psi,\quad \psi_L = P_L \psi\nonumber
+\end{align}
+4$B@.J,%9%T%N!<%k>l(B$\psi$$B$O(B2$B$D$N%+%$%i%k%9%T%N!<%k$NOB$G=q$/$3$H$,$G$-$k(B.
+\begin{align}
+  \psi &= \psi_L + \psi_R\nonumber\\
+       &= \frac{1+\gamma^5}{2}\psi + \frac{1-\gamma^5}{2}\psi\nonumber\\
+       &= P_L\psi + P_R\psi\label{Mj_1}
+\end{align}
+$B$3$3$+$i(B, $\gamma$$B9TNs$O%+%$%i%k4pDl$r$H$k(B.
+$B$3$l$K$h$C$F%+%$%i%k%9%T%N!<%k$r(B2$B@.J,$N%9%T%N!<%k$H$7$F07$&$3$H$,$G$-$k(B.
+$B6qBNE*$K$O(B,$B%Q%&%j9TNs(B$\sigma^{i}\,(i=1,2,3)$$B$KBP$7$F(B
+\begin{align}
+  \sigma ^\mu &= ( I, \sigma^i )\nonumber\\
+  \bar{\sigma} ^\mu &= (I, -\sigma^i ) \nonumber
+\end{align}
+$B$HDj5A$9$k$H(B, 
+$\gamma$$B9TNs$O(B
+\begin{align}
+  \gamma ^{\mu} = \left(\begin{array}{cc}
+                             0 &  \sigma ^{\mu}     \\
+                             \bar{\sigma}^{\mu} & 0 \\
+                           \end{array}
+                           \right)
+\end{align}
+$B$H=q$/$3$H$,$G$-$k(B.
+$B$3$N$3$H$+$i(B, $B%+%$%i%k%9%T%N!<%k$O(B
+\begin{align}
+  \psi_L = \left( \begin{array}{c}
+                   \eta_\alpha \\
+                   0 \\
+                 \end{array}
+                 \right);\,\,(\alpha =1,2)\nonumber\\
+  \psi_R = \left(\begin{array}{c}
+                   0 \\
+                   \bar{\xi}^{\dot{\alpha}} \\
+                 \end{array}
+           \right);\,\,(\dot{\alpha} = 1,2)
+\end{align}
+$B$H$J$j(B, $B$=$l$>$l(B2$B@.J,$NJ#AG%Y%/%H%k$GI=$9$3$H$,$G$-$k(B.
+$B$^$?(B, $B%m!<%l%s%D72$N@8@.;R(B$\sigma^{\mu\nu}$$B$O(B
+\begin{align}
+  \Sigma ^{\mu\nu} = \frac{i}{2}\left(\begin{array}{cc}
+      \sigma ^{\mu\nu} & 0 \\
+                             0                & \bar{\sigma}^{\mu\nu} \\
+                           \end{array}
+                         \right),\qquad(\sigma^{\mu\nu}\equiv \sigma^\mu\bar{\sigma}^\nu,\quad\bar{\sigma}^{\mu\nu}\equiv\bar{\sigma}^\mu\sigma^\nu\quad(\mu\neq\nu))
+\end{align}
+$B$H$J$j(B, $B%m!<%l%s%DJQ49$N2<$G0[$J$k%+%$%i%j%F%#$r;}$D>l$,:.9g$7$J\MATHBLOCKDOLLARDOLLAR{(B.
+$B?t3XE*$K$O72(B$SL(2,\mathbb{C})$$B$N4{LsI=8=$r@.$9$3$H$,L@3N$K$J$k(B.
+
+$B%+%$%i%k4pDl$G$O(BC$BJQ49$O(B $C = i\gamma^0\gamma^2$$B$H9TNs$GI=$9$3$H$,$G$-$?(B.
+$B$3$l$h$j%+%$%i%k%U%'%k%_%*%s$O(B
+\begin{align}
+  (\psi_L)^c &= C\bar{\psi}_L^t = -i\gamma^2 (\psi_L)^*\nonumber\\
+             &= \left(\begin{array}{c}
+                        0 \\
+                        \bar{\eta}^{\dot{\alpha}}
+                      \end{array}\right)
+\end{align}
+$B$H0[$J$k%+%$%i%j%F%#$r;}$D%+%$%i%k%U%'%k%_%*%s$r9=@.$9$k$3$H$,$G$-$k(B.
+
+$B$3$l$^$G$G(B, $B%G%#%i%C%/%9%T%N!<%k$O(B
+\begin{align}
+  \psi_D = \psi_L + \psi_R = \left(\begin{array}{c}
+                                  \eta_\alpha \\
+                                  \bar{\xi}^{\dot{\alpha}}
+                                \end{array}
+                                \right)
+\end{align}
+$B$HI=$;$k(B.
+$B$5$i$K(B, C$BJQ49$O%+%$%i%j%F%#$rJQ2=$5$;$k$3$H$+$i(B, $B$"$k:84,$-$N%+%$%i%k%U%'%k%_%*%s$H$=$NH?N3;R$G%9%T%N!<%k$r9=@.$9$k$3$H$,2DG=$G$"$k$3$H$,$o$+$k(B.
+\begin{align}
+  \psi_{ML} = \psi_L + (\psi_L)^c = \left(\begin{array}{c}
+                                  \eta_\alpha \\
+                                  \bar{\eta}^{\dot{\alpha}}
+                                \end{array}
+                                \right)
+\end{align}
+$B$"$k}$O1&4,$-$N%+%$%i%k%U%'%k%_%*%s$rMQ$$$k$H(B
+\begin{align}
+  \psi_{MR} = \psi_R + (\psi_R)^c = \left(\begin{array}{c}
+                                  \xi_\alpha \\
+                                  \bar{\xi}^{\dot{\alpha}}
+                                \end{array}
+                                \right)
+\end{align}
+$B$N$h$&$K(B, $B%9%T%N!<%k$r9=@.$9$k$3$H$,2DG=$H$J$k(B.
+$B$3$N$h$&$K$7$F9=@.$5$l$?%9%T%N!<%k$O%^%h%i%J%9%T%N!<%k$H8F$P$l$k(B.
+
+$B%^%h%i%J%9%T%N!<%k$N=EMW$JE@$H$7$F(B, P$BJQ49$H(BC$BJQ49$r(B2$B2s;\$9$H85$N>uBV$KLa$k(B.
+$B0J>e$N$3$H$+$i(B, $B%^%h%i%J%9%T%N!<%k$ON3;R$HH?N3;R$N6hJL$,$J$$Cf@-$N%U%'%k%_%*%s$rI=$9(B.
+
+$B$3$3$G(B, $B?t3XE*$JB&LL$K8@5Z$9$k(B.
+$\eta, \bar{\xi}$ $B$O%m!<%l%s%D72(B$SL(2,\mathbb{C})$$B$N4pK\I=8=$H$=$NH?I=8=$H$7$F$N?6$kIq$$$r$9$k(B.
+$B$3$l$i$O(BLevi-Civita$B%F%s%=%k$rMQ$$$F(B
+\begin{align}
+  \bar{\eta}^{\dot{\alpha}} = \epsilon^{\dot{\alpha}\dot{\beta}}\bar{\eta}_{\dot{\beta}}
+\end{align}
+$B$H$J$j(B, Levi-Civita$B%F%s%=%k$,7WNL$H$7$F$NLr3d$r;}$D(B.
+
+$B$3$3$G(B, $BG$0U$N(B2$B$D$N:84,$-%9%T%N!<%k(B$\eta, \chi$$B$N=LLs$r9M$($k(B.
+\begin{align}
+  \eta_\alpha \chi ^\alpha = \epsilon^{\alpha\beta}\eta_\alpha \chi_\beta \nonumber
+\end{align}
+$B$O(B$SL(2,\mathbb{C})$$BJQ49$N$b$H$GITJQ$G$"$k$+$i(B, $B%m!<%l%s%DITJQNL$G$"$k$3$H$,$o$+$k(B.
+$B$3$l$O(B$SU(2)$$B72$K$*$$$F4pK\I=8=$N(B2$B=E9`$rH?BP>N$KAH$`$3$H$K$h$C$F(B1$B=E9`$r@.$7(B, $SU(2)$$BITJQNL$r@.$9$3$H$rI=$7$F$$$k(B.
+\footnote{$B$3$l$O;~6u$r%_%s%3%U%9%-!<E*$G$O$J$/%f!<%/%j%C%IE*$H$9$k$H(B, $B%m!<%l%s%DJQ49$,(B$SO(4)\simeq SU(2)\times SU(2)$$B$H$J$j(B, $BFHN)$J(B$SU(2)$$B$G5-=R$G$-$k$3$H$HBP1~$7$F$$$k(B.}
+
+$B%^%h%i%J%9%T%N!<%k$N9=@.$r9T$C$?$3$H$K$h$j(B, $B%^%h%i%J7?$N<ANL9`$r9=@.$9$k$3$H$,$G$-$k(B.
+\begin{eqnarray}
+  -m_L \overline{\psi_{ML}}\psi_{ML} = -m_L(\overline{\nu_L^c}\nu_L +\mathrm{h.c.}) = m_L(\eta^\alpha \eta_\alpha + \mathrm{h.c.})\label{Mj_L}\\
+  -m_R \overline{\psi_{MR}}\psi_{MR} = -m_R(\overline{\nu_R^c}\nu_R +\mathrm{h.c.}) = m_R(\xi^\alpha \xi_\alpha + \mathrm{h.c.})\label{Mj_R}
+\end{eqnarray}
+$B0lJ$$$G(B, $B:84,$-%K%e!<%H%j%N$N%+%$%i%k%Q!<%H%J!<$H$7$F1&4,$-$N%K%e!<%H%j%N$rM}O@$K4^$a$?$3$H$K$h$j(B, $BB>$N%U%'%k%_%*%s$HF1$8$h$&$K%G%#%i%C%/7?$N<ANL9`$r9M$($k$3$H$,$G$-$k(B.
+\begin{eqnarray}
+  -m_D\bar{\psi_D}\psi_D = -m_D(\bar{\psi_L}\psi_R + \bar{\psi_R}\psi_L)\label{D_n}
+\end{eqnarray}
+$B$3$l$i$r$^$H$a$k$H(B, $B%K%e!<%H%j%N$N<ANL9`$O<0(B(\ref{Mj_L}), (\ref{Mj_R}), (\ref{D_n})$B$rMQ}$F(B, $B0lHLE*$K(B
+\begin{eqnarray}
+  \mathcal{L}_{\mathrm{mass}} = -\frac{1}{2}m_L(\overline{\nu_L^c}\nu_L +\mathrm{h.c.}) -\frac{1}{2}m_R(\overline{\nu_R^c}\nu_R +\mathrm{h.c.}) -m_D(\bar{\nu_L}\nu_R + \bar{\nu_R}\nu_L)\label{Lagrangian_nMass}
+\end{eqnarray}
+$B$HI=$9$3$H$,$G$-$k(B.
+
+$B$3$3$G(B, $B<0(B(\ref{Lagrangian_nMass})$B$r9TNs$G$^$H$a$k(B.
+\begin{eqnarray}
+  \mathcal{L}_{\mathrm{mass}} = -\frac{1}{2}\left( 
+  \begin{array}{cc}
+    \overline{(\nu_L)^c} & \overline{\nu_R}
+  \end{array}\right)
+        \left( \begin{array}{cc}
+        m_L & m_D \\
+        m_D & m_R 
+    \end{array}\right)
+    \left( \begin{array}{c}
+     \nu_L  \\
+     (\nu_R)^c \end{array}\right)
+     + \mathrm{h.c.}\label{Lagrangian_mt_nMass}
+\end{eqnarray}
+$B0lHLE*$K<ANL9TNs$OJ#AG9TNs$G$"$k(B.
+$B$3$N$H$-(B, $BJ#AGBP>N9TNs$O%f%K%?%j!<9TNs$H$=$NE>CO9TNs$K$h$jBP3Q2=$9$k$3$H$,$G$-$k(B.
+\begin{eqnarray}
+  \left( \begin{array}{cc}
+        m_L & m_D \\
+        m_D & m_R 
+    \end{array}\right)
+ =
+  U^T\left( \begin{array}{cc}
+        m_a & 0 \\
+          0 & m_s 
+    \end{array}\right)U
+\end{eqnarray}
+$B$3$N$H$-(B, $BBP3Q2=9TNs(B$U$, $\nu_L$$B$H(B$(\nu_R)^c$$B$N:.9g3Q(B$\theta_\nu$$B$O$=$l$>$l(B
+\begin{eqnarray}
+  U =\left(
+  \begin{array}{cc}
+        -i\cos\theta_\nu & \sin\theta_\nu  \\
+         i\sin\theta_\nu & \cos\theta_\nu
+     \end{array}\right),\quad \tan2\theta_\nu = \frac{2m_D}{m_R-m_L}
+\end{eqnarray}
+$B$H$J$k(B.
+$B<ANL8GM->uBV$H%+%$%i%k8GM->uBV$O(B
+\begin{eqnarray}
+  \left(\begin{array}{c}
+      \nu_a \\
+      \nu_s
+    \end{array}
+    \right) = U^\dagger
+  \left(\begin{array}{c}
+      \nu_L \\
+      (\nu_R)^c
+    \end{array}
+    \right)
+\end{eqnarray}
+$B$H$$$&4X78$H$J$k(B.
+
+$B0J>e$K$h$j(B2$B$D$N<ANL8GM-CM(B$m_a$, $m_s$$B$H$=$l$>$l$N<ANL8GM->uBV(B$\nu_a$, $\nu_s$$B$rF@$k$3$H$,$G$-$k(B.
+\begin{eqnarray}
+  m_a &=& \frac{1}{2}\left[ \sqrt{(m_R - m_L)^2 + 4m_D^2} - (m_R+m_L)\right]\nonumber\\
+  m_s &=& \frac{1}{2}\left[ \sqrt{(m_R - m_L)^2 + 4m_D^2} + (m_R+m_L)\right]\nonumber\\
+  \nu_a &=& i\left(\nu_L\cos\theta_\nu - (\nu_R)^c\sin\theta_\nu\right)\nonumber\\
+  \nu_s &=& \nu_L\sin\theta_\nu + (\nu_R)^c\cos\theta_\nu\nonumber
+\end{eqnarray}
+$B<ANL8GM->uBV(B$\nu_a$$B$H(B$\nu_s$$B$K$h$C$F(B, 1$B$D$N@$Be$+$iFHN)$J(B2$B$D$N%^%h%i%J%U%'%k%_%*%s$N<ANL9`$r=q$/$3$H$,$G$-(B,
+\begin{eqnarray}
+  \mathcal{L} = -\frac{1}{2}m_s\bar{\nu_s}\nu_s -\frac{1}{2}m_a\bar{\nu_a}{\nu_a} + \mathrm{h.c.}
+\end{eqnarray}
+$B$H$J$k(B.
+$B$3$3$^$G$G%^%h%i%J%U%'%k%_%*%s$H%G%#%i%C%/%U%'%k%_%*%s$+$i%K%e!<%H%j%N$N<ANL9`$r0lHLE*$KF3$/$3$H$r9T$C$?(B.
+$B%K%e!<%H%j%N$,<ANL$r;}$D5!9=$K$D$$$F$O$$$/$D$+9M$($i$l$F$*$j(B, $B<g$K(B
+\begin{itemize}
+  \item $B%G%#%i%C%/7?(B$\cdots$$B%^%h%i%J<ANL$r;}$?$:$K%G%#%i%C%/7?$N<ANL9`$N$_$r9M$($k(B.
+  \item $B%7!<%=!<5!9=(B$\cdots$$B%G%#%i%C%/<ANL$h$jHs>o$KBg$-$J%^%h%i%J<ANL$,B8:_$9$k(B.
+  \item $B5<%G%#%i%C%/!&%K%e!<%H%j%N(B$\cdots$$B%G%#%i%C%/<ANL$h$jHs>o$K>.$5$J%^%h%i%J<ANL$,B8:_$9$k(B.
+\end{itemize}
+$B$,Ds0F$5$l$F$$$k(B.
+$B$3$NCf$G$b%7!<%=!<5!9=$O%K%e!<%H%j%N$,B>$N%U%'%k%_%*%s$KHf$Y$FHs>o$K>.$5$J<ANL$r;}$D$3$H$r<+A3$K@bL@$9$k$3$H$,$G$-$k(B.
+\subsection{$B%7!<%=!<5!9=(B}
+$B%7!<%=!<5!9=$OBg$-$/<ANL$,0[$J$k%^%h%i%J%K%e!<%H%j%N$NB8:_$K$h$j(B, $B>.$5$J%K%e!<%H%j%N<ANL$N@bL@$r9T$&$b$N$G$"$k(B.
+$B$O$8$a$K(B, $B<ANL$K<!$N$h$&$J3,AX$,$"$k$H2>Dj$9$k(B.
+\begin{align}
+  m_L \ll m_D \ll m_R \label{hneu}
+\end{align}
+$B$3$N$H$-(B, $B:.9g3Q$O(B
+\begin{align}
+  \theta \simeq \frac{m_D}{m_R} \ll 1
+\end{align}
+$B$H6a;w$G$-$k(B.
+$BF1$8$h$&$K(B$\nu_a,\,\nu_s$$B$K$D$$$F$b(B
+\begin{align}
+  \nu_a &\simeq i\left((\nu_L)-(\nu_R)^c\theta_\nu \right)\nonumber\\
+  \nu_s &\simeq \nu_L\theta_\nu + (\nu_R)^c\nonumber
+\end{align}
+$B$H$J$k$+$i(B,
+\begin{align}
+  m_a \simeq \frac{m_D^2}{m_R} - m_L,\quad m_s \simeq \frac{m_D^2}{m_R} + m_R\nonumber
+\end{align}
+$B$H<ANL$rI=$;$k(B.
+$B<ANL$N3,AX@-$N2>Dj$G$"$k<0(B(\ref{hneu})$B$+$i(B$m_a,\,m_s$$B$N<ANL$NBg$-$J3,AX@-$rF3$$$?(B.
+$B$3$3$^$G$G(B, $B:84,$-%K%e!<%H%j%N$N<ANL(B$m_L$$B$K$D$$$F>\:Y$r=R$Y$F$$$J$$$,(B, $B<B:]$K(B$m_L\neq0$$B$H%^%h%i%J<ANL$,$"$k$3$H$r9M$($k$?$a$K$O(B$SU(2)$$B;0=E9`%R%C%0%9$rM}O@$K4^$a$kI,MW$,$"$k(B.
+$B$3$l$O:84,$-%K%e!<%H%j%N$N%^%h%i%J<ANL9`(B
+\begin{align}
+  -\frac{1}{2}m_L\overline{\nu_L^c}\nu_L + \mathrm{h.c.} \nonumber
+\end{align}
+$B$K4^$^$l$k(B$\nu_L$$B$O(B$SU(2)_L$$BITJQ@-$r;$$$?$J}$?$a(B, $B$b$7$3$N9`$r%2!<%8ITJQ$J7A$G<B8=$9$k$?$a$K$O;0=E9`%R%C%0%9$G9M$($k$3$H$K$J$k(B.
+$B$=$N$?$a(B$m_L =0$$B$H$$$&2>Dj$r$*$/(B.
+$B$9$k$H(B
+\begin{align}
+  m_a \simeq \frac{m_D^2}{m_R}\ll m_D,\quad m_s \simeq m_R\nonumber
+\end{align}
+$B$H$J$j(B, $B%^%h%i%J%K%e!<%H%j%N$O(B
+\begin{align}
+  \nu_a \simeq i\left(\nu_L - (\nu_L)^c\right),\quad \nu_s \simeq \nu_R + \nu_R^c
+\end{align}
+$B$H$J$k(B.
+
+
+%EOF
+
+
+\chapter{SU(5)大統一理論}
+% ----------------------------------------
+% 
+%  Grand Unified Theory
+%  grand_unified_theory.tex
+%  Program modified by Yasutoki Takamura
+%  Last Modified Jan 14 2025
+%
+% ----------------------------------------
+%\section{大統一理論}
+大統一理論はH.GeorgiとS.L.Glashowにより1974年に提唱された\cite{PhysRevLett.32.438}.
+大統一理論では重力を除いた3つの相互作用を1つに統一することを目的としている.
+したがって, ゲージ対称性は単純群によって記述されると考えられており, 標準模型のゲージ群である$\mathcal{G}_\text{SM}= SU(3)_c\times SU(2)_L\times U(1)_Y$を部分群として内包する群を考える.
+このことから, 前節で述べられているような標準模型の問題点はいくつか解決されると考えられている.
+
+\textcolor{red}{要修正: どの点で何が解決できているのか}
+
+大統一理論にも様々な単純群を考えることが可能であり, $SU(5)$や$SO(10)$, $E_6$などの模型を考えることが可能であるが, このノートでは最小模型である$SU(5)$について取り扱い, 理論の拡張を試みる.
+
+はじめに, $SU(5)$大統一理論が最小模型である理由を考える.
+標準模型のゲージ対称性である$SU(3)_c\times SU(2)_L\times U(1)_Y$は, 群の階数が$\text{rank}=4$であり, これを内包できる群を考える必要がある.
+その中で考えられる単純群は, $\text{O}(8)$, $\mathrm{O}(9)$, $\mathrm{Sp}(8)$, $\mathrm{F}_4$, そして $\mathrm{SU}(5)$である.
+このうち, $SU(3)$のもつ3重項をもち, $SU(2)$がもつ2重項の複素表現をもつという性質は$SU(5)$群を用いて記述することができるため, 最小模型として$SU(5)$群を考えて理論を構築することが可能となる.
+
+\section{Georgi-Glashow モデル}
+ここから$SU(5)$群を考える.
+ゲージ群を決定すると, ラグランジアンに導入する場の既約表現を指定すれば理論を定めることができる.
+$SU(5)$の基本表現は$5$表現であり, $5$表現か, その複素表現である$\overline{5}$を用いることですべての表現を構成することができる.
+$SU(5)$群の階数は4であるから, 生成演算子を$L_i$$(i=1,\cdots,24)$ のうち対角化可能なものが4つ存在する.
+$SU(3)_c$の対角化可能な生成演算子を$\lambda_3,\lambda_8$, $\mathrm{SU}(2)$のものを$I_3$ (アイソスピン), $U(1)$の超電荷を$Y$に対応させて考えることができる.
+
+次にフェルミオンの次元を$\mathrm{SU}(3), \mathrm{SU}(2)$の表現次元, $U(1)$の超電荷$Y$で $(1, 2, -1)$のように表し, どのように$SU(5)$模型に当てはめられるか考える.
+\begin{center}
+\begin{tabular}{clc}
+             &                         & 多重度 \\
+  $(u, d)_L$ & $(3  , 2, \frac{1}{6})$ &      6 \\
+    $d_L^c $ & $(3^*, 1, \frac{1}{3})$ &      3 \\ 
+    $u_L^c $ & $(3^*, 1,-\frac{2}{3})$ &      3 \\ 
+$(\nu, e)_L$ & $(1  , 2,-\frac{1}{2})$ &      2 \\ 
+     $e_L^c$ & $(1  , 1,           1)$ &      1 \\ 
+   $\nu_L^c$ & $(1  , 1,           0)$ &      1 \\ 
+\end{tabular}
+\end{center}
+
+基本表現をこの中から選ぶことで
+\begin{align}
+  (q_L^c, \nu_L, e_L) = (3^*, 1, Y)\oplus\left(1,2,-\frac{1}{2}\right) = \overline{5}
+\end{align}
+と考えられる.
+ここではまだ$q$の正体が$u, d$クォークのどちらかは定かではないが, $\mathrm{SU}(5)$群のトレースは0でなければならないため, $Q$を電荷とすると上記の電荷は
+\begin{align}
+  \sum_{a=1}^5 Q_a = 3Q_{qc}+Q_\nu + Q_e\nonumber\\
+  \therefore\quad Q_q = -Q_{qc} = -\frac{1}{3}\label{quantum_Q}
+\end{align}
+となる.
+したがって, $q=d$と選択することにより, 次のように$\bm{5}$表現を決めることができる.
+\begin{align}
+ \bar{\bm{5}}=\begin{pmatrix}
+    d_1 ^c \\
+    d_2 ^c \\
+    d_3 ^c \\
+    l      \\
+    -\nu_l
+  \end{pmatrix}=\left({3}^*,1,\frac{1}{3}\right)\oplus \left(1,2,-\frac{1}{2}\right)\label{GUT-5rep}
+\end{align}
+これによりクォークの電荷が荷電レプトンの$\frac{1}{3}$の整数倍となっていることが説明できる.
+残りのフェルミオンを次元の大きい表現に当てはめることを考える.
+基本表現よりも大きな表現は, すべて基本表現の積で表すことができる.
+${\bm{10}}$表現は
+\begin{align}
+  \bm{5}\otimes\bm{5} = \bm{15}\oplus\bm{10}\nonumber
+\end{align}
+として構成することができる.
+この$\bf{10}$表現は$\bm{10}\rightarrow (3^*,1,-\frac{2}{3})\oplus(3,2,\frac{1}{6})\oplus(1,1,1)$
+と分解できるので, 次のように当てはめることができる.
+\begin{align}
+  \overline{\bm{10}}= \frac{1}{\sqrt{2}}\begin{pmatrix}
+         0 &  u_3^c & -u_2^c & u_1 & d_1 \\
+    -u_3^c &      0 &  u_1^c & u_2 & d_2 \\
+     u_2^c & -u_1^c &      0 & u_3 & d_3 \\
+    -u_1   &   -u_2 &   -u_3 &   0 & e^c \\
+      -d_1 &   -d_2 &   -d_3 &-e^c &   0 \\
+    \end{pmatrix}\label{GUT-10rep}
+% Note
+% 10表現であれば内部に規格化定数を入れる場合があるがここで必要ではないのか確認しなければならない.
+% Dec 10: up quark massを出す際に規格化されている必要があるので, この規格化定数は必要.
+\end{align}
+ただし, $x^c$は$x$を同じカイラリティで荷電共役したものを表している.
+この$x$の例として, 左巻きの電子$e^-_L$を考える.
+$e^-_L$に対して荷電共役変換を行った$(e^-_L)^c$を考える.
+これは右巻きの電子$e_R^-$となるが, 左巻きの陽電子である$e_L^+$と同じである.
+\subsection{ゲージ粒子の表現}
+ゲージ粒子を$SU(5)$大統一理論で考えるために, 群の生成子について考える.
+一般に$SU(n)$ゲージ群の変換は, 
+\begin{align}
+  U =\exp\left(-i \sum_{i=1}^{n^2-1}\beta_i L_i\right)=\exp(-\bm{\beta}\cdot \bm{L})
+\end{align}
+で表される.
+ここで, $L_i$は群の生成子であり, エルミート性があり, トレースレス($\mathrm{tr} L_i =0$)である.
+これにより$U$はユニタリーであり, $\mathrm{det}U =1$を満たす.
+$L_i$は
+\begin{align}
+  \mathrm{tr}(L_iL_j) = \frac{1}{2}{\delta_{ij}}
+\end{align}
+と規格化する.
+ここで, 表現行列を昇降演算子との類推で今後のために
+\begin{align}
+  (L^a_b)^c_d \equiv \delta^c_b\delta^a_d -\frac{1}{n}\delta^a_b\delta^c_d,\quad ((L^a_b)^\dagger=L^b_a)
+\end{align}
+と定義する.
+交換関係は
+\begin{align}
+  [L^a_b,L^c_d] = \delta^a_bL^c_b - \delta^c_bL^a_d
+\end{align}
+を満たす.
+これまで$n$表現について考えたが, 共役な表現$\bar{n}$を考えた場合,
+\begin{align}
+  L^a_b(\bar{n}) = -L^{aT}_b = -L^b_a
+\end{align}
+を満たす.
+
+ここから具体的にゲージ場について考える.
+$SU(n)$ゲージ理論では, $n^2-1$個のゲージ場が存在する.
+これらは随伴表現で表される.
+$SU(5)$群の生成演算子をこれまでのように$[L_i]^a_b\,(i=1,\cdots,24, a,b=1,\cdots,5)$として構成する.
+基本表現である$5$表現の類推からは$a,b=1,2,3$はカラー量子数, $a,b=4,5$がアイソスピン量子数と考えられる.
+そのため$i=1,\cdots,8$を$SU(3)$部分, $i=9,10,11$を$SU(2)$の部分群として考えると
+\begin{align}
+  L_i(i=1,\cdots,8) = \left(\begin{array}{@{}c|c@{}}
+      \mbox{$\frac{1}{2}\lambda_i$} &
+      \begin{matrix}
+        0 & 0 \\
+        0 & 0 \\
+        0 & 0 
+      \end{matrix}\\
+      \hline
+      \begin{matrix}
+        0 & 0 & 0\\
+        0 & 0 & 0
+      \end{matrix} &{\large{\mbox{$0$}}}
+  \end{array}\right),\quad
+  L_i(i=9,10,11) = \left(\begin{array}{@{}c|c@{}}
+      \mbox{\Large 0} &
+      \begin{matrix}
+        0 & 0 \\
+        0 & 0 \\
+        0 & 0 
+      \end{matrix}\\
+      \hline
+      \begin{matrix}
+        0 & 0 & 0\\
+        0 & 0 & 0
+      \end{matrix} & {\mbox{$\frac{1}{2}\sigma_j$}}
+  \end{array}\right)
+\end{align}
+ただし, $\sigma_{j=i-8}\,(j=1,2,3)$である.
+
+対角行列は$L_3, L_8, L_{11}$と$L_{12}=\frac{1}{2\sqrt{15}}\mathrm{diag}(-2,-2,-2,3,3)$である.
+24個のゲージボゾンは随伴表現として存在し, 次のように分解できる.
+\begin{align}
+  \bm{24} = G(8,1,0)\oplus W(1,3,0)\oplus B(1,1,0)\oplus \bar{X}(3,\bar{2},-\frac{5}{6})\oplus X(\bar{3},2,+\frac{5}{6})
+\end{align}
+ゲージボゾンを$V_\mu$とすると,
+\begin{align}
+  \frac{1}{\sqrt{2}}V_\mu &= \sum_{i=1}^{24}\frac{1}{2}V_\mu^i L_i\\
+  V_\mu &= \left(\begin{array}{ccccc}
+    G^1_1 - \frac{2B}{\sqrt{30}} & G^1_2 & G^1_3 & \bar{X_1} & \bar{Y_1} \\
+    G^2_1 & G^2_2 - \frac{2B}{\sqrt{30}} & G^2_3 & \bar{X_2} & \bar{Y_2} \\
+    G^3_1 & G^3_2 & G^3_3 - \frac{2B}{\sqrt{30}} & \bar{X_3} & \bar{Y_3} \\
+    X_1   & X_2 & X_3 & \frac{W^3}{\sqrt{2}} + \frac{3B}{\sqrt{30}} & W^+ \\
+    Y_1   & Y_2 & Y_3 & W^- &    -\frac{W^3}{\sqrt{2}} + \frac{3B}{\sqrt{30}} 
+      \end{array}
+  \right)
+\end{align}
+ただし, $SU(3)$ゲージ場の部分は$G^i\,(i=1,\cdots,8)$をグルーオン場として
+\begin{align}
+  G^1_2 = G^1,\quad G^2_1 = G^2,\quad G^3_1 = G^5,\quad G^2_3 = G^6,\quad G^3_2 = G_7\nonumber\\
+  G^1_1 = \frac{G^3}{\sqrt{2}} + \frac{G^8}{\sqrt{6}},\quad G^2_2=-\frac{G^3}{\sqrt{2}}+\frac{G^8}{\sqrt{6}},\quad G^3_3 = -\frac{2G^8}{\sqrt{6}}\nonumber
+\end{align}
+であり, $SU(2)$ゲージ場は
+\begin{align}
+  W^\pm = \frac{W^1\mp iW^2}{\sqrt{2}}\nonumber
+\end{align}
+である.
+ここで, $SU(5)$ゲージ粒子として新しく$X, Y$ボゾンが導入される.
+これらは
+\begin{align}
+  X, Y = \left(\bar{3},2, \frac{5}{3}\right)\label{XY_bosons}
+\end{align}
+という量子数をもつ.
+
+ここまででゲージ場を導入できたので, $SU(5)$ゲージ群のラグランジアンを書くことができる.
+はじめに共変微分を考える.
+$n$表現, $\bar{n}$表現の共変微分は
+\begin{align}
+  (D_\mu \psi)^a = \left[\partial_\mu \delta^a_b - \frac{ig}{\sqrt{2}}(V_\mu)^a_b\right]\psi^b\nonumber\\
+  (D_\mu \chi)_a = \left[\partial_\mu \delta^b_a + \frac{ig}{\sqrt{2}}(V_\mu)^b_a\right]\chi^b\nonumber
+\end{align}
+と表せる.
+また, $\frac{n(n-1)}{2}$表現の場合
+\begin{align}
+  (D_\mu \psi)^{ab} = \partial_\mu \psi^{ab} - \frac{ig}{\sqrt{2}}(V_\mu)^a_c\psi^{cb}- \frac{ig}{\sqrt{2}}(V_\mu)^b_d\psi^{ad}\nonumber
+\end{align}
+となる.
+場の強さを
+\begin{align}
+  (F_{\mu\nu})^a_b = \partial_\mu(A_\nu)^a_b -\frac{ig}{\sqrt{2}}(A_\mu)^a_c (A_\nu)^c_b - (\mu\leftrightarrow\nu)
+\end{align}
+とすると, ゲージ場の運動項は
+\begin{align}
+  \mathcal{L}_K = -\frac{1}{4}\mathrm{Tr}(F^{\mu\nu}F_{\mu\nu})=-\frac{1}{4}(F^{\mu\nu})^a_b(F_{\mu\nu})
+\end{align}
+となる.
+また$\psi_{\bar{5}}$について
+\begin{align}
+  \mathcal{L}_{5K} &= i\overline{\psi_{\bar{5}}}\gamma^\mu D_\mu\psi_{\bar{5}}\nonumber\\
+                   &= i\overline{\psi_{\bar{5}}}_a\gamma^\mu \left(\delta^a_b \partial_\mu + \frac{ig}{\sqrt{2}}(V_\mu)^a_b\right)\psi_{\bar{5}}^b\nonumber
+\end{align}
+さらに$\psi_{10}$について
+\begin{align}
+  \mathcal{L}_{10K} &= i\overline{\psi_{10}}_{ab}\gamma^\mu \left(D_\mu\psi_{10}\right)^{ab}\nonumber\\
+                    &= i\overline{\psi_{10}}_{ab}\gamma^\mu \left(\delta^a_c \partial_\mu + \frac{2ig}{\sqrt{2}}(V_\mu)^a_c\right)\psi_{10}^{cb}\nonumber
+\end{align}
+となる.
+
+\subsection{対称性の破れ}
+$SU(5)$模型は$X, Y$ゲージボゾンの存在を予言する.
+これらの粒子はクォークととレプトンの相互作用を引き起こすため, 陽子崩壊が起こる.
+陽子は標準模型では安定である.
+現在の実験データと矛盾させないためには大統一スケールが十分大きくなければならない.\footnote{これについては次の小区分で詳細を述べる.}
+したがって, 大統一スケールで対称性が
+\begin{align}
+  SU(5)\rightarrow SU(3)_c\times SU(2)_L\times U(1)_Y\label{SU5GSM}
+\end{align}
+と自発的に破れると考えられている.
+標準模型ではゲージボゾンは12個存在していた.
+$SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現れない残りの12個の粒子が質量をもつ必要がある.
+そのため少なくとも12個の南部・ゴールドストンボゾンが存在しなければならない.
+また, 自発的対称性の破れは, 式(\ref{SU5GSM})のようにゲージ群を単純群から直積の群へ破るものである.
+このときに群のランクを保存するものでなければならない.
+したがって, そのような対称性の破れを行うものは随伴表現である.
+最小模型では$24$表現ヒッグス$\phi_{\bm{24}}$を用いる.
+ゲージ粒子と同じように, 
+\begin{align}
+  (\phi_{\bm{24}})_a^b \equiv \sum_{i=1}^{24}\frac{1}{\sqrt{2}}\phi_{\bm{24}}^i L_i
+\end{align}
+となる.
+ゲージ場との結合は
+\begin{align}
+\mathcal{L}_K = \frac{1}{2}\sum_{i=1}^{24}[D_\mu\phi_{\bm{24}}]^\dagger [D^\mu\phi_{\bm{24}}]\nonumber
+\end{align}
+となる.
+共変微分を具体的に求める.
+24表現は$\bm{24}\oplus \bm{1} = \bm{5}\otimes \bar{\bm{5}}$であるため,
+\begin{align}
+  \phi_{\bm{24}b}^{\,\,a} = \psi_{\bm{5}}^a \psi_{\bm{\bar{5}}b} -\frac{1}{5}\delta^a_b \psi^c_{\bm{5}}\psi_{\bm{\bar{5}}c}
+\end{align}
+と構成されている.
+それぞれの表現の変換は
+\begin{align}
+  \psi_{\bm{5}}^a \rightarrow \psi^a_{\bm{5}}+\delta \psi_{\bm{5}}^a = \psi_{\bm{5}}^a -i\frac{g}{2}\varepsilon^i L^a_{ic}\psi_{\bm{5}}^c \nonumber\\
+  \psi_{\bm{\bar{5}}a} \rightarrow \psi_{\bm{\bar{5}}a}+\delta \psi_{\bm{5}}^a = \psi_{\bm{5}}^a +i\frac{g}{2}\varepsilon^i L^c_{ia}\psi_{\bm{5}c}\nonumber
+\end{align}
+となるから, $\phi_{\bm{24}}$は
+\begin{align}
+  \phi_{\bm{24}b}^a \rightarrow \phi_{\bm{24}b}^a -i\frac{g}{2}[L_i,\phi_{\bm{24}}]^a_b
+\end{align}
+と変換を受ける.
+したがって共変微分は
+\begin{align}
+  (D_\mu\phi_{\bm{24}})^a_b = \partial_\mu \phi_{\bm{24}a}^{\,\,b}  -\frac{ig}{\sqrt{2}}[V_\mu, \phi_{\bm{24}}]^b_{a}
+\end{align}
+となる.
+ヒッグスの運動項は
+\begin{align}
+  \mathcal{L}_K = \mathrm{Tr}[(D_\mu \phi_{\bm{24}})^\dagger (D^\mu \phi_{\bm{24}})]
+\end{align}
+とまとめることができる.
+ゲージボゾンの質量は24表現ヒッグスの真空期待値を$\Sigma = \langle 0|\phi_{\bm{24}}| 0\rangle$としたとき
+\begin{align}
+  \mathcal{L}_M &= \mathrm{Tr}[(D_\mu \phi_{\bm{24}})^\dagger (D^\mu \phi_{\bm{24}})]|_{\phi_{\bm{24}}=\Sigma}\nonumber\\
+                &= \frac{g^2}{2}\mathrm{Tr}\left([V_\mu, \Sigma]^\dagger [V^\mu,\Sigma]\right) = m_{ij}^2 V_\mu^{i\dagger}V^{\mu j}
+\end{align}
+これによりポテンシャルは
+\begin{align}
+  V(\phi_{\bm{24}})) = -\frac{\mu^2}{2}\mathrm{Tr}(\phi_{\bm{24}}^2) +\frac{1}{4}a(\mathrm{Tr}(\phi_{\bm{24}}^2))^2 + \frac{1}{2}b\mathrm{Tr}(\phi_{\bm{24}}^4) + \frac{1}{3}c\mathrm{Tr}\phi_{\bm{24}}^3\nonumber
+\end{align}
+となる.
+% NOTE: 下の文章は一般的な対称性の破れで考えられているものだが, 既に具体的なので省いた.
+% これは$\phi_{\bm{24}}\rightarrow U\phi_{\bm{24}} U^\dagger$と変換する.
+簡単のために$\mathbb{Z}_2$対称性を課すと, $c=0$となる.
+真空期待値は次のようなとり方が考えられる.
+\begin{align}
+  \Sigma &= v\,\mathrm{diag}(1,1,1,1,-4),\quad(b<0)\label{vev1}\\
+  \Sigma &= v\,\mathrm{diag}\left(1,1,1,-\frac{3}{2},-\frac{3}{2}\right),\quad(b>0)\label{vev2}
+\end{align}
+式(\ref{vev1})の場合, ゲージ対称性は$SU(4)\times U(1)$に破れ, 式(\ref{vev2})の場合は$SU(3)_c\times SU(2)_L\times U(1)_Y$に破れる.
+したがって, 後者の場合を考える.
+この場合のポテンシャルの最小値は$b>0,\, a>-{7b}/{15}$の条件のもとで
+\begin{align}
+  \left.\frac{\partial V(\phi_{\bm{24}})}{\partial \phi_{\bm{24}}} \right|_{\phi_{\bm{24}}=\Sigma} = 0
+\end{align}
+より求められ, 
+\begin{align}
+  v^2 = \frac{2\mu^2}{15a+7b}\nonumber
+\end{align}
+となる.
+ゲージボゾンの質量は24表現ヒッグスに真空期待値をもたせると
+\begin{align}
+  [V_\mu, \Sigma] \sim \left(\begin{array}{@{}c|c@{}}
+      {\Large{\mbox{$0$}}} &
+      \begin{matrix}
+        -\frac{5}{2}\bar{X_1} & -\frac{5}{2}\bar{Y_1} &   \\
+        -\frac{5}{2}\bar{X_2} & -\frac{5}{2}\bar{Y_2} &   \\
+        -\frac{5}{2}\bar{X_3} & -\frac{5}{2}\bar{Y_3} &   \\
+      \end{matrix} \\
+      \hline
+      \begin{matrix}
+        \frac{5}{2}X_1 & \frac{5}{2}X_2 & \frac{5}{2}X_3 \\
+        \frac{5}{2}Y_1 & \frac{5}{2}Y_2 & \frac{5}{2}Y_3 \\
+      \end{matrix} & {\large{\mbox{$0$}}}
+  \end{array}\right)
+\end{align}  
+となる.
+これにより$X, Y$ボゾンの質量は
+\begin{align}
+  m_X^2 = m_Y^2 = \frac{25}{8}g^2v^2
+\end{align}
+となる.
+
+標準模型で表れるヒッグス粒子$\Psi$は5表現に属する.
+\begin{align}
+  \phi_{\bm{5}} = \left(
+  \begin{array}{c}
+      t^1 \\
+      t^2 \\
+      3^3 \\
+      \phi^+ \\
+      -\phi^0
+  \end{array}\right) =\left(\bm{3}, 1,-\frac{1}{3}\right)\oplus\left(1,\bm{2},\frac{1}{2}\right)
+\end{align}
+真空期待値は
+\begin{align}
+  \langle\phi_{\bm{5}}\rangle = \frac{1}{\sqrt{2}}\left(
+  \begin{array}{c}
+      0 \\
+      0 \\
+      0 \\
+      0 \\
+      v_0
+  \end{array}\right),\quad(v_0\sim 246\,[\mathrm{GeV}])
+\end{align}
+のようにして, 標準模型と同じ値を取る.
+もし24表現ヒッグスと5表現ヒッグスに交わりがない場合, ポテンシャルは
+\begin{align}
+  V(\phi_{\bm{5}}) = -\frac{{\mu_5}^2}{2}\phi_{\bm{5}}^\dagger \phi_{\bm{5}} + \frac{\lambda}{4}(\phi_{\bm{5}}^\dagger \phi_{\bm{5}})^2
+\end{align}
+である.\footnote{第2章のポテンシャルの規格化とは異なる}
+%NOTE: Notationが微妙にちがう. BEGNに合わせると \frac{\mu^2}{2}になるので注意.
+このとき, $v_0^2 =\frac{2\mu_5^2}{\lambda}$となり, 標準模型に表れるゲージボゾンは
+\begin{align}
+  m_W^2 = \frac{g^2 v_0^2}{4}
+\end{align}
+と質量を持つことになる.
+\textcolor{red}{検討中(20250113): ヒッグスのDTsplitting問題をここに入れる?}
+\subsection{フェルミオン質量}
+
+\subsection{SU(5)大統一理論の予言}
+$SU(5)$大統一理論では, 素粒子標準模型粒子を$SU(5)$群の$\bar{\bm{5}}$表現や$\bm{10}$表現に当てはめた.
+これにより素粒子標準模型には存在しない現象が予言される.
+\subsubsection{陽子崩壊}
+$SU(5)$大統一理論では式(\ref{XY_bosons})で見たように, 新たに$X, Y$ゲージボゾンの存在が予言される.
+\subsubsection{電荷の量子化}
+式(\ref{quantum_Q})で述べているが, 標準模型では予言されない電荷の量子化が行える.
+これは$SU(5)$大統一理論がクォーク, レプトンを $SU(5)$の単純群で記述し, $\bar{\bm{5}}$表現に当てはめることで
+\begin{align}
+  \mathrm{Tr}(d^c_1, d^c_2, d^c_3, e^+, -\nu)=0 \nonumber
+\end{align}
+と電荷に制限を与えたためである.
+\subsubsection{ワインバーグ角の予言}
+
+\subsection{破綻}
+
+
+%EOF
+
+
+\chapter{群論}
+% ---------------------------------------
+%
+%  Group theory
+%  group_theory.tex
+%  Program modified by Yasutoki Takamura
+%  Last Modified Jul 18 2024
+%
+% ----------------------------------------
+ この章では, 大統一理論に必要な数学の内容をまとめている.
+ 詳しい証明や例については数学の専門書を参考にすること.
+ 次のことを認め, 話を進める.
+
+ $X$を集合とする.
+ 写像$\phi: X\times X \rightarrow X$のことを集合$X$上の演算と言う.
+ これ以降では$a,b,\in X$に対する写像を$\phi(a, b)$の代わりに$ab$と書く.
+\section{群}
+群とは次の性質を持つものである.
+\begin{dfn}[群]
+  $G$を空ではない集合とする. 集合$G$上で演算が定義されており, 次の性質を満たすとき, $G$を群と言う.
+  \begin{enumerate}
+    \item 単位元と呼ばれる$e\in G$が存在し, 全ての$a\in G$に対して$ae=ea=a$となる.
+    \item すべての$a\in G$に対し, $b\in G$が存在し, $ab=ba=e$となる. この元$b$は$a$の逆元と呼ばれ, $a^{-1}$と書く.
+    \item すべての$a, b, c \in G$に対して, $(ab)c=a(bc)$が成り立つ.
+  \end{enumerate}
+\end{dfn}
+特に, 性質3. は結合法則と呼ばれている.
+群の元$a, b\in G$に対して$ab=ba$が成り立つとき, $a, b$は可換である.
+$G$の任意の元$a, b$が可換なら, $G$を可換群(Abel群)と呼ぶ.
+
+\section{Lie群}
+\section{表現}
+\section{カルタン分類}
+
+
+%EOF
+
+
+
+
+% ----- 2nd part -----
+\part{研究の部分}
+
+\chapter{SU(5)大統一理論の拡張模型}
+aa
+
+% ----- Bibliography -----
+\bibliographystyle{abbrv}
+\begin{thebibliography}{1}
+
+\bibitem{PhysRevLett.32.438}
+H.~Georgi and S.~L. Glashow.
+\newblock Unity of all elementary-particle forces.
+\newblock {\em Phys. Rev. Lett.}, 32:438--441, Feb 1974.
+
+\end{thebibliography}
+
+% -----------------------
+\end{document}
+
+%EOF

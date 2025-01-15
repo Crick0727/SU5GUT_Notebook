@@ -3,7 +3,7 @@
 %  Grand Unified Theory
 %  grand_unified_theory.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 13 2025
+%  Last Modified Jan 14 2025
 %
 % ----------------------------------------
 %\section{大統一理論}
@@ -49,7 +49,7 @@ $(\nu, e)_L$ & $(1  , 2,-\frac{1}{2})$ &      2 \\
 ここではまだ$q$の正体が$u, d$クォークのどちらかは定かではないが, $\mathrm{SU}(5)$群のトレースは0でなければならないため, $Q$を電荷とすると上記の電荷は
 \begin{align}
   \sum_{a=1}^5 Q_a = 3Q_{qc}+Q_\nu + Q_e\nonumber\\
-  \therefore\quad Q_q = -Q_{qc} = -\frac{1}{3}
+  \therefore\quad Q_q = -Q_{qc} = -\frac{1}{3}\label{quantum_Q}
 \end{align}
 となる.
 したがって, $q=d$と選択することにより, 次のように$\bm{5}$表現を決めることができる.
@@ -184,7 +184,7 @@ $SU(5)$群の生成演算子をこれまでのように$[L_i]^a_b\,(i=1,\cdots,2
 ここで, $SU(5)$ゲージ粒子として新しく$X, Y$ボゾンが導入される.
 これらは
 \begin{align}
-  X, Y = \left(\bar{3},2, \frac{5}{3}\right)\nonumber
+  X, Y = \left(\bar{3},2, \frac{5}{3}\right)\label{XY_bosons}
 \end{align}
 という量子数をもつ.
 
@@ -358,16 +358,24 @@ $SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現
 %NOTE: Notationが微妙にちがう. BEGNに合わせると \frac{\mu^2}{2}になるので注意.
 このとき, $v_0^2 =\frac{2\mu_5^2}{\lambda}$となり, 標準模型に表れるゲージボゾンは
 \begin{align}
-  m_W = \frac{g^2 v_0^2}{4}
+  m_W^2 = \frac{g^2 v_0^2}{4}
 \end{align}
 と質量を持つことになる.
 \textcolor{red}{検討中(20250113): ヒッグスのDTsplitting問題をここに入れる?}
 \subsection{フェルミオン質量}
 
-
 \subsection{SU(5)大統一理論の予言}
+$SU(5)$大統一理論では, 素粒子標準模型粒子を$SU(5)$群の$\bar{\bm{5}}$表現や$\bm{10}$表現に当てはめた.
+これにより素粒子標準模型には存在しない現象が予言される.
 \subsubsection{陽子崩壊}
+$SU(5)$大統一理論では式(\ref{XY_bosons})で見たように, 新たに$X, Y$ゲージボゾンの存在が予言される.
 \subsubsection{電荷の量子化}
+式(\ref{quantum_Q})で述べているが, 標準模型では予言されない電荷の量子化が行える.
+これは$SU(5)$大統一理論がクォーク, レプトンを $SU(5)$の単純群で記述し, $\bar{\bm{5}}$表現に当てはめることで
+\begin{align}
+  \mathrm{Tr}(d^c_1, d^c_2, d^c_3, e^+, -\nu)=0 \nonumber
+\end{align}
+と電荷に制限を与えたためである.
 \subsubsection{ワインバーグ角の予言}
 
 \subsection{破綻}

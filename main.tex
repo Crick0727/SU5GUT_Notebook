@@ -2,7 +2,7 @@
 %   The basic memos for the standard model of particle physics
 %   and SU(5) Grand Unified Theory 
 %
-%   Last Modified: Dec 19 2024
+%   Last Modified: Jan 16 2025
 %   Author: Yasutoki Takamura
 %   Kanazawa University / Institute of theoretical particle physics
 % ------------------------------------------------------------------
@@ -46,7 +46,6 @@
 
 % ----- Geometry setting ---------------------------
 \geometry{left=25mm,right=25mm,top=30mm,bottom=30mm}
-% ---------------------------------------------------
 \begin{document}
 
 
@@ -55,14 +54,10 @@
 \author{金沢大学大学院\,\,自然科学研究科数物科学専攻\,(物理学コース)修士課程2年\\学籍番号\,2315011026$\quad$名列番号216\\高村 泰時} 
 \date{\today}
 \maketitle
-% ---------------------------------------------------
-
 
 % ----- Contents page -------------------------------
 \tableofcontents
 \clearpage
-% ---------------------------------------------------
-
 
 % ----- Abstract ------------------------------------
 \begin{abstract}
@@ -71,10 +66,10 @@
   勉強したものであっても一度まとめておかないと, 後々忘れてしまうものですので冗長にまとめている部分もあります.
   全部分のNotationはまだまとめていません.
 \end{abstract}
-% ---------------------------------------------------
 
-
+% =========================
 % ----- Main Contents -----
+% =========================
 % ----- 1st part -----
 \part{教科書の部分}
 
@@ -96,20 +91,21 @@
 \chapter{SU(5)大統一理論}
 \input{grand_unified_theory.tex}
 
-\chapter{群論}
-\input{group_theory.tex}
-
-
 % ----- 2nd part -----
 \part{研究の部分}
 
 \chapter{SU(5)大統一理論の拡張模型}
 \input{extend_SU5.tex}
 
+% ----- Appendix -----
+\appendix
+\chapter{群論}
+\input{group_theory.tex}
+
 % ----- Bibliography -----
 \bibliographystyle{abbrv}
 \bibliography{bibs.bib}
-% -----------------------
-\end{document}
 
+
+\end{document}
 %EOF

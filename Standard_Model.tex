@@ -106,7 +106,8 @@ $\theta^a$は実定数であり, $n=\mathrm{dim}(G)$はリー群の次元であ�
   W_{\mu\nu}^i &= \partial_\mu W_\nu^i - \partial_\nu W_\mu^i+g_2\varepsilon^{ijk}W_\mu^j W_\nu^k \label{gauge.W}\\
   G_{\mu\nu}^a &= \partial_\mu G_\nu^a - \partial_\nu G_\mu^a +g_3 f^{abc}G_\mu^b G_\mu^c\label{gauge.G}
 \end{align}
-ここでは, $g_2, g_3$はそれぞれ$\mathrm{SU}(3)_\mathrm{c}$, $\mathrm{SU}(2)_\mathrm{L}$ゲージ群の結合定数ある.
+ここでは, $g_3, g_2$はそれぞれ$\mathrm{SU}(3)_\mathrm{c}$, $\mathrm{SU}(2)_\mathrm{L}$ゲージ群の結合定数ある.
+また, 後述されるが$\mathrm{U(1)}_{\mathrm {Y}}$ゲージ場によって現れる$B_\mu$ゲージボゾンの結合定数を$g'$とする.
 $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 また, 標準模型のゲージ場の運動項は式(\ref{gauge-6})より
 \begin{align}
@@ -183,9 +184,10 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
 ここから, ゲージ粒子の質量の獲得について考える.
 ヒッグス場のラグランジアン密度は式(\ref{L_H})で与えられており, ヒッグス粒子の運動項には
 \begin{align}
-  \mathcal{L}_H \supset \frac{1}{4}\left((g_2W^a_\mu\frac{\sigma^a}{2}+g_1B_\mu)\Phi\right)^\dagger \left((g_2W^{a\,\mu}\frac{\sigma^a}{2}+g_1B^\mu)\Phi\right)\label{eq2-18}
+  \mathcal{L}_H \supset \frac{1}{4}\left((g_2W^a_\mu\frac{\sigma^a}{2}+g'B_\mu)\Phi\right)^\dagger \left((g_2W^{a\,\mu}\frac{\sigma^a}{2}+g'B^\mu)\Phi\right)\label{eq2-18}
 \end{align}
 という項が含まれている.
+ここで$g'$は$U(1)_Y$ゲージボゾン$B_\mu$のゲージ結合定数である.
 これによりゲージ対称性は
 \begin{align}
   SU(3)_c\times SU(2)_L\times U(1)_Y \rightarrow SU(3)_c\times U(1)_{em}
@@ -193,7 +195,7 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
 のように自発的に破れる.
 したがって, (\ref{eq2-18})から
 \begin{align}
-  \mathcal{L}_H \supset \frac{v^2}{8}\left[\left(g_2^2(W^1_\mu  W^{1\mu}+W^2_\mu  W^{2\mu}\right)+ (g_2W_\mu^3 -g_1B_\mu)(g_2W^{3\mu}-g_1 B^{\mu})\right] \label{2-21}
+  \mathcal{L}_H \supset \frac{v^2}{8}\left[\left(g_2^2(W^1_\mu  W^{1\mu}+W^2_\mu  W^{2\mu}\right)+ (g_2W_\mu^3 -g'B_\mu)(g_2W^{3\mu}-g' B^{\mu})\right] \label{2-21}
 \end{align}
 となる.
 ここで, ゲージ場$W_\mu^a$と$B_\mu$を次の様に再定義する.
@@ -202,9 +204,9 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
   \left(\begin{array}{c}
       Z_\mu^0 \\
       A_\mu
-      \end{array}\right)&=\frac{1}{\sqrt{g_1^2+g_2^2}}\left(\begin{array}{c}
-      g_2 W_\mu^3-g_1 B_\mu \\
-      g_1 W_\mu^3-g_2 B_\mu 
+      \end{array}\right)&=\frac{1}{\sqrt{g'^2+g_2^2}}\left(\begin{array}{c}
+      g_2 W_\mu^3-g' B_\mu \\
+      g' W_\mu^3-g_2 B_\mu 
     \end{array}\right)
     \equiv \left(\begin{array}{cc}
         \cos\theta_W W_\mu^3 - \sin\theta_W B_\mu \\
@@ -214,7 +216,7 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
 \end{align}
 ただし, この混合角$\theta_W$は
 \begin{align}
-  \cos\theta_W = \frac{g_2}{\sqrt{g_1^2 + g_2^2}},\quad \sin\theta_W = \frac{g_1}{\sqrt{g_1^2 + g_2^2}}\nonumber
+  \cos\theta_W = \frac{g_2}{\sqrt{g'^2 + g_2^2}},\quad \sin\theta_W = \frac{g'}{\sqrt{g'^2 + g_2^2}}\nonumber
 \end{align}
 で定義され, ワインバーグ角と呼ばれる.
 実験によりこの値は$\sin^2\theta_W \simeq 0.23$となる.
@@ -232,7 +234,7 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
 \end{align}
 さらに,
 \begin{align}
-  m_W = \frac{1}{2}g_2v,\quad m_Z = \frac{1}{2}\sqrt{g_1^2+g_2^2}v\nonumber
+  m_W = \frac{1}{2}g_2v,\quad m_Z = \frac{1}{2}\sqrt{g'^2+g_2^2}v\nonumber
 \end{align}
 となる.
 これらも質量は

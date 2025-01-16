@@ -3,7 +3,7 @@
 %  Grand Unified Theory
 %  grand_unified_theory.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 14 2025
+%  Last Modified Jan 16 2025
 %
 % ----------------------------------------
 %\section{大統一理論}
@@ -54,7 +54,7 @@ $(\nu, e)_L$ & $(1  , 2,-\frac{1}{2})$ &      2 \\
 となる.
 したがって, $q=d$と選択することにより, 次のように$\bm{5}$表現を決めることができる.
 \begin{align}
- \bar{\bm{5}}=\begin{pmatrix}
+ \psi_{\bar{\bm{5}}} =\begin{pmatrix}
     d_1 ^c \\
     d_2 ^c \\
     d_3 ^c \\
@@ -73,7 +73,7 @@ ${\bm{10}}$表現は
 この$\bf{10}$表現は$\bm{10}\rightarrow (3^*,1,-\frac{2}{3})\oplus(3,2,\frac{1}{6})\oplus(1,1,1)$
 と分解できるので, 次のように当てはめることができる.
 \begin{align}
-  \overline{\bm{10}}= \frac{1}{\sqrt{2}}\begin{pmatrix}
+\psi_{{\bm{10}}} = \frac{1}{\sqrt{2}}\begin{pmatrix}
          0 &  u_3^c & -u_2^c & u_1 & d_1 \\
     -u_3^c &      0 &  u_1^c & u_2 & d_2 \\
      u_2^c & -u_1^c &      0 & u_3 & d_3 \\
@@ -99,7 +99,7 @@ $e^-_L$に対して荷電共役変換を行った$(e^-_L)^c$を考える.
 これにより$U$はユニタリーであり, $\mathrm{det}U =1$を満たす.
 $L_i$は
 \begin{align}
-  \mathrm{tr}(L_iL_j) = \frac{1}{2}{\delta_{ij}}
+  \mathrm{tr}(L_iL_j) = \frac{1}{2}{\delta_{ij}}\label{reguralization}
 \end{align}
 と規格化する.
 ここで, 表現行列を昇降演算子との類推で今後のために
@@ -126,7 +126,7 @@ $SU(5)$群の生成演算子をこれまでのように$[L_i]^a_b\,(i=1,\cdots,2
 そのため$i=1,\cdots,8$を$SU(3)$部分, $i=9,10,11$を$SU(2)$の部分群として考えると
 \begin{align}
   L_i(i=1,\cdots,8) = \left(\begin{array}{@{}c|c@{}}
-      \mbox{$\frac{1}{2}\lambda_i$} &
+      \mbox{$\cfrac{1}{2}\lambda_i$} &
       \begin{matrix}
         0 & 0 \\
         0 & 0 \\
@@ -149,12 +149,20 @@ $SU(5)$群の生成演算子をこれまでのように$[L_i]^a_b\,(i=1,\cdots,2
       \begin{matrix}
         0 & 0 & 0\\
         0 & 0 & 0
-      \end{matrix} & {\mbox{$\frac{1}{2}\sigma_j$}}
+      \end{matrix} & {\mbox{$\cfrac{1}{2}\sigma_j$}}
   \end{array}\right)
 \end{align}
 ただし, $\sigma_{j=i-8}\,(j=1,2,3)$である.
 
-対角行列は$L_3, L_8, L_{11}$と$L_{12}=\frac{1}{2\sqrt{15}}\mathrm{diag}(-2,-2,-2,3,3)$である.
+対角行列は$L_3, L_8, L_{11}$にそれぞれ$SU(3), SU(2)$群の対角行列を対応させる.
+残りの1つは$L_{12}$であり, $U(1)_Y$の超電荷を対応させる.
+基本表現である$\bm{5}$表現の超電荷を対応させ, 規格化条件である式(\ref{reguralization})を用いることで
+\begin{align}
+  L_{12}=\frac{1}{2\sqrt{15}}\mathrm{diag}(-2,-2,-2,3,3)\nonumber
+\end{align}
+と決めることができる.
+
+
 24個のゲージボゾンは随伴表現として存在し, 次のように分解できる.
 \begin{align}
   \bm{24} = G(8,1,0)\oplus W(1,3,0)\oplus B(1,1,0)\oplus \bar{X}(3,\bar{2},-\frac{5}{6})\oplus X(\bar{3},2,+\frac{5}{6})
@@ -362,10 +370,39 @@ $SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現
 \end{align}
 と質量を持つことになる.
 \textcolor{red}{検討中(20250113): ヒッグスのDTsplitting問題をここに入れる?}
+
+\subsubsection{ワインバーグ角}
+ゲージ結合定数が大統一スケールで$g_5$と統一されたことにより, 理論的にワインバーグ角を決定することができる.
+それを見るために$\mathrm{U(1)_Y}$ゲージ群の結合定数を$SU(5)$の中で規格化する.
+フォトン場を$A_\mu$, 中性弱ボゾンを$Z_\mu$とすると
+\begin{align}
+  D_\mu &\supset \partial_\mu -i\frac{g_5}{2}[W^0 L_{11} + B L_{12}]\nonumber\\
+        &\quad=\partial_\mu -i\frac{g_5}{2}[(\sin\theta_W L_{11} + \cos\theta_W L_{12})A_\mu + (\cos\theta_W L_{11} -\sin\theta_W L_{12})Z_\mu]\nonumber\\
+        &\quad\equiv \partial_\mu -i[eQA_\mu + g' Q_Z Z_\mu]\nonumber
+\end{align}
+となる.
+このとき, 電荷を表す演算子$Q$は,
+\begin{align}
+  eQ = \frac{g_5}{2}(\sin\theta_W L_{11} + \cos\theta_W L_{12})
+\end{align}
+と関係が導ける.
+一方で電荷演算子はアイソスピン$I_3 = L_{11}$と超電荷$Y=\sqrt{\frac{5}{3}}L_{12}$を用いると
+\begin{align}
+  Q = L_{11} + \sqrt{\frac{5}{3}}L_{12}
+\end{align}
+とかける.
+これらを比較することで,
+\begin{align}
+  e = g_5\sin\theta_W\nonumber\\
+  g' = \frac{e}{\cos\theta_W}=\sqrt{\frac{3}{5}}g_5 = g_5 \tan\theta_W\nonumber\\
+  \sin\theta_W =\sqrt{\frac{3}{8}}
+\end{align}
+と大統一スケールでの値を予言することができる.
+$\sin\theta_W$は標準模型では値を予言することはできなかったが, 大統一理論では予言ができることが示された.
 \subsection{フェルミオン質量}
 
 \subsection{SU(5)大統一理論の予言}
-$SU(5)$大統一理論では, 素粒子標準模型粒子を$SU(5)$群の$\bar{\bm{5}}$表現や$\bm{10}$表現に当てはめた.
+$SU(5)$大統一理論では, 素粒子標準模型に現れる粒子を$SU(5)$群の$\bar{\bm{5}}$表現や$\bm{10}$表現, 随伴表現の$\bm{24}$表現に当てはめて考えた.
 これにより素粒子標準模型には存在しない現象が予言される.
 \subsubsection{陽子崩壊}
 $SU(5)$大統一理論では式(\ref{XY_bosons})で見たように, 新たに$X, Y$ゲージボゾンの存在が予言される.
@@ -375,8 +412,10 @@ $SU(5)$大統一理論では式(\ref{XY_bosons})で見たように, 新たに$X,
 \begin{align}
   \mathrm{Tr}(d^c_1, d^c_2, d^c_3, e^+, -\nu)=0 \nonumber
 \end{align}
-と電荷に制限を与えたためである.
+と標準模型では与えられない条件を課すことができるためである.
 \subsubsection{ワインバーグ角の予言}
+大統一スケールではゲージ結合定数が$g_5$と統一される.
+そのためワインバーグ角は大統一スケールでは理論から予言することができ,
 
 \subsection{破綻}
 

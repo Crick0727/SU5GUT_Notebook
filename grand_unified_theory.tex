@@ -393,24 +393,115 @@ $SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現
 
 はじめに$\overline{\bm{5}}\otimes {\bm{10}}$の場合を考える.
 \begin{align}
-  \mathcal{L}_Y \supset Y^{mn} (\psi^T_{\bm{\overline{5}}mL})_a C (\psi_{\bm{10}nL})^{ab}(\phi_{\bm{5}})_b^\dagger +\mathrm{h.c.}
+  \mathcal{L}_Y \supset Y_5^{mn} (\psi^T_{\bm{\overline{5}}mL})_a C (\psi_{\bm{10}nL})^{ab}(\phi_{\bm{5}})_b^\dagger +\mathrm{h.c.}
 \end{align}
+ここで, $Y_5$は世代ごとの湯川結合を行列で表したものであり, $\{m, n= 1,2,3\}$である.
 ヒッグスに真空期待値を式(\ref{Higgs_VEV_5})のように持たせると,
 \begin{align}
-  -\frac{v_0}{2}Y^{mn}\left(\sum_{i=1}^3\overline{d_{mR}}d_{nL} + \overline{e_{mR}^+}e^+_{nL}\right) + \mathrm{h.c.}
+  Y_5^{mn} (\psi^T_{\bm{\overline{5}}mL})_a C (\psi_{\bm{10}nL})^{ab}(\phi_{\bm{5}})_b^\dagger +\mathrm{h.c.} \rightarrow\quad -\frac{v_0}{2}Y_5^{mn}\left(\overline{d_{mR}}d_{nL} + \overline{e_{mR}^+}e^+_{nL}\right) + \mathrm{h.c.}
 \end{align}
 となり, 下系列クォークと荷電レプトンの質量を導くことができる.
 
 一方で,$ \bm{10}\otimes \bm{10}$の場合は
 \begin{align}
-  \mathcal{L} \supset Y^{mn} \varepsilon_{abcde} (\psi^{T}_{\bm{\overline{5}}mL})^{ab}C (\psi_{\bm{10}nL})^{cd} \phi_{\bm{5}}^e
+  \mathcal{L}_Y \supset Y_{10}^{mn} \varepsilon_{abcde} (\psi^{T}_{\bm{\overline{5}}mL})^{ab}C (\psi_{\bm{10}nL})^{cd} \phi_{\bm{5}}^e \label{u_Yukawa}
 \end{align}
+となる.
 ここで$\varepsilon_{abcde}=1$を満たす完全反対称テンソルである.
-\section{SU(5)大統一理論の予言}
+上系列クォークの質量は$d=4$の時に得ることができる.
+真空期待値を式(\ref{Higgs_VEV_5})のようにとると, 式(\ref{u_Yukawa})は
+\begin{align}
+  Y_{10}^{mn} \varepsilon_{abcde} (\psi^{T}_{\bm{\overline{5}}mL})^{ab}C (\psi_{\bm{10}nL})^{cd} \phi_{\bm{5}}^e \rightarrow&\quad 4Y^{mn} \varepsilon_{abc45} (\psi^{T}_{\bm{\overline{5}}mL})^{ab}C (\psi_{\bm{10}nL})^{cd}\frac{v_0}{\sqrt{2}} + \mathrm{h.c.} \nonumber\\
+                                                                                                            &= 4Y^{mn} \varepsilon_{\alpha \beta \gamma} (\psi^{T}_{\bm{\overline{5}}mL})^{\alpha\beta}C (\psi_{\bm{10}nL})^{\gamma 4}\frac{v_0}{\sqrt{2}} + \mathrm{h.c.}\nonumber\\
+                                          &= \frac{4}{\sqrt{2}}v_0 Y^{mn}\overline{u_{mR}}u_{nL} + \mathrm{h.c.}
+\end{align}
+と表すことができる.
+\section{SU(5)大統一理論による予言と問題点}
 $SU(5)$大統一理論では, 素粒子標準模型に現れる粒子を$SU(5)$群の$\overline{\bm{5}}$表現や$\bm{10}$表現, 随伴表現の$\bm{24}$表現に当てはめて考えた.
 これにより素粒子標準模型には存在しない現象が予言される.
 \subsection{陽子崩壊}
 $SU(5)$大統一理論では式(\ref{XY_bosons})で見たように, 新たに$X, Y$ゲージボゾンの存在が予言される.
+ゲージ相互作用は次のような形をとる.
+\begin{align}
+  \mathcal{L}_{Int} &= -\frac{g_5}{\sqrt{2}}\left[ \overline{X}_\mu^i(\overline{d}_{iR}\gamma^\mu e^c_R + \overline{d}_{iL}\gamma^\mu e^c_L -\varepsilon_{ijk} \overline{u}_L^{c\,j}\gamma^\mu u_L^k) \right.\nonumber\\ &\qquad\qquad+\left.\overline{Y}_\mu^i(-\overline{d}_{iR}\gamma^\mu \nu_R^c -\overline{u}_{iL}\gamma^\mu e_L^c + \varepsilon_{ijk}\overline{u}_L^{c\,k}\gamma^\mu d_L^j)\right] \label{PD_L}
+\end{align}
+これらの項により, 標準模型では存在しないクォークとレプトンの相互作用が起こる.
+図\ref{fig_X_boson}は$X, Y$ボゾンによる相互作用をファインマン図を用いて表したものである.
+\begin{figure}[ht]
+  \begin{center}
+    \begin{tabular}{ccc}
+      \begin{minipage}[b]{0.20\columnwidth}
+        \centering
+        \begin{tikzpicture}
+          \begin{feynhand}
+            \vertex [particle] (e) at (-0.8,1.26) {$e^c$};
+            \vertex [particle] (d) at (-0.8,-1.26) {$\overline{d}$};
+            \vertex (x_in) at (0,0);
+            \vertex (x_out) at (1.6,0);
+            \propag [fermion] (x_in) to (e);
+            \propag [fermion] (d) to (x_in);
+            \propag [charged boson] (x_out) to [edge label =$X$] (x_in);
+          \end{feynhand}
+        \end{tikzpicture}
+      \end{minipage} &
+      \begin{minipage}[b]{0.20\columnwidth}
+        \centering
+        \begin{tikzpicture}
+          \begin{feynhand}
+            \vertex [particle] (e) at (-0.8,1.26) {$e^c$};
+            \vertex [particle] (d) at (-0.8,-1.26) {$u$};
+            \vertex (x_in) at (0,0);
+            \vertex (x_out) at (1.6,0);
+            \propag [fermion] (x_in) to (e);
+            \propag [fermion] (d) to (x_in);
+            \propag [charged boson] (x_out) to [edge label =$Y$] (x_in);
+          \end{feynhand}
+        \end{tikzpicture}
+      \end{minipage} &
+      \begin{minipage}[b]{0.20\columnwidth}
+        \centering
+        \begin{tikzpicture}
+          \begin{feynhand}
+            \vertex [particle] (e) at (-0.8,1.26) {$\nu^c$};
+            \vertex [particle] (d) at (-0.8,-1.26) {$d$};
+            \vertex (x_in) at (0,0);
+            \vertex (x_out) at (1.6,0);
+            \propag [fermion] (x_in) to (e);
+            \propag [fermion] (d) to (x_in);
+            \propag [charged boson] (x_out) to [edge label =$Y$] (x_in);
+          \end{feynhand}
+        \end{tikzpicture}
+      \end{minipage}
+    \end{tabular}
+  \end{center}
+  \caption{$X$ボゾン, $Y$ボゾンによるクォークとレプトンの相互作用.}
+  \label{fig_X_boson}
+\end{figure}
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \begin{feynhand}
+      \vertex [particle] (e) at (-0.8,1.26) {$e^c$};
+      \vertex [particle] (d) at (-0.8,-1.26) {$d$};
+      \vertex (x_in) at (0,0);
+      \vertex (x_out) at (1.6,0);
+      \vertex [particle] (u) at (2.4,1.26) {$u^c$};
+      \vertex [particle] (uc) at (2.4,-1.26) {$u$};
+      \vertex (free) at (2.0,0);
+      \vertex [particle] (fu_in) at (2.8,-1.26) {$u$};
+      \vertex [particle] (fu_out) at (2.8,1.26) {$u$};
+      \propag [fermion] (x_in) to (e);
+      \propag [fermion] (d) to (x_in);
+      \propag [fermion] (u) to (x_out);
+      \propag [fermion] (x_out) to (uc);
+      \propag [fermion] (fu_in) to (free);
+      \propag [fermion] (free) to (fu_out);
+      \propag [charged boson] (x_out) to [edge label =$X$] (x_in);
+    \end{feynhand}
+  \end{tikzpicture}
+  \label{fig_X_proton_decay}
+  \caption{$X$ボゾンを介した陽子崩壊のファインマン図}
+\end{figure}
 \subsection{電荷の量子化}
 式(\ref{quantum_Q})で述べているが, 標準模型では予言されない電荷の量子化が行える.
 これは$SU(5)$大統一理論がクォーク, レプトンを $SU(5)$の単純群で記述し, 式(\ref{GUT-5rep})のように$\overline{\bm{5}}$表現に当てはめることで

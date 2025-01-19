@@ -307,5 +307,99 @@ $i=1,2,3$を世代数として, 図\ref{fig_sm}のようにまとめられる.
 と表せる.
 
 \section{走るゲージ結合定数}
+場の量子論に基づけば, 理論に現れる発散を繰り込みという手法を用いて取り除くことが可能である.
+\textcolor{red}{種類などもう少し細かい説明をするか?}
+
+いずれの方法であってもエネルギースケールへ依存性があるが, 理論はエネルギーの変化に対して不変でなければならないため, ラグランジアンに存在するパラメータはエネルギースケールの変化を打ち消すように変化する.
+これによってエネルギースケールに依存する繰り込まれた理論が得られる.
+\subsection{Callan-Simanzik Equation}
+繰り込まれた量子場の理論ではラグランジアンの項は制限が与えられ, 質量次元が4次の項のみ許される.
+繰り込まれた場の理論のパラメータは, 繰り込み条件の組みで決定され, この条件が繰り込みスケールを決定している.
+異なるエネルギースケールであっても同様の理論を考えることができる.
+
+繰り込み条件を考えると, 繰り込みを行うスケール$M$は任意である.
+したがって, 同じ理論を異なったスケール$M'$でも定義することができる.
+このことを以下で考える. 
+
+ある理論のグリーン関数が
+\begin{align}
+  \langle T \phi_0(x_1)\cdots\phi_0(x_n)\rangle 
+\end{align}
+で与えられるとする.
+この理論では, 量子効果を考えない裸の結合定数$\lambda_0$や, 運動量カットオフが$\Lambda$によって与えられるものであり,エネルギースケール$M$には依存していない.
+エネルギースケール依存性は, このグリーン関数にあるのではなく, 場をリスケーリングし裸の結合定数$\lambda_0$を消して繰り込まれた結合定数$\lambda$で書くことでカットオフ依存性を取り除いたときにのみ現れる.
+繰り込まれたグリーン関数と裸のグリーン関数は, リスケーリング因子の$Z$に至るまでは数値的に同じになる.
+場の繰り込みは場の強さの繰り込み因子である$Z$を用いて次のように定義される.
+\begin{align}
+  \phi(x) = Z^{\frac{1}{2}}\phi_0(x) \label{bfnc-2}
+\end{align}
+これにより繰り込まれた$n$点の相関関数は, 裸の相関関数と次のように関係付けられる.
+\begin{align}
+  \langle T \phi(x_1)\cdots \phi(x_n)\rangle = Z^{-\frac{n}{2}}\langle T \phi_0(x_1)\cdots \phi(x_n)\rangle \label{bfnc-1}
+\end{align}
+式(\ref{bfnc-1})の左辺は繰り込まれたグリーン関数と呼ばれる.
+この関数は右辺のグリーン関数とは異なる別のエネルギースケールである$M'$で定義されており, 結合定数は$\lambda'$, リスケーリング因子は$Z'$で定義される.
+
+ここから, エネルギースケール$M$を無限小だけシフトした場合の影響を考える.
+はじめに$G^{(n)}(x_1,\cdots,x_n)$を繰り込まれた摂動論において計算される連結$n$点関数とする.
+\begin{align}
+  G^{(n)}(x_1,\cdots,x_n) = \langle T\phi(x_1)\cdots\phi(x_n) \rangle_{\text{connected}}\label{rnpf}
+\end{align}
+繰り込みされていない裸の相関関数は, 繰り込みされていないパラメータである$(\phi_0,\lambda_0,m_0)$とカットオフ$\Lambda$に依存している.
+一方で, 繰り込まれた相関関数(式(\ref{rnpf}))には繰り込まれたパラメーターである($\phi,\lambda,m)$と繰り込みスケール$M$に依存している.
+このことから, 繰り込みされていない裸の相関関数$G^{(n)}_0$は繰り込みスケール$M$に依存せず, 繰り込みスケールの変化があった場合でも変化することがないので
+\begin{align}
+  \frac{d G_0^{(n)}}{dM} = 0 \label{bfnc-3}
+\end{align}
+が満たされる.
+一方で, 繰り込まれた相関関数は繰り込みスケールが変化することで影響を受ける.
+繰り込みスケールを無限小だけシフトする.
+\begin{align}
+  M\quad\rightarrow\quad M + \delta M \label{sftM}
+\end{align}
+このとき, 繰り込みスケールの変化に伴って$\lambda$と$\phi$は次のように変化する.
+\begin{align}
+  &\lambda \quad\rightarrow\quad \lambda + \delta \lambda \label{sftl}\\
+  &\phi \quad\rightarrow\quad \phi+ \delta\phi \equiv (1+\delta\eta)\phi \label{sftp}
+\end{align}
+場の変換については無次元のシフトを$\delta \eta  = \frac{\delta\phi}{\phi}$とした.
+式(\ref{bfnc-2})から
+\begin{align}
+  Z^{\frac{1}{2}} = 1 - \delta\eta\label{bfnc-4}
+\end{align}
+が言えるので, 式(\ref{bfnc-3})から繰り込みされた相関関数は
+\begin{align}
+  G^{(n)}\quad\rightarrow\quad(1+n\delta\eta)G^{(n)}\label{sftg}
+\end{align}
+と変化することがわかる.
+これらを踏まえて, 繰り込みされた相関関数の微小変化を考えると, 式(\ref{bfnc-3})から
+\begin{align}
+  \frac{d}{dM} Z^{\frac{n}{2}}G^{(n)} = \frac{\partial G^{(n)}}{\partial M} + \frac{\partial G^{(n)}}{\partial \lambda}\frac{\partial \lambda}{\partial M} - n \frac{\partial \eta}{\partial M}G^{(n)} = 0
+\end{align}
+がわかるので, これを整理して
+\begin{align}
+  \left(M \frac{\partial}{\partial M} + M\frac{\partial \lambda}{\partial M} \frac{\partial}{\partial M} -nM\frac{\partial \eta}{\partial M}\right)G^{(n)}(x_1,\cdots,x_n;M,\lambda) = 0\label{CS-1}
+\end{align}
+となる.
+ここで無次元の量である$\beta$と$\gamma$を
+\begin{align}
+  &\beta = M\frac{\partial \lambda}{\partial M} \label{def_beta}\\
+  &\gamma =  -M\frac{\partial \eta}{\partial M} \label{def_gamma}
+\end{align}
+と定義すると, 次の関係式が得られる.
+\begin{align}
+  \left(M \frac{\partial }{\partial M} + \beta \frac{\partial}{\partial \lambda} + n \gamma\right) G^{(n)}(x_1,\cdots,x_n;M,\lambda) = 0 \label{bfnc-CS1}
+\end{align}
+式(\ref{bfnc-CS1})はCallan-Symanzik方程式と呼ばれる.
+Callan-Symanzik方程式に現れる$\beta, \gamma$の2つの関数はカットオフスケールの$\Lambda$に依存し, 繰り込みスケール$M$に依存しない.
+つまり, この$\beta, \gamma$の2つの関数は次元を持たない繰り込まれた結合定数である$\lambda$の関数であることが言える.
+これらは$G^{(n)}$にのみ繰り込みが行われているからである.
+
+ここで新しく定義された$\beta, \gamma$の2つの関数は普遍的な関数であり, 繰り込み定数と場の強さの変化にのみ依存しており, これらが変化したときの繰り込みスケール$M$の変化を補うように変化が起こる. 
+そのため$\beta$関数は繰り込みスケールが$M$への結合定数の依存性を表し, 一方で$\gamma$関数は場を繰り込みスケール$M$への依存性を表している
+
+
+
+
 
 %EOF

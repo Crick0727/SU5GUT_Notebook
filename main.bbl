@@ -1,8 +1,38 @@
 \begin{thebibliography}{1}
 
+\bibitem{glashowPartialsymmetriesWeakInteractions1961}
+Sheldon~L. Glashow.
+\newblock Partial-symmetries of weak interactions.
+\newblock {\em Nuclear Physics}, Vol.~22, No.~4, pp. 579--588, February 1961.
+
+\bibitem{salamWeakElectromagneticInteractions1968}
+Abdus Salam.
+\newblock Weak and {{Electromagnetic Interactions}}.
+\newblock {\em Conf. Proc. C}, Vol. 680519, pp. 367--377, 1968.
+
+\bibitem{weinbergModelLeptons1967}
+Steven Weinberg.
+\newblock A {{Model}} of {{Leptons}}.
+\newblock {\em Physical Review Letters}, Vol.~19, No.~21, pp. 1264--1266, November 1967.
+
+\bibitem{callanBrokenScaleInvariance1970}
+Curtis~G. Callan.
+\newblock Broken {{Scale Invariance}} in {{Scalar Field Theory}}.
+\newblock {\em Physical Review D}, Vol.~2, No.~8, pp. 1541--1547, October 1970.
+
+\bibitem{symanzikSmallDistanceBehaviour1970}
+K.~Symanzik.
+\newblock Small distance behaviour in field theory and power counting.
+\newblock {\em Communications in Mathematical Physics}, Vol.~18, No.~3, pp. 227--246, September 1970.
+
+\bibitem{symanzikSmalldistancebehaviourAnalysisWilson1971}
+K.~Symanzik.
+\newblock Small-distance-behaviour analysis and {{Wilson}} expansions.
+\newblock {\em Communications in Mathematical Physics}, Vol.~23, No.~1, pp. 49--86, March 1971.
+
 \bibitem{PhysRevLett.32.438}
-H.~Georgi and S.~L. Glashow.
+Howard Georgi and S.~L. Glashow.
 \newblock Unity of all elementary-particle forces.
-\newblock {\em Phys. Rev. Lett.}, 32:438--441, Feb 1974.
+\newblock {\em Phys. Rev. Lett.}, Vol.~32, pp. 438--441, Feb 1974.
 
 \end{thebibliography}

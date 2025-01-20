@@ -16,10 +16,12 @@
 \usepackage{here}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{ascmac}
+\usepackage{cite}
 \usepackage{color}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage[compat=1.1.0]{tikz-feynhand}
 \usepackage[dvipdfmx]{hyperref}
+\usepackage{multibib}
 \usepackage{pxjahyper} %
 \hypersetup{%
   setpagesize=true, %
@@ -50,7 +52,7 @@
 
 
 % ----- Title Page -------------
-\title{SU(5)大統一理論15表現ヒッグスを用いた模型の拡張}
+\title{SU(5)大統一理論における15表現ヒッグスを用いた模型の拡張}
 \author{金沢大学大学院\,\,自然科学研究科数物科学専攻\,(物理学コース)修士課程2年\\学籍番号\,2315011026$\quad$名列番号216\\高村 泰時} 
 \date{\today}
 \maketitle
@@ -82,8 +84,9 @@
 \chapter{素粒子標準模型では説明できない物理}
 \input{SM_problems.tex}
 
-\section{階層性問題}
-\input{hierarchy_problem.tex}
+%\section{階層性問題}
+%\input{hierarchy_problem.tex}
+% Hierarchy problemは大統一理論の中にいれて説明するべきであるから, 移動させる.
 
 \section{ニュートリノ質量}
 \input{neutrino.tex}
@@ -103,8 +106,8 @@
 \input{group_theory.tex}
 
 % ----- Bibliography -----
-\bibliographystyle{abbrv}
-\bibliography{bibs.bib}
+\bibliographystyle{junsrt}
+\bibliography{bibs/GUT.bib,bibs/Standard_Models.bib,bibs/CS_Equation.bib,bibs/Glashow_Weinberg.bib}
 
 
 \end{document}

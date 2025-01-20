@@ -3,7 +3,7 @@
 %  Standard model
 %  Standard_Model.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 16 2025
+%  Last Modified Jan 20 2025
 %
 % ---------------------------------------
 この章では素粒子物理学における標準模型についてまとめた.
@@ -20,6 +20,7 @@
 ``C''はカラー量子数, ``L''は左巻きのカイラリティ, ``Y''は超電荷である.
 $\mathrm{SU}(3)_c$群は核子に作用する強い相互作用を記述する群であり, 量子色力学(QCD)によって記述される.
 一方で$\mathrm{SU}(2)_L\times \mathrm{U}(1)_Y$は弱い相互作用と電磁相互作用を統一的に記述する電弱理論を記述する群である.
+\cite{glashowPartialsymmetriesWeakInteractions1961,salamWeakElectromagneticInteractions1968,weinbergModelLeptons1967}
 
 ゲージ対称性の他に, 理論に現れる粒子がどのようなものであるのか, 標準模型のゲージ対称性の中でどのような対称性を持つ粒子であるのかを決めることにより, 理論を具体的に決定することができる.
 他にも, ラグランジアン密度に含める項は, 繰り込み可能であり, ローレンツ対称性を満足するものを決めることで全て書き下すことができる.
@@ -390,16 +391,25 @@ $i=1,2,3$を世代数として, 図\ref{fig_sm}のようにまとめられる.
 \begin{align}
   \left(M \frac{\partial }{\partial M} + \beta \frac{\partial}{\partial \lambda} + n \gamma\right) G^{(n)}(x_1,\cdots,x_n;M,\lambda) = 0 \label{bfnc-CS1}
 \end{align}
-式(\ref{bfnc-CS1})はCallan-Symanzik方程式と呼ばれる.
+式(\ref{bfnc-CS1})はCallan-Symanzik方程式と呼ばれる. \cite{callanBrokenScaleInvariance1970,symanzikSmallDistanceBehaviour1970,symanzikSmalldistancebehaviourAnalysisWilson1971}
+
 Callan-Symanzik方程式に現れる$\beta, \gamma$の2つの関数はカットオフスケールの$\Lambda$に依存し, 繰り込みスケール$M$に依存しない.
 つまり, この$\beta, \gamma$の2つの関数は次元を持たない繰り込まれた結合定数である$\lambda$の関数であることが言える.
 これらは$G^{(n)}$にのみ繰り込みが行われているからである.
 
-ここで新しく定義された$\beta, \gamma$の2つの関数は普遍的な関数であり, 繰り込み定数と場の強さの変化にのみ依存しており, これらが変化したときの繰り込みスケール$M$の変化を補うように変化が起こる. 
+ここで新しく定義された$\beta, \gamma$の2つの関数は不変的な関数であり, 繰り込み定数と場の強さの変化にのみ依存しており, これらが変化したときの繰り込みスケール$M$の変化を補うように変化が起こる. 
 そのため$\beta$関数は繰り込みスケールが$M$への結合定数の依存性を表し, 一方で$\gamma$関数は場を繰り込みスケール$M$への依存性を表している
 
+\subsection{ゲージ結合定数のエネルギー依存性}
 
+式(\ref{def_beta})はゲージ結合定数
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=12truecm,clip]{fig/RGE_SM.eps}
+  \caption{標準模型粒子のみで繰り込み群方程式を解いた図}
+  \label{fig:RGE_SM}
+\end{figure}
 
 
 %EOF

@@ -7,6 +7,7 @@ set output "RGE.eps"
 
 set key bottom right
 set logscale x
+set format x "%t"
 set ylabel font "Arial, 12"
 
 set xlabel " log {/Symbol m} [GeV]^{-1}"

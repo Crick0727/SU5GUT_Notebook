@@ -1,4 +1,19 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{grossUltravioletBehaviorNonAbelian1973}
+David~J. Gross and Frank Wilczek.
+\newblock Ultraviolet {{Behavior}} of {{Non-Abelian Gauge Theories}}.
+\newblock {\em Physical Review Letters}, Vol.~30, No.~26, pp. 1343--1346, June 1973.
+
+\bibitem{politzerReliablePerturbativeResults1973a}
+H.~David Politzer.
+\newblock Reliable {{Perturbative Results}} for {{Strong Interactions}}?
+\newblock {\em Physical Review Letters}, Vol.~30, No.~26, pp. 1346--1349, June 1973.
+
+\bibitem{weinbergNonAbelianGaugeTheories1973}
+Steven Weinberg.
+\newblock Non-{{Abelian Gauge Theories}} of the {{Strong Interactions}}.
+\newblock {\em Physical Review Letters}, Vol.~31, No.~7, pp. 494--497, August 1973.
 
 \bibitem{glashowPartialsymmetriesWeakInteractions1961}
 Sheldon~L. Glashow.
@@ -29,6 +44,56 @@ K.~Symanzik.
 K.~Symanzik.
 \newblock Small-distance-behaviour analysis and {{Wilson}} expansions.
 \newblock {\em Communications in Mathematical Physics}, Vol.~23, No.~1, pp. 49--86, March 1971.
+
+\bibitem{chengHiggsPhenomenaAsymptotically1974}
+T.~P. Cheng, E.~Eichten, and Ling-Fong Li.
+\newblock Higgs phenomena in asymptotically free gauge theories.
+\newblock {\em Physical Review D}, Vol.~9, No.~8, pp. 2259--2273, April 1974.
+
+\bibitem{machacekFermionHiggsMasses1981}
+Marie~E. Machacek and Michael~T. Vaughn.
+\newblock Fermion and {{Higgs}} masses as probes of unified theories.
+\newblock {\em Physics Letters B}, Vol. 103, No.~6, pp. 427--432, August 1981.
+
+\bibitem{machacekTwoloopRenormalizationGroup1983}
+Marie~E. Machacek and Michael~T. Vaughn.
+\newblock Two-loop renormalization group equations in a general quantum field theory: ({{I}}). {{Wave}} function renormalization.
+\newblock {\em Nuclear Physics B}, Vol. 222, No.~1, pp. 83--103, July 1983.
+
+\bibitem{machacekTwoloopRenormalizationGroup1984}
+Marie~E. Machacek and Michael~T. Vaughn.
+\newblock Two-loop renormalization group equations in a general quantum field theory ({{II}}). {{Yukawa}} couplings.
+\newblock {\em Nuclear Physics B}, Vol. 236, No.~1, pp. 221--232, April 1984.
+
+\bibitem{machacekTwoloopRenormalizationGroup1985}
+Marie~E. Machacek and Michael~T. Vaughn.
+\newblock Two-loop renormalization group equations in a general quantum field theory: ({{III}}). {{Scalar}} quartic couplings.
+\newblock {\em Nuclear Physics B}, Vol. 249, No.~1, pp. 70--92, January 1985.
+
+\bibitem{maVariationMixingAngles1979}
+Ernest Ma and Sandip Pakvasa.
+\newblock Variation of mixing angles and masses with \$\{q\}{\textasciicircum}\{2\}\$ in the standard six-quark model.
+\newblock {\em Physical Review D}, Vol.~20, No.~11, pp. 2899--2902, December 1979.
+
+\bibitem{vaughnRenormalizationGroupConstraints1982}
+Michael~T. Vaughn.
+\newblock Renormalization group constraints on unified gauge theories.
+\newblock {\em Zeitschrift f{\"u}r Physik C Particles and Fields}, Vol.~13, No.~2, pp. 139--146, June 1982.
+
+\bibitem{politzerReliablePerturbativeResults1973b}
+H.~David Politzer.
+\newblock Reliable {{Perturbative Results}} for {{Strong Interactions}}?
+\newblock {\em Physical Review Letters}, Vol.~30, No.~26, pp. 1346--1349, June 1973.
+
+\bibitem{caswellAsymptoticBehaviorNonAbelian1974}
+William~E. Caswell.
+\newblock Asymptotic {{Behavior}} of {{Non-Abelian Gauge Theories}} to {{Two-Loop Order}}.
+\newblock {\em Physical Review Letters}, Vol.~33, No.~4, pp. 244--246, July 1974.
+
+\bibitem{jonesTwoloopDiagramsYangMills1974}
+D.~R.~T. Jones.
+\newblock Two-loop diagrams in {{Yang-Mills}} theory.
+\newblock {\em Nuclear Physics B}, Vol.~75, No.~3, pp. 531--538, June 1974.
 
 \bibitem{PhysRevLett.32.438}
 Howard Georgi and S.~L. Glashow.

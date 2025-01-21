@@ -18,7 +18,7 @@
 \end{align}
 それぞれゲージ群の添字は量子数に対応している.
 ``C''はカラー量子数, ``L''は左巻きのカイラリティ, ``Y''は超電荷である.
-$\mathrm{SU}(3)_c$群は核子に作用する強い相互作用を記述する群であり, 量子色力学(QCD)によって記述される.
+$\mathrm{SU}(3)_c$群は核子に作用する強い相互作用を記述する群であり, 量子色力学(QCD)によって記述される.\cite{grossUltravioletBehaviorNonAbelian1973,politzerReliablePerturbativeResults1973a,weinbergNonAbelianGaugeTheories1973}
 一方で$\mathrm{SU}(2)_L\times \mathrm{U}(1)_Y$は弱い相互作用と電磁相互作用を統一的に記述する電弱理論を記述する群である.
 \cite{glashowPartialsymmetriesWeakInteractions1961,salamWeakElectromagneticInteractions1968,weinbergModelLeptons1967}
 
@@ -313,7 +313,7 @@ $i=1,2,3$を世代数として, 図\ref{fig_sm}のようにまとめられる.
 
 いずれの方法であってもエネルギースケールへ依存性があるが, 理論はエネルギーの変化に対して不変でなければならないため, ラグランジアンに存在するパラメータはエネルギースケールの変化を打ち消すように変化する.
 これによってエネルギースケールに依存する繰り込まれた理論が得られる.
-\subsection{Callan-Simanzik Equation}
+\subsection{Callan-Symanzik方程式}
 繰り込まれた量子場の理論ではラグランジアンの項は制限が与えられ, 質量次元が4次の項のみ許される.
 繰り込まれた場の理論のパラメータは, 繰り込み条件の組みで決定され, この条件が繰り込みスケールを決定している.
 異なるエネルギースケールであっても同様の理論を考えることができる.
@@ -324,7 +324,7 @@ $i=1,2,3$を世代数として, 図\ref{fig_sm}のようにまとめられる.
 
 ある理論のグリーン関数が
 \begin{align}
-  \langle T \phi_0(x_1)\cdots\phi_0(x_n)\rangle 
+  \langle T \phi_0(x_1)\cdots\phi_0(x_n)\rangle  \label{rescale1}
 \end{align}
 で与えられるとする.
 この理論では, 量子効果を考えない裸の結合定数$\lambda_0$や, 運動量カットオフが$\Lambda$によって与えられるものであり,エネルギースケール$M$には依存していない.
@@ -332,7 +332,7 @@ $i=1,2,3$を世代数として, 図\ref{fig_sm}のようにまとめられる.
 繰り込まれたグリーン関数と裸のグリーン関数は, リスケーリング因子の$Z$に至るまでは数値的に同じになる.
 場の繰り込みは場の強さの繰り込み因子である$Z$を用いて次のように定義される.
 \begin{align}
-  \phi(x) = Z^{\frac{1}{2}}\phi_0(x) \label{bfnc-2}
+  \phi(x) = Z^{-\frac{1}{2}}\phi_0(x) \label{bfnc-2}
 \end{align}
 これにより繰り込まれた$n$点の相関関数は, 裸の相関関数と次のように関係付けられる.
 \begin{align}
@@ -379,13 +379,13 @@ $i=1,2,3$を世代数として, 図\ref{fig_sm}のようにまとめられる.
 \end{align}
 がわかるので, これを整理して
 \begin{align}
-  \left(M \frac{\partial}{\partial M} + M\frac{\partial \lambda}{\partial M} \frac{\partial}{\partial M} -nM\frac{\partial \eta}{\partial M}\right)G^{(n)}(x_1,\cdots,x_n;M,\lambda) = 0\label{CS-1}
+  \left(M \frac{\partial}{\partial M} + M\frac{\partial \lambda}{\partial M} \frac{\partial}{\partial \lambda} -nM\frac{\partial \eta}{\partial M}\right)G^{(n)}(x_1,\cdots,x_n;M,\lambda) = 0\label{CS-1}
 \end{align}
 となる.
 ここで無次元の量である$\beta$と$\gamma$を
 \begin{align}
-  &\beta = M\frac{\partial \lambda}{\partial M} \label{def_beta}\\
-  &\gamma =  -M\frac{\partial \eta}{\partial M} \label{def_gamma}
+  &\beta = M\frac{\partial \lambda}{\partial M}\label{def_beta}\\
+  &\gamma = -M\frac{\partial \eta}{\partial M} \label{def_gamma}
 \end{align}
 と定義すると, 次の関係式が得られる.
 \begin{align}
@@ -400,16 +400,89 @@ Callan-Symanzik方程式に現れる$\beta, \gamma$の2つの関数はカット�
 ここで新しく定義された$\beta, \gamma$の2つの関数は不変的な関数であり, 繰り込み定数と場の強さの変化にのみ依存しており, これらが変化したときの繰り込みスケール$M$の変化を補うように変化が起こる. 
 そのため$\beta$関数は繰り込みスケールが$M$への結合定数の依存性を表し, 一方で$\gamma$関数は場を繰り込みスケール$M$への依存性を表している
 
+次にCallan-Symanzik方程式に現れた新たな関数$\gamma$をを一般化し, 摂動との関係を考える.
+$\delta \eta$は式(\ref{sftp})で定義されていた.
+したがって,
+\begin{align}
+  \delta \eta &= \frac{Z^{-\frac{1}{2}}(M+\delta M)}{Z^{-\frac{1}{2}}(M)}-1\nonumber\\
+              &= \frac{Z^{-\frac{1}{2}}(M+\delta M)-Z^{-\frac{1}{2}}(M)}{Z^{-\frac{1}{2}}(M)}
+\end{align}
+となる.
+この両辺を$\delta \mu$で割り, $\delta \mu\rightarrow0$とすると
+\begin{align}
+  \frac{\partial \eta}{\partial M} = -\frac{1}{2}\frac{1}{Z}\frac{\partial Z}{\partial M}
+\end{align}
+一方で$\gamma$は式(\ref{def_gamma})で定義されているので,
+\begin{align}
+  \gamma = \frac{1}{2}\frac{M}{Z} \frac{\partial Z}{\partial M}\label{def_gamma_correct}
+\end{align}
+と$\gamma$の表し方を変えることができる.
+ここから摂動論の関係を見ることができる.
+摂動論を考えているとき, 場の強さ$Z$は
+\begin{align}
+  Z = 1 +\delta Z
+\end{align}
+と微小量$\delta Z \ll 1$を用いて書くことができる.
+これより
+\begin{align}
+  \gamma \simeq \frac{1}{2}M \frac{\partial \delta Z}{\partial M} + \mathcal{O}((\delta Z)^2)
+\end{align}
+となる.
+このことから摂動論が有効な理論であれば, $\delta Z$が判明すれば 相殺項から体系的に$\beta$関数を求めることができることがわかる.
+
+ここまではCallan-Symanzik方程式をスカラー場の理論として式(\ref{rescale1})から導出した.
+一般にフェルミオン場が存在した場合でも成り立つ.
+$n$個のフェルミオン場, $m$個のスカラー場が存在し, 両方の結合定数が$\lambda$の場合を考える.
+このとき, 場のくりこみを同じように考えると, 繰り込まれたグリーン関数は
+\begin{align}
+  G_0^{(n,m)}(\{x_i\},\lambda_0) = Z_\psi^{\frac{n}{2}} Z_\phi^{\frac{m}{2}}G^{(n,m)}(\{x_i\},\lambda,M)\label{renormalized_G}
+\end{align}
+となる.
+したがって, 式(\ref{bfnc-3})と同じように考えて
+\begin{align}
+  \left(M\frac{\partial}{\partial M} + \beta\frac{\partial}{\partial \lambda} + n\gamma_\psi + m \gamma_\phi \right)G^{(n,m)}(\{x_i\},M,\lambda) = 0\label{renormalized_CS}
+\end{align}
+となる.
+ここでは
+\begin{align}
+  \gamma_\psi = \frac{n}{2}\frac{M}{Z_\psi}\frac{\partial Z_\psi}{\partial M},\quad \gamma_\phi = \frac{m}{2}\frac{M}{Z_\phi}\frac{\partial Z_\phi}{\partial M}\label{def_gamma2}
+\end{align}
+とした.
+
+これらより, 式(\ref{def_beta})
+\begin{align}
+  \beta \equiv M\frac{\partial}{\partial M}\lambda\nonumber
+\end{align}
+の$\beta$からゲージ結合定数$\lambda$のエネルギー依存性を求めることができる.
+この$\beta$は摂動論において相殺項や繰り込まれたグリーン関数から求めることができ, 非可換ゲージ理論や湯川結合, スカラー場の理論など一般的な場の理論で同様に求めることができる.
+\cite{chengHiggsPhenomenaAsymptotically1974,
+machacekFermionHiggsMasses1981,
+machacekTwoloopRenormalizationGroup1983,
+machacekTwoloopRenormalizationGroup1984,
+machacekTwoloopRenormalizationGroup1985,
+maVariationMixingAngles1979,
+vaughnRenormalizationGroupConstraints1982}
 \subsection{ゲージ結合定数のエネルギー依存性}
+式(\ref{def_beta})により, ゲージ結合定数のエネルギー依存性を$\beta$関数によって導くことができることが明らかにされた.
+理論に現れる相殺項を求めることで$\beta$-関数の具体的な形を求めることができるが, 群論の対称性を用いることで一般的な$\beta$-関数の係数は導出されている.
+摂動の$\delta Z$の1次の影響まで考えた場合,
+\begin{align}
+  \beta = -\frac{g^3}{(4\pi)^2}\left[\frac{11}{3}C_2(G) -\frac{4}{3}\kappa S_2(F) - \frac{1}{6}\eta S_2(S)\right]
+\end{align}
+となる.\cite{grossUltravioletBehaviorNonAbelian1973,politzerReliablePerturbativeResults1973b}
+\footnote{
+本論文では扱わないが, 2次までの摂動の計算をすると次のようになる.
+\cite{caswellAsymptoticBehaviorNonAbelian1974,jonesTwoloopDiagramsYangMills1974}
+\begin{align}
+  \beta &= -\frac{g^3}{(4\pi)^2}\left[\frac{11}{3}C_2(G) -\frac{4}{3}\kappa S_2(F) - \frac{1}{6}\eta S_2(S)\right] \nonumber\\
+        &\quad-\frac{g^5}{(4\pi)^4}\left[ \frac{34}{3}[C_2(G)]^2 -\kappa\left(4C_2(F)+\frac{20}{3}C_2(G)\right)S_2(F) -\left(2C_2(S)+\frac{1}{3}C_2(G)\right)\eta S_2(S)\right] \nonumber
+\end{align}
+}
 
-式(\ref{def_beta})はゲージ結合定数
-
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=12truecm,clip]{fig/RGE_SM.eps}
   \caption{標準模型粒子のみで繰り込み群方程式を解いた図}
   \label{fig:RGE_SM}
 \end{figure}
-
-
 %EOF

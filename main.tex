@@ -18,21 +18,25 @@
 \usepackage{ascmac}
 \usepackage{cite}
 \usepackage{color}
+\usepackage{multibib}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage[compat=1.1.0]{tikz-feynhand}
 \usepackage[dvipdfmx]{hyperref}
-\usepackage{multibib}
-\usepackage{pxjahyper} %
+\usepackage{pxjahyper} % (u)pLaTeXのときのみかく
 \hypersetup{%
-  setpagesize=true, %
-%  bookmarks=true, %
-%  bookmarksdepth=tocdepth, %
-  bookmarksnumbered=true, %
-  colorlinks=true, %
-  pdftitle={}, %
-  pdfauthor={}, %
-  pdfkeywords={}
-}
+ setpagesize=false,%
+ bookmarksnumbered=true,%
+ colorlinks=true,%
+ pdftitle={},%
+ pdfsubject={},%
+ pdfauthor={},%
+ pdfkeywords={},%
+ hidelinks,%
+ citecolor=blue,%
+ filecolor=blue,%
+ urlcolor=blue,%
+ linkcolor=blue,
+ }
 % ----------------------------------
 
 
@@ -84,14 +88,9 @@
 \chapter{素粒子標準模型では説明できない物理}
 \input{SM_problems.tex}
 
-%\section{階層性問題}
-%\input{hierarchy_problem.tex}
-% Hierarchy problemは大統一理論の中にいれて説明するべきであるから, 移動させる.
-
 \section{ニュートリノ質量}
 \input{neutrino.tex}
 
-\chapter{SU(5)大統一理論}
 \input{grand_unified_theory.tex}
 
 % ----- 2nd part -----
@@ -107,7 +106,7 @@
 
 % ----- Bibliography -----
 \bibliographystyle{junsrt}
-\bibliography{bibs/GUT.bib,bibs/Standard_Models.bib,bibs/CS_Equation.bib,bibs/Glashow_Weinberg.bib}
+\bibliography{bibs/GUT.bib,bibs/Standard_Models.bib,bibs/CS_Equation.bib,bibs/Glashow_Weinberg.bib,bibs/QCD.bib,bibs/beta_function.bib}
 
 
 \end{document}

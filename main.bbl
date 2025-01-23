@@ -5,7 +5,7 @@ David~J. Gross and Frank Wilczek.
 \newblock Ultraviolet {{Behavior}} of {{Non-Abelian Gauge Theories}}.
 \newblock {\em Physical Review Letters}, Vol.~30, No.~26, pp. 1343--1346, June 1973.
 
-\bibitem{politzerReliablePerturbativeResults1973a}
+\bibitem{politzerReliablePerturbativeResults1973}
 H.~David Politzer.
 \newblock Reliable {{Perturbative Results}} for {{Strong Interactions}}?
 \newblock {\em Physical Review Letters}, Vol.~30, No.~26, pp. 1346--1349, June 1973.
@@ -80,11 +80,6 @@ Michael~T. Vaughn.
 \newblock Renormalization group constraints on unified gauge theories.
 \newblock {\em Zeitschrift f{\"u}r Physik C Particles and Fields}, Vol.~13, No.~2, pp. 139--146, June 1982.
 
-\bibitem{politzerReliablePerturbativeResults1973b}
-H.~David Politzer.
-\newblock Reliable {{Perturbative Results}} for {{Strong Interactions}}?
-\newblock {\em Physical Review Letters}, Vol.~30, No.~26, pp. 1346--1349, June 1973.
-
 \bibitem{caswellAsymptoticBehaviorNonAbelian1974}
 William~E. Caswell.
 \newblock Asymptotic {{Behavior}} of {{Non-Abelian Gauge Theories}} to {{Two-Loop Order}}.
@@ -94,6 +89,16 @@ William~E. Caswell.
 D.~R.~T. Jones.
 \newblock Two-loop diagrams in {{Yang-Mills}} theory.
 \newblock {\em Nuclear Physics B}, Vol.~75, No.~3, pp. 531--538, June 1974.
+
+\bibitem{jonesTwoLoopBeta1982}
+D.~R.~T. Jones.
+\newblock The {{Two Loop}} beta {{Function}} for a {{G}}(1) x {{G}}(2) {{Gauge Theory}}.
+\newblock {\em Physical Review D}, Vol.~25, No.~2, pp. 581--582, January 1982.
+
+\bibitem{navasReviewParticlePhysics2024}
+S.~Navas, et~al.
+\newblock Review of particle physics.
+\newblock {\em Phys. Rev. D}, Vol. 110, No.~3, p. 030001, 2024.
 
 \bibitem{PhysRevLett.32.438}
 Howard Georgi and S.~L. Glashow.

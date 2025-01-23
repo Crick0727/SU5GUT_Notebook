@@ -2,7 +2,7 @@
 %   The basic memos for the standard model of particle physics
 %   and SU(5) Grand Unified Theory 
 %
-%   Last Modified: Jan 16 2025
+%   Last Modified: Jan 22 2025
 %   Author: Yasutoki Takamura
 %   Kanazawa University / Institute of theoretical particle physics
 % ------------------------------------------------------------------
@@ -20,6 +20,8 @@
 \usepackage{color}
 \usepackage{multibib}
 \usepackage[dvipdfmx]{graphicx}
+%\usepackage{etoolbox}
+%\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
 \usepackage[compat=1.1.0]{tikz-feynhand}
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{pxjahyper} % (u)pLaTeXのときのみかく
@@ -77,13 +79,16 @@
 % ----- Main Contents -----
 % =========================
 % ----- 1st part -----
-\part{教科書の部分}
+%\part{教科書の部分}
 
 \chapter{記法}
 \input{notations.tex}
 
 \chapter{素粒子標準模型}
 \input{Standard_Model.tex}
+
+\chapter{場の理論における繰り込みと結合定数}
+\input{rge.tex}
 
 \chapter{素粒子標準模型では説明できない物理}
 \input{SM_problems.tex}
@@ -94,7 +99,7 @@
 \input{grand_unified_theory.tex}
 
 % ----- 2nd part -----
-\part{研究の部分}
+%\part{研究の部分}
 
 \chapter{SU(5)大統一理論の拡張模型}
 \input{extend_SU5.tex}
@@ -106,7 +111,7 @@
 
 % ----- Bibliography -----
 \bibliographystyle{junsrt}
-\bibliography{bibs/GUT.bib,bibs/Standard_Models.bib,bibs/CS_Equation.bib,bibs/Glashow_Weinberg.bib,bibs/QCD.bib,bibs/beta_function.bib}
+\bibliography{bibs/GUT.bib,bibs/Standard_Models.bib,bibs/CS_Equation.bib,bibs/Glashow_Weinberg.bib,bibs/QCD.bib,bibs/beta_function.bib,bibs/Experimental.bib}
 
 
 \end{document}

@@ -3,7 +3,7 @@
 %  Standard model
 %  Standard_Model.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 20 2025
+%  Last Modified Jan 22 2025
 %
 % ---------------------------------------
 この章では素粒子物理学における標準模型についてまとめた.
@@ -18,7 +18,7 @@
 \end{align}
 それぞれゲージ群の添字は量子数に対応している.
 ``C''はカラー量子数, ``L''は左巻きのカイラリティ, ``Y''は超電荷である.
-$\mathrm{SU}(3)_c$群は核子に作用する強い相互作用を記述する群であり, 量子色力学(QCD)によって記述される.\cite{grossUltravioletBehaviorNonAbelian1973,politzerReliablePerturbativeResults1973a,weinbergNonAbelianGaugeTheories1973}
+$\mathrm{SU}(3)_c$群は核子に作用する強い相互作用を記述する群であり, 量子色力学(QCD)によって記述される.\cite{grossUltravioletBehaviorNonAbelian1973,politzerReliablePerturbativeResults1973,weinbergNonAbelianGaugeTheories1973}
 一方で$\mathrm{SU}(2)_L\times \mathrm{U}(1)_Y$は弱い相互作用と電磁相互作用を統一的に記述する電弱理論を記述する群である.
 \cite{glashowPartialsymmetriesWeakInteractions1961,salamWeakElectromagneticInteractions1968,weinbergModelLeptons1967}
 
@@ -108,7 +108,7 @@ $\theta^a$は実定数であり, $n=\mathrm{dim}(G)$はリー群の次元であ�
   G_{\mu\nu}^a &= \partial_\mu G_\nu^a - \partial_\nu G_\mu^a +g_3 f^{abc}G_\mu^b G_\mu^c\label{gauge.G}
 \end{align}
 ここでは, $g_3, g_2$はそれぞれ$\mathrm{SU}(3)_\mathrm{c}$, $\mathrm{SU}(2)_\mathrm{L}$ゲージ群の結合定数ある.
-また, 後述されるが$\mathrm{U(1)}_{\mathrm {Y}}$ゲージ場によって現れる$B_\mu$ゲージボゾンの結合定数を$g'$とする.
+また, 後述されるが$\mathrm{U(1)}_{\mathrm {Y}}$ゲージ場によって現れる$B_\mu$ゲージボゾンの結合定数を$g_Y$とする.
 $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 また, 標準模型のゲージ場の運動項は式(\ref{gauge-6})より
 \begin{align}
@@ -185,10 +185,10 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
 ここから, ゲージ粒子の質量の獲得について考える.
 ヒッグス場のラグランジアン密度は式(\ref{L_H})で与えられており, ヒッグス粒子の運動項には
 \begin{align}
-  \mathcal{L}_H \supset \frac{1}{4}\left((g_2W^a_\mu\frac{\sigma^a}{2}+g'B_\mu)\Phi\right)^\dagger \left((g_2W^{a\,\mu}\frac{\sigma^a}{2}+g'B^\mu)\Phi\right)\label{eq2-18}
+  \mathcal{L}_H \supset \frac{1}{4}\left((g_2W^a_\mu\frac{\sigma^a}{2}+g_Y B_\mu)\Phi\right)^\dagger \left((g_2W^{a\,\mu}\frac{\sigma^a}{2}+g_YB^\mu)\Phi\right)\label{eq2-18}
 \end{align}
 という項が含まれている.
-ここで$g'$は$U(1)_Y$ゲージボゾン$B_\mu$のゲージ結合定数である.
+ここで$g_Y$は$U(1)_Y$ゲージボゾン$B_\mu$のゲージ結合定数である.
 これによりゲージ対称性は
 \begin{align}
   SU(3)_c\times SU(2)_L\times U(1)_Y \rightarrow SU(3)_c\times U(1)_{em}
@@ -196,7 +196,7 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
 のように自発的に破れる.
 したがって, (\ref{eq2-18})から
 \begin{align}
-  \mathcal{L}_H \supset \frac{v^2}{8}\left[\left(g_2^2(W^1_\mu  W^{1\mu}+W^2_\mu  W^{2\mu}\right)+ (g_2W_\mu^3 -g'B_\mu)(g_2W^{3\mu}-g' B^{\mu})\right] \label{2-21}
+  \mathcal{L}_H \supset \frac{v^2}{8}\left[\left(g_2^2(W^1_\mu  W^{1\mu}+W^2_\mu  W^{2\mu}\right)+ (g_2W_\mu^3 -g_Y B_\mu)(g_2W^{3\mu}-g_Y B^{\mu})\right] \label{2-21}
 \end{align}
 となる.
 ここで, ゲージ場$W_\mu^a$と$B_\mu$を次の様に再定義する.
@@ -205,9 +205,9 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
   \left(\begin{array}{c}
       Z_\mu^0 \\
       A_\mu
-      \end{array}\right)&=\frac{1}{\sqrt{g'^2+g_2^2}}\left(\begin{array}{c}
-      g_2 W_\mu^3-g' B_\mu \\
-      g' W_\mu^3-g_2 B_\mu 
+      \end{array}\right)&=\frac{1}{\sqrt{g_Y^2+g_2^2}}\left(\begin{array}{c}
+      g_2 W_\mu^3-g_Y B_\mu \\
+      g_Y W_\mu^3-g_2 B_\mu 
     \end{array}\right)
     \equiv \left(\begin{array}{cc}
         \cos\theta_W W_\mu^3 - \sin\theta_W B_\mu \\
@@ -217,7 +217,7 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
 \end{align}
 ただし, この混合角$\theta_W$は
 \begin{align}
-  \cos\theta_W = \frac{g_2}{\sqrt{g'^2 + g_2^2}},\quad \sin\theta_W = \frac{g'}{\sqrt{g'^2 + g_2^2}}\nonumber
+  \cos\theta_W = \frac{g_2}{\sqrt{g_Y^2 + g_2^2}},\quad \sin\theta_W = \frac{g_Y}{\sqrt{g_Y^2 + g_2^2}}\nonumber
 \end{align}
 で定義され, ワインバーグ角と呼ばれる.
 実験によりこの値は$\sin^2\theta_W \simeq 0.23$となる.
@@ -235,7 +235,7 @@ $\pi^a(x),\,(a=1,2,3)$の3つの自由度のうち,  2つが$W^\pm$ボゾンに�
 \end{align}
 さらに,
 \begin{align}
-  m_W = \frac{1}{2}g_2v,\quad m_Z = \frac{1}{2}\sqrt{g'^2+g_2^2}v\nonumber
+  m_W = \frac{1}{2}g_2v,\quad m_Z = \frac{1}{2}\sqrt{g_Y^2+g_2^2}v\nonumber
 \end{align}
 となる.
 これらも質量は
@@ -307,182 +307,3 @@ $i=1,2,3$を世代数として, 図\ref{fig_sm}のようにまとめられる.
 \end{align}
 と表せる.
 
-\section{走るゲージ結合定数}
-場の量子論に基づけば, 理論に現れる発散を繰り込みという手法を用いて取り除くことが可能である.
-\textcolor{red}{種類などもう少し細かい説明をするか?}
-
-いずれの方法であってもエネルギースケールへ依存性があるが, 理論はエネルギーの変化に対して不変でなければならないため, ラグランジアンに存在するパラメータはエネルギースケールの変化を打ち消すように変化する.
-これによってエネルギースケールに依存する繰り込まれた理論が得られる.
-\subsection{Callan-Symanzik方程式}
-繰り込まれた量子場の理論ではラグランジアンの項は制限が与えられ, 質量次元が4次の項のみ許される.
-繰り込まれた場の理論のパラメータは, 繰り込み条件の組みで決定され, この条件が繰り込みスケールを決定している.
-異なるエネルギースケールであっても同様の理論を考えることができる.
-
-繰り込み条件を考えると, 繰り込みを行うスケール$M$は任意である.
-したがって, 同じ理論を異なったスケール$M'$でも定義することができる.
-このことを以下で考える. 
-
-ある理論のグリーン関数が
-\begin{align}
-  \langle T \phi_0(x_1)\cdots\phi_0(x_n)\rangle  \label{rescale1}
-\end{align}
-で与えられるとする.
-この理論では, 量子効果を考えない裸の結合定数$\lambda_0$や, 運動量カットオフが$\Lambda$によって与えられるものであり,エネルギースケール$M$には依存していない.
-エネルギースケール依存性は, このグリーン関数にあるのではなく, 場をリスケーリングし裸の結合定数$\lambda_0$を消して繰り込まれた結合定数$\lambda$で書くことでカットオフ依存性を取り除いたときにのみ現れる.
-繰り込まれたグリーン関数と裸のグリーン関数は, リスケーリング因子の$Z$に至るまでは数値的に同じになる.
-場の繰り込みは場の強さの繰り込み因子である$Z$を用いて次のように定義される.
-\begin{align}
-  \phi(x) = Z^{-\frac{1}{2}}\phi_0(x) \label{bfnc-2}
-\end{align}
-これにより繰り込まれた$n$点の相関関数は, 裸の相関関数と次のように関係付けられる.
-\begin{align}
-  \langle T \phi(x_1)\cdots \phi(x_n)\rangle = Z^{-\frac{n}{2}}\langle T \phi_0(x_1)\cdots \phi(x_n)\rangle \label{bfnc-1}
-\end{align}
-式(\ref{bfnc-1})の左辺は繰り込まれたグリーン関数と呼ばれる.
-この関数は右辺のグリーン関数とは異なる別のエネルギースケールである$M'$で定義されており, 結合定数は$\lambda'$, リスケーリング因子は$Z'$で定義される.
-
-ここから, エネルギースケール$M$を無限小だけシフトした場合の影響を考える.
-はじめに$G^{(n)}(x_1,\cdots,x_n)$を繰り込まれた摂動論において計算される連結$n$点関数とする.
-\begin{align}
-  G^{(n)}(x_1,\cdots,x_n) = \langle T\phi(x_1)\cdots\phi(x_n) \rangle_{\text{connected}}\label{rnpf}
-\end{align}
-繰り込みされていない裸の相関関数は, 繰り込みされていないパラメータである$(\phi_0,\lambda_0,m_0)$とカットオフ$\Lambda$に依存している.
-一方で, 繰り込まれた相関関数(式(\ref{rnpf}))には繰り込まれたパラメーターである($\phi,\lambda,m)$と繰り込みスケール$M$に依存している.
-このことから, 繰り込みされていない裸の相関関数$G^{(n)}_0$は繰り込みスケール$M$に依存せず, 繰り込みスケールの変化があった場合でも変化することがないので
-\begin{align}
-  \frac{d G_0^{(n)}}{dM} = 0 \label{bfnc-3}
-\end{align}
-が満たされる.
-一方で, 繰り込まれた相関関数は繰り込みスケールが変化することで影響を受ける.
-繰り込みスケールを無限小だけシフトする.
-\begin{align}
-  M\quad\rightarrow\quad M + \delta M \label{sftM}
-\end{align}
-このとき, 繰り込みスケールの変化に伴って$\lambda$と$\phi$は次のように変化する.
-\begin{align}
-  &\lambda \quad\rightarrow\quad \lambda + \delta \lambda \label{sftl}\\
-  &\phi \quad\rightarrow\quad \phi+ \delta\phi \equiv (1+\delta\eta)\phi \label{sftp}
-\end{align}
-場の変換については無次元のシフトを$\delta \eta  = \frac{\delta\phi}{\phi}$とした.
-式(\ref{bfnc-2})から
-\begin{align}
-  Z^{\frac{1}{2}} = 1 - \delta\eta\label{bfnc-4}
-\end{align}
-が言えるので, 式(\ref{bfnc-3})から繰り込みされた相関関数は
-\begin{align}
-  G^{(n)}\quad\rightarrow\quad(1+n\delta\eta)G^{(n)}\label{sftg}
-\end{align}
-と変化することがわかる.
-これらを踏まえて, 繰り込みされた相関関数の微小変化を考えると, 式(\ref{bfnc-3})から
-\begin{align}
-  \frac{d}{dM} Z^{\frac{n}{2}}G^{(n)} = \frac{\partial G^{(n)}}{\partial M} + \frac{\partial G^{(n)}}{\partial \lambda}\frac{\partial \lambda}{\partial M} - n \frac{\partial \eta}{\partial M}G^{(n)} = 0
-\end{align}
-がわかるので, これを整理して
-\begin{align}
-  \left(M \frac{\partial}{\partial M} + M\frac{\partial \lambda}{\partial M} \frac{\partial}{\partial \lambda} -nM\frac{\partial \eta}{\partial M}\right)G^{(n)}(x_1,\cdots,x_n;M,\lambda) = 0\label{CS-1}
-\end{align}
-となる.
-ここで無次元の量である$\beta$と$\gamma$を
-\begin{align}
-  &\beta = M\frac{\partial \lambda}{\partial M}\label{def_beta}\\
-  &\gamma = -M\frac{\partial \eta}{\partial M} \label{def_gamma}
-\end{align}
-と定義すると, 次の関係式が得られる.
-\begin{align}
-  \left(M \frac{\partial }{\partial M} + \beta \frac{\partial}{\partial \lambda} + n \gamma\right) G^{(n)}(x_1,\cdots,x_n;M,\lambda) = 0 \label{bfnc-CS1}
-\end{align}
-式(\ref{bfnc-CS1})はCallan-Symanzik方程式と呼ばれる. \cite{callanBrokenScaleInvariance1970,symanzikSmallDistanceBehaviour1970,symanzikSmalldistancebehaviourAnalysisWilson1971}
-
-Callan-Symanzik方程式に現れる$\beta, \gamma$の2つの関数はカットオフスケールの$\Lambda$に依存し, 繰り込みスケール$M$に依存しない.
-つまり, この$\beta, \gamma$の2つの関数は次元を持たない繰り込まれた結合定数である$\lambda$の関数であることが言える.
-これらは$G^{(n)}$にのみ繰り込みが行われているからである.
-
-ここで新しく定義された$\beta, \gamma$の2つの関数は不変的な関数であり, 繰り込み定数と場の強さの変化にのみ依存しており, これらが変化したときの繰り込みスケール$M$の変化を補うように変化が起こる. 
-そのため$\beta$関数は繰り込みスケールが$M$への結合定数の依存性を表し, 一方で$\gamma$関数は場を繰り込みスケール$M$への依存性を表している
-
-次にCallan-Symanzik方程式に現れた新たな関数$\gamma$をを一般化し, 摂動との関係を考える.
-$\delta \eta$は式(\ref{sftp})で定義されていた.
-したがって,
-\begin{align}
-  \delta \eta &= \frac{Z^{-\frac{1}{2}}(M+\delta M)}{Z^{-\frac{1}{2}}(M)}-1\nonumber\\
-              &= \frac{Z^{-\frac{1}{2}}(M+\delta M)-Z^{-\frac{1}{2}}(M)}{Z^{-\frac{1}{2}}(M)}
-\end{align}
-となる.
-この両辺を$\delta \mu$で割り, $\delta \mu\rightarrow0$とすると
-\begin{align}
-  \frac{\partial \eta}{\partial M} = -\frac{1}{2}\frac{1}{Z}\frac{\partial Z}{\partial M}
-\end{align}
-一方で$\gamma$は式(\ref{def_gamma})で定義されているので,
-\begin{align}
-  \gamma = \frac{1}{2}\frac{M}{Z} \frac{\partial Z}{\partial M}\label{def_gamma_correct}
-\end{align}
-と$\gamma$の表し方を変えることができる.
-ここから摂動論の関係を見ることができる.
-摂動論を考えているとき, 場の強さ$Z$は
-\begin{align}
-  Z = 1 +\delta Z
-\end{align}
-と微小量$\delta Z \ll 1$を用いて書くことができる.
-これより
-\begin{align}
-  \gamma \simeq \frac{1}{2}M \frac{\partial \delta Z}{\partial M} + \mathcal{O}((\delta Z)^2)
-\end{align}
-となる.
-このことから摂動論が有効な理論であれば, $\delta Z$が判明すれば 相殺項から体系的に$\beta$関数を求めることができることがわかる.
-
-ここまではCallan-Symanzik方程式をスカラー場の理論として式(\ref{rescale1})から導出した.
-一般にフェルミオン場が存在した場合でも成り立つ.
-$n$個のフェルミオン場, $m$個のスカラー場が存在し, 両方の結合定数が$\lambda$の場合を考える.
-このとき, 場のくりこみを同じように考えると, 繰り込まれたグリーン関数は
-\begin{align}
-  G_0^{(n,m)}(\{x_i\},\lambda_0) = Z_\psi^{\frac{n}{2}} Z_\phi^{\frac{m}{2}}G^{(n,m)}(\{x_i\},\lambda,M)\label{renormalized_G}
-\end{align}
-となる.
-したがって, 式(\ref{bfnc-3})と同じように考えて
-\begin{align}
-  \left(M\frac{\partial}{\partial M} + \beta\frac{\partial}{\partial \lambda} + n\gamma_\psi + m \gamma_\phi \right)G^{(n,m)}(\{x_i\},M,\lambda) = 0\label{renormalized_CS}
-\end{align}
-となる.
-ここでは
-\begin{align}
-  \gamma_\psi = \frac{n}{2}\frac{M}{Z_\psi}\frac{\partial Z_\psi}{\partial M},\quad \gamma_\phi = \frac{m}{2}\frac{M}{Z_\phi}\frac{\partial Z_\phi}{\partial M}\label{def_gamma2}
-\end{align}
-とした.
-
-これらより, 式(\ref{def_beta})
-\begin{align}
-  \beta \equiv M\frac{\partial}{\partial M}\lambda\nonumber
-\end{align}
-の$\beta$からゲージ結合定数$\lambda$のエネルギー依存性を求めることができる.
-この$\beta$は摂動論において相殺項や繰り込まれたグリーン関数から求めることができ, 非可換ゲージ理論や湯川結合, スカラー場の理論など一般的な場の理論で同様に求めることができる.
-\cite{chengHiggsPhenomenaAsymptotically1974,
-machacekFermionHiggsMasses1981,
-machacekTwoloopRenormalizationGroup1983,
-machacekTwoloopRenormalizationGroup1984,
-machacekTwoloopRenormalizationGroup1985,
-maVariationMixingAngles1979,
-vaughnRenormalizationGroupConstraints1982}
-\subsection{ゲージ結合定数のエネルギー依存性}
-式(\ref{def_beta})により, ゲージ結合定数のエネルギー依存性を$\beta$関数によって導くことができることが明らかにされた.
-理論に現れる相殺項を求めることで$\beta$-関数の具体的な形を求めることができるが, 群論の対称性を用いることで一般的な$\beta$-関数の係数は導出されている.
-摂動の$\delta Z$の1次の影響まで考えた場合,
-\begin{align}
-  \beta = -\frac{g^3}{(4\pi)^2}\left[\frac{11}{3}C_2(G) -\frac{4}{3}\kappa S_2(F) - \frac{1}{6}\eta S_2(S)\right]
-\end{align}
-となる.\cite{grossUltravioletBehaviorNonAbelian1973,politzerReliablePerturbativeResults1973b}
-\footnote{
-本論文では扱わないが, 2次までの摂動の計算をすると次のようになる.
-\cite{caswellAsymptoticBehaviorNonAbelian1974,jonesTwoloopDiagramsYangMills1974}
-\begin{align}
-  \beta &= -\frac{g^3}{(4\pi)^2}\left[\frac{11}{3}C_2(G) -\frac{4}{3}\kappa S_2(F) - \frac{1}{6}\eta S_2(S)\right] \nonumber\\
-        &\quad-\frac{g^5}{(4\pi)^4}\left[ \frac{34}{3}[C_2(G)]^2 -\kappa\left(4C_2(F)+\frac{20}{3}C_2(G)\right)S_2(F) -\left(2C_2(S)+\frac{1}{3}C_2(G)\right)\eta S_2(S)\right] \nonumber
-\end{align}
-}
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=12truecm,clip]{fig/RGE_SM.eps}
-  \caption{標準模型粒子のみで繰り込み群方程式を解いた図}
-  \label{fig:RGE_SM}
-\end{figure}
-%EOF

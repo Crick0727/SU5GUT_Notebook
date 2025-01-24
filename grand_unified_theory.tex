@@ -3,7 +3,7 @@
 %  Grand Unified Theory
 %  grand_unified_theory.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 23 2025
+%  Last Modified Jan 24 2025
 %
 % ----------------------------------------
 \chapter{SU(5)大統一理論}
@@ -349,7 +349,7 @@ $SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現
       T^3 \\
       \phi^+ \\
       -\phi^0
-  \end{array}\right) =\left(\bm{3}, 1,-\frac{1}{3}\right)\oplus\left(1,\bm{2},\frac{1}{2}\right)\label{Higgs_5}
+  \end{array}\right) = T\left(\bm{3}, 1,-\frac{1}{3}\right)\oplus H_2\left(1,\bm{2},\frac{1}{2}\right)\label{Higgs_5}
 \end{align}
 真空期待値は
 \begin{align}
@@ -396,17 +396,17 @@ $SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現
 \subsection{Doublet-triplet splitting problem}
 ここでは$SU(5)$大統一理論を考える.
 $SU(5)$大統一理論では, 5表現ヒッグスと24表現ヒッグスを考えることができた.
-それぞれ$H$,\,$\Phi$とおく.
+それぞれ$H_2$,\,$\phi_{\bm{24}}$とおく.
 これらのヒッグス粒子によるポテンシャルを考える.
 $\mathbb{Z}_2$対称性を課すと,
 \begin{align}
-  V(H,\,\Phi) = -\frac{1}{2}\nu^2 H^\dagger H + \frac{\lambda}{4}(H^\dagger H)^2 + H^\dagger[\alpha \mathrm{Tr}(\Phi^2)+\beta(\Phi^2)]H \label{eq5-1} 
+  V(H,\,\Phi) = -\frac{1}{2}\nu^2 H_2^\dagger H_2 + \frac{\lambda}{4}(H_2^\dagger H_2)^2 + H_2^\dagger[\alpha \mathrm{Tr}(\phi_{\bm{24}}^2)+\beta(\Phi_{\bm{24}}^2)]H_2 \label{eq5-1} 
 \end{align}
 となる.
-ここで, $\Phi$の最小化は式(\ref{eq5-1})の第3項の内部のみで行われていると考える.
+ここで, $\phi_{\bm{24}}$の最小化は式(\ref{eq5-1})の第3項の内部のみで行われていると考える.
 これは式(\ref{eq5-1})は階層性のもとでは, 多項式全体の最小化の影響よりも, 十分影響を与えるためである.
 
-ただし, このように真空期待値を取った場合, $Y$ボゾンに質量を与えうる$H^\alpha$と$\Phi^\alpha_5$という2つのカラー三重項ヒッグス場が存在したとしても片方のヒッグス場のみ質量を与え, もう一方は質量がないままとなる.
+ただし, このように真空期待値を取った場合, $Y$ボゾンに質量を与えうる$H_2^\alpha$と$\phi_{\bm{24}5}^\alpha$という2つのカラー三重項ヒッグス場が存在したとしても片方のヒッグス場のみ質量を与え, もう一方は質量がないままとなる.
 
 %EOF
 
@@ -419,7 +419,7 @@ $\mathbb{Z}_2$対称性を課すと,
 と書かれる. $C$は荷電共役変換の演算子である.
 このとき, 直積表現は
 \begin{align}
-  \overline{\bm{5}}\otimes \bar{\bm{5}} &= \bar{\bm{10}}\oplus\bar{\bm{15}}\label{decon_55}\\
+  \overline{\bm{5}}\otimes \overline{\bm{5}} &= \bar{\bm{10}}\oplus\bar{\bm{15}}\label{decon_55}\\
   \overline{\bm{5}}\otimes {\bm{10}} &= \bm{5}\oplus\bm{45}\label{decon_510}\\
   \bm{10}\otimes \bm{10} &= \overline{\bm{5}}\oplus\bar{\bm{45}}\oplus\bm{50}\label{decon_1010}
 \end{align}
@@ -430,15 +430,19 @@ $\mathbb{Z}_2$対称性を課すと,
 
 はじめに$\overline{\bm{5}}\otimes {\bm{10}}$の場合を考える.
 \begin{align}
-  \mathcal{L}_Y \supset Y_5^{mn} (\psi^T_{\bm{\overline{5}}mL})_a C (\psi_{\bm{10}nL})^{ab}(\phi_{\bm{5}})_b^\dagger +\mathrm{h.c.}
+  \mathcal{L}_Y \supset Y_5^{mn} (\psi^T_{\bm{\overline{5}}mL})_a C (\psi_{\bm{10}nL})^{ab}(\phi_{\bm{5}})_b^\dagger +\mathrm{h.c.}\label{yukawa_5_10}
 \end{align}
 ここで, $Y_5$は世代ごとの湯川結合を行列で表したものであり, $\{m, n= 1,2,3\}$である.
 ヒッグスに真空期待値を式(\ref{Higgs_VEV_5})のように持たせると,
 \begin{align}
   Y_5^{mn} (\psi^T_{\bm{\overline{5}}mL})_a C (\psi_{\bm{10}nL})^{ab}(\phi_{\bm{5}})_b^\dagger +\mathrm{h.c.} \rightarrow\quad -\frac{v_0}{2}Y_5^{mn}\left(\overline{d_{mR}}d_{nL} + \overline{e_{mR}^+}e^+_{nL}\right) + \mathrm{h.c.}
 \end{align}
-となり, 下系列クォークと荷電レプトンの質量を導くことができる.
-
+となり, 下系列クォークと荷電レプトンの質量を導くことができ, 
+\begin{align}
+  \frac{v_0}{\sqrt{2}}Y_5^{mn} &= \mathrm{diag}(m_d, m_s, m_b)\quad (= M_d)\nonumber\\
+                               &= \mathrm{diag}(m_e, m_\mu, m_\tau)\quad (= M_e)
+\end{align}
+となる.
 一方で,$ \bm{10}\otimes \bm{10}$の場合は
 \begin{align}
   \mathcal{L}_Y \supset Y_{10}^{mn} \varepsilon_{abcde} (\psi^{T}_{\bm{\overline{5}}mL})^{ab}C (\psi_{\bm{10}nL})^{cd} \phi_{\bm{5}}^e \label{u_Yukawa}
@@ -448,11 +452,13 @@ $\mathbb{Z}_2$対称性を課すと,
 上系列クォークの質量は$d=4$の時に得ることができる.
 真空期待値を式(\ref{Higgs_VEV_5})のようにとると, 式(\ref{u_Yukawa})は
 \begin{align}
-  Y_{10}^{mn} \varepsilon_{abcde} (\psi^{T}_{\bm{\overline{5}}mL})^{ab}C (\psi_{\bm{10}nL})^{cd} \phi_{\bm{5}}^e \rightarrow&\quad 4Y^{mn} \varepsilon_{abc45} (\psi^{T}_{\bm{\overline{5}}mL})^{ab}C (\psi_{\bm{10}nL})^{cd}\frac{v_0}{\sqrt{2}} + \mathrm{h.c.} \nonumber\\
-                                                                                                            &= 4Y^{mn} \varepsilon_{\alpha \beta \gamma} (\psi^{T}_{\bm{\overline{5}}mL})^{\alpha\beta}C (\psi_{\bm{10}nL})^{\gamma 4}\frac{v_0}{\sqrt{2}} + \mathrm{h.c.}\nonumber\\
-                                          &= \frac{4}{\sqrt{2}}v_0 Y^{mn}\overline{u_{mR}}u_{nL} + \mathrm{h.c.}
+  Y_{10}^{mn} \varepsilon_{abcde} (\psi^{T}_{\bm{\overline{5}}mL})^{ab}C (\psi_{\bm{10}nL})^{cd} \phi_{\bm{5}}^e \rightarrow&\quad 4Y_{10}^{mn} \varepsilon_{abc45} (\psi^{T}_{\bm{\overline{5}}mL})^{ab}C (\psi_{\bm{10}nL})^{cd}\frac{v_0}{\sqrt{2}} + \mathrm{h.c.} \nonumber\\
+                                                                                                                            &= 4Y_{10}^{mn} \varepsilon_{\alpha \beta \gamma} (\psi^{T}_{\bm{\overline{5}}mL})^{\alpha\beta}C (\psi_{\bm{10}nL})^{\gamma 4}\frac{v_0}{\sqrt{2}} + \mathrm{h.c.}\nonumber\\
+                                                                                                                            &= \frac{4}{\sqrt{2}}v_0 Y_{10}^{mn}\overline{u_{mR}}u_{nL} + \mathrm{h.c.}
 \end{align}
 と表すことができる.
+ここで述べた質量はいずれも大統一のエネルギースケールで成立するものである.
+そのため電弱スケールでの実験値と比較するためには繰り込み群方程式を解くことによってエネルギー依存性を含めて考える必要がある.
 \section{SU(5)大統一理論による予言と問題点}
 $SU(5)$大統一理論では, 素粒子標準模型に現れる粒子を$SU(5)$群の$\overline{\bm{5}}$表現や$\bm{10}$表現, 随伴表現の$\bm{24}$表現に当てはめて考えた.
 これにより素粒子標準模型には存在しない現象が予言される.
@@ -539,6 +545,8 @@ $SU(5)$大統一理論では式(\ref{XY_bosons})で見たように, 新たに$X,
   \label{fig_X_proton_decay}
   \caption{$X$ボゾンを介した陽子崩壊のファインマン図}
 \end{figure}
+
+\begin{comment}
 \subsection{電荷の量子化}
 式(\ref{quantum_Q})で述べているが, 標準模型では予言されない電荷の量子化が行える.
 これは$SU(5)$大統一理論がクォーク, レプトンを $SU(5)$の単純群で記述し, 式(\ref{GUT-5rep})のように$\overline{\bm{5}}$表現に当てはめることで
@@ -546,6 +554,7 @@ $SU(5)$大統一理論では式(\ref{XY_bosons})で見たように, 新たに$X,
   \mathrm{Tr}Q = 0 \nonumber
 \end{align}
 と標準模型では与えられない条件を満足させているためである.
+\end{comment}
 \subsection{ワインバーグ角}
 標準模型に現れるフェルミオンやゲージ粒子が, $\mathrm{SU(5)}$大統一理論でどのように当てはめられるのかを見てきた.
 ゲージ結合定数が大統一スケールで$g_5$と統一されたことにより, 理論的にワインバーグ角を決定することができる.
@@ -574,7 +583,45 @@ $SU(5)$大統一理論では式(\ref{XY_bosons})で見たように, 新たに$X,
   \sin\theta_W &=\sqrt{\frac{3}{8}}\nonumber
 \end{align}
 と大統一スケールでの値を予言することができる.
-$\sin\theta_W$は標準模型では値を予言することはできなかったが, 大統一理論では予言ができることが示された.
+$\sin\theta_W$は標準模型では値を予言することはできなかったが, 大統一理論では$\sin\theta_W$を予言ができることが示された.
+
+これらの予想は$SU(5)$ゲージ群において成り立つものである.
+そのため大統一スケールよりも低いエネルギースケールでどのような値を取るかはくりこみ群方程式を解くことによって導く必要がある.
+量子補正を1次まで含めた式(\ref{bfnc_1loop})は, ワインバーグ角と結合定数の規格化を行った式(\ref{re_gY})を含めると
+\begin{align}
+  \frac{1}{\alpha_3(\mu)} &= \frac{1}{\alpha_{\mathrm{GUT}}} +\frac{1}{2\pi}\left(11-\frac{4}{3}n_f\right)\mathrm{ln}\left(\frac{\mu}{M_{\mathrm{GUT}}}\right)\nonumber\\
+  \frac{1}{\alpha_2(\mu)} &= \frac{\sin^2\theta_W}{\alpha_{Y}} =  \frac{1}{\alpha_{\mathrm{GUT}}} +\frac{1}{2\pi}\left(22-\frac{4}{3}n_f - \frac{n_H}{6}\right)\mathrm{ln}\left(\frac{\mu}{M_{\mathrm{GUT}}}\right)\nonumber\\
+  \frac{1}{\alpha_1(\mu)} &= \frac{3}{5}\frac{\cos^2\theta_{W}}{\alpha_{Y}} =\frac{1}{\alpha_{\mathrm{GUT}}} -\frac{1}{2\pi}\left(\frac{4}{3}n_f+\frac{1}{10}n_f\right)\mathrm{ln}\left(\frac{\mu}{M_{\mathrm{GUT}}}\right)\nonumber
+\end{align}
+と表すことができる.
+ただし, $n_f, n_H$はそれぞれ世代数とヒッグス二重項の数である.
+
+これを$\sin^2\theta_W$について解く.
+$n_f =3, n_H = 1$ として
+\begin{align}
+  \sin^2{\theta_W} &= \frac{3}{8}\left( 1 - \frac{109}{18\pi}\alpha_{Y}(\mu)\mathrm{ln}\left(\frac{M_{\mathrm{GUT}}}{\mu}\right) \right)\nonumber\\
+  \frac{\alpha_{Y}{(\mu)}}{\alpha_{3}{(\mu)}} &= \frac{3}{8}\left( 1 - \frac{67}{6\pi} \mathrm{ln}\left(\frac{M_{\mathrm{GUT}}}{\mu}\right)\right)\label{alpha_em}
+\end{align}
+となる.
+
+式(\ref{alpha_em})について$\mu=M_Z$の場合を考え, $\alpha$の値を決めると
+\begin{align}
+  \alpha_{GUT} = 0.0244\pm 0.0002\nonumber\\
+  \sin^2 \theta_W = 0.214\pm 0.004\nonumber
+\end{align}
+と導かれる. \cite{}
+一方で, 最新の実験値は
+\begin{align}
+  \sin^2\theta_W = 0.23129\pm0.00004
+\end{align}
+と与えられるため, $SU(5)$大統一理論が予言するワインバーグ角は電弱スケールでの測定値と合わない.
+
+\subsection{フェルミオン質量の関係}
+$SU(5)$大統一模型では, 標準模型に存在するヒッグス粒子を$\bm{5}$表現に当てはめて考えた.
+湯川結合は式(\ref{yukawa_5_10}と式(\ref{u_Yukawa})で書くことができ, 前者の下系列クォークと荷電レプトンについては, 
+\begin{align}
+  M^d = M^e = \frac{v_0}{\sqrt{2}}Y_5^{mn}
+\end{align}
 
 
 %EOF

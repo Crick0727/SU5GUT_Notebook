@@ -3,17 +3,17 @@
 %  Extend to SU(5) GUT
 %  extend_SU5.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 23 2025
+%  Last Modified Jan 24 2025
 %
 % ---------------------------------------
 ここまでで$SU(5)$大統一理論について見ることができた.
-電荷の量子化を理論に基づいて自然と説明されることは魅力的である.
+電荷の量子化を理論に基づいて自然と説明されることは$SU(5)$大統一理論の魅力的な点である.
 一方で, 陽子崩壊やワインバーグ角など現在の実験と整合性の合わない事実も残される.
 さらに標準模型の課題を$SU(5)$大統一理論によってすべて解決することができない.
 そのため, 高いエネルギースケールで3つの相互作用が統一されるべきという立場を取るならば, 大統一理論を拡張し, 標準模型を超えた物理を探査することが必要となる.
 
 したがって, ここまで見てきたH.Georgi, S.L.Glashowによる$SU(5)$大統一模型を最小$SU(5)$模型と呼び, $SU(5)$模型の拡張方法について例を見る.
-\section{SU(5)大統一理論の課題}
+\section{最小SU(5)大統一理論の課題}
 \begin{itemize}
   \item ゲージ結合定数の統一\\
         くりこみ群方程式を解くことにより, ゲージ結合定数の大きさのエネルギー依存性を求めることができた.
@@ -23,17 +23,16 @@
         標準模型を拡張して重たい場を加えてニュートリノ質量を導く方法はあるが, 大統一理論はそのような拡張よりも高いエネルギースケールで成り立つ理論である.
         そのため, 大統一スケールであればそのような拡張を自然と含んだ模型である必要がある.
         最小$SU(5)$大統一理論は標準模型粒子の他に, $T \,(\in \phi_{\bar{\bm{5}}})$ヒッグスと$X,Y$ボゾンを含むが, 右巻きのカイラリティを持つニュートリノ$\nu_R$を含まないため, ニュートリノのディラック型質量項を表すことができない. 
-  \item 暗黒物質
-  \item 暗黒エネルギー
 \end{itemize}
 \section{高次元表現を用いた拡張}
 場の量子論に基づくと, ゲージ対称性により許される表現は理論に加えることが可能である.
 ここでは高次元表現で表される粒子による拡張を与え, それらが現象論的にどのような予言をもたらすのかを見る.
 \subsection{45表現ヒッグスを用いた拡張}
-大統一理論において, 式(\ref{decon_510})のように基本表現である$\bm{5}$表現から$\bm{45}$表現を考えることができる.
-この表現を用いた$\bm{45}$表現ヒッグス$(\phi_{\bm{45}})$ を考える
+大統一理論において, 式(\ref{decon_510})のように基本表現である$\bm{5}$表現から$\bm{45}$表現を構成することができる.
+この表現を用いた$\bm{45}$表現ヒッグス$(\phi_{\bm{45}})$ を考え, 
+最小$SU(5)$模型で予言された下系列クォークと荷電レプトンの質量比についての予言$M_d = M_e$に修正を行うことができる
 \cite{framptonEstimateFlavorNumber1979,georgiNewLeptonquarkMass1979}.
-これは
+$\bm{45}$表現ヒッグスは
 \begin{align}
   \left(\phi_{\bm{45}}\right)^{ij}_k = -(\phi_{\bm{45}})^{ji}_k,\quad (\phi_{\bm{45}})^{ij}_i =0 \quad(i,j,k =1,\cdots,5)\nonumber
 \end{align}
@@ -43,11 +42,23 @@
   \phi_{\bm{45}} &= \varphi_8 \left(\bm{8}, \bm{2}, \frac{1}{2}\right) \oplus \varphi_{\bar{6}}\left(\overline{\bm{6}}, \bm{3}, -\frac{1}{3}\right) \oplus \varphi_3^T\left(\overline{\bm{3}}, \bm{3}, -\frac{1}{3}\right) \nonumber\\
                  &\qquad\qquad\oplus \varphi_3^D\left( \overline{\bm{3}}, \bm{2}, -\frac{7}{6}\right) \oplus \varphi_3^S\left(\bm{3}, \bm{1}, -\frac{1}{3}\right)\oplus \varphi_{\overline{3}}^S\left( \overline{\bm{3}}, \bm{1}, \frac{4}{3}\right)\oplus H_2\left(\bm{1}, \bm{2}, \frac{1}{2}\right)\nonumber
 \end{align}
-45表現ヒッグスは真空期待値を
+湯川結合は次のようになる.
+\begin{align}
+  (\psi_{\bm{\bar{5}}La}^T)_a C (\psi_{\bm{10}L})^{bc} (\phi_{\bm{45}}^\dagger)_{bc}^a+\mathrm{h.c.}\label{Y_45a}\\
+  \varepsilon_{abcef} (\psi_{\bm{10}L}^T)^{ab} C \psi_{\bm{10}L})^{cd} (\phi_{\bm{45}})_d^{ef}+ \mathrm{h.c.}\label{Y_45b}
+\end{align}
+
+$\bm{45}$表現ヒッグスは真空期待値を
 \begin{align}
   \langle (\phi_{\bm{45}})^{j5}_i\rangle = v_{45}\left(\delta^j_i - 4\delta^j_4 \delta_i^4\right),\quad(i,j=1,\cdots 4)
 \end{align}
 と取ることにより, ゲージ対称性を$SU(3)_c\times U(1)_{em}$へ破る.
+このとき, 式(\ref{Y_45a})(\ref{Y_45b})より質量行列が
+\begin{align}
+  M^e_{45} = -3M_{45}^d
+\end{align}
+となり, $\bm{5}$表現ヒッグスとは異なる結果となる.
+
 \subsection{15表現ヒッグスを用いた拡張}
 \begin{align}
   \phi_{\bm{15}} = \Delta \left(\bm{1}, \bm{3}, 1\right) \oplus \widetilde{R_2}\left(\bm{3}, \bm{2},\frac{1}{6}\right)\oplus S\left(\overline{\bm{6}}, \bm{1}, -\frac{2}{3}\right)
@@ -56,4 +67,5 @@
 \footnote{
   この記法は\cite{dorsnerPhysicsLeptoquarksPrecision2016}を参考にした.
 }
+
 %EOF

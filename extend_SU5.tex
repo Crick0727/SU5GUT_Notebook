@@ -3,7 +3,7 @@
 %  Extend to SU(5) GUT
 %  extend_SU5.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 21 2025
+%  Last Modified Jan 23 2025
 %
 % ---------------------------------------
 ここまでで$SU(5)$大統一理論について見ることができた.
@@ -26,7 +26,34 @@
   \item 暗黒物質
   \item 暗黒エネルギー
 \end{itemize}
-\section{高次元表現ヒッグスを用いた拡張}
-15表現ヒッグスを
-
+\section{高次元表現を用いた拡張}
+場の量子論に基づくと, ゲージ対称性により許される表現は理論に加えることが可能である.
+ここでは高次元表現で表される粒子による拡張を与え, それらが現象論的にどのような予言をもたらすのかを見る.
+\subsection{45表現ヒッグスを用いた拡張}
+大統一理論において, 式(\ref{decon_510})のように基本表現である$\bm{5}$表現から$\bm{45}$表現を考えることができる.
+この表現を用いた$\bm{45}$表現ヒッグス$(\phi_{\bm{45}})$ を考える
+\cite{framptonEstimateFlavorNumber1979,georgiNewLeptonquarkMass1979}.
+これは
+\begin{align}
+  \left(\phi_{\bm{45}}\right)^{ij}_k = -(\phi_{\bm{45}})^{ji}_k,\quad (\phi_{\bm{45}})^{ij}_i =0 \quad(i,j,k =1,\cdots,5)\nonumber
+\end{align}
+と
+また, $\phi_{\bm{45}}$は次のように分解される.
+\begin{align}
+  \phi_{\bm{45}} &= \varphi_8 \left(\bm{8}, \bm{2}, \frac{1}{2}\right) \oplus \varphi_{\bar{6}}\left(\overline{\bm{6}}, \bm{3}, -\frac{1}{3}\right) \oplus \varphi_3^T\left(\overline{\bm{3}}, \bm{3}, -\frac{1}{3}\right) \nonumber\\
+                 &\qquad\qquad\oplus \varphi_3^D\left( \overline{\bm{3}}, \bm{2}, -\frac{7}{6}\right) \oplus \varphi_3^S\left(\bm{3}, \bm{1}, -\frac{1}{3}\right)\oplus \varphi_{\overline{3}}^S\left( \overline{\bm{3}}, \bm{1}, \frac{4}{3}\right)\oplus H_2\left(\bm{1}, \bm{2}, \frac{1}{2}\right)\nonumber
+\end{align}
+45表現ヒッグスは真空期待値を
+\begin{align}
+  \langle (\phi_{\bm{45}})^{j5}_i\rangle = v_{45}\left(\delta^j_i - 4\delta^j_4 \delta_i^4\right),\quad(i,j=1,\cdots 4)
+\end{align}
+と取ることにより, ゲージ対称性を$SU(3)_c\times U(1)_{em}$へ破る.
+\subsection{15表現ヒッグスを用いた拡張}
+\begin{align}
+  \phi_{\bm{15}} = \Delta \left(\bm{1}, \bm{3}, 1\right) \oplus \widetilde{R_2}\left(\bm{3}, \bm{2},\frac{1}{6}\right)\oplus S\left(\overline{\bm{6}}, \bm{1}, -\frac{2}{3}\right)
+\end{align}
+と分解できる.
+\footnote{
+  この記法は\cite{dorsnerPhysicsLeptoquarksPrecision2016}を参考にした.
+}
 %EOF

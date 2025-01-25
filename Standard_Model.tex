@@ -123,6 +123,25 @@ $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 
 物質粒子はカイラリティと呼ばれる右巻き粒子と左巻き粒子の状態によって区別される.
 \textcolor{red}{カイラリティの説明をするべきか?}
+ディラックスピノール場$\psi_D$について, 射影演算子$P_L = \cfrac{1-\gamma^5}{2}, P_R= \cfrac{1+\gamma^5}{2}$を用いて次のように表される.
+\begin{align}
+  \psi_R = P_R \psi_D,\qquad \psi_L=P_L \psi_D
+\end{align}
+ここで, $\gamma^5= i\gamma^0 \gamma^1 \gamma^2 \gamma^3$とし, $\gamma^\mu$は
+\begin{align}
+  \{ \gamma^\mu \gamma^\nu \} = 2g^{\mu\nu}
+\end{align}
+を満たす.
+
+クォークは$SU(3)_c$対称性について
+\begin{align}
+  \mathcal{L}_{\mathrm{Dirac}} = i\overline{\Psi}\gamma^\mu D_\mu \Psi,
+\end{align}
+ここで, 共変微分$D_\mu$は次のように定義される.
+\begin{align}
+  D_\mu \equiv \partial_\mu -ig_3 G_\mu^a \frac{1}{2}\lambda^a -ig_2 W_\mu^i\frac{1}{2}\sigma^i -ig_Y Y B_\mu
+\end{align}
+
 \section{ヒッグス機構}
 標準模型はゲージ対称性により記述される理論で大きな成功をおさめた.
 ところが, この対称性が破れない場合, 次のような問題が残る.
@@ -319,12 +338,55 @@ $i=1,2,3$を世代数として, 図\ref{fig_sm}のようにまとめられる.
 さらに小林, 益川\cite{kobayashi_cp-violation_1973}の2名によってこの世代構造が3世代以上の場合であれば弱い相互作用はCP対称性を破ることを説明できることを指摘した.
 これらは次のように説明される.
 
-スピノール$q$に対して弱固有状態を記述する基底を$q'$と表すと, 質量固有状態$q$とは次のような関係を持つ.
+クォーク場$q$に対して弱固有状態を記述する基底を$q'$と表すと, 質量固有状態$q$とはユニタリ行列を用いて
 \begin{align}
-  (d'_{L})^i = (U_{d_L})^i_j d_L^j,\quad (d'_{R})^i = (U_{d_R})^i_j d^j\nonumber\\
-  (u'_{L})^i = (U_{q_L})^i_j u_L^j,\quad (u'_{R})^i = (U_{u_R})^i_j u^j\nonumber\\
-  (L'_{L})^i = (U_{L_L})^i_j L_L^j,\quad (u'_{R})^i = (U_{u_R})^i_j u^j\nonumber\\
+  (d'_{L})^i = (U_{d_L})^i_j d_L^j,\quad (d'_{R})^i = (U_{d_R})^i_j d^j,\nonumber\\
+  (u'_{L})^i = (U_{q_L})^i_j u_L^j,\quad (u'_{R})^i = (U_{u_R})^i_j u^j,\nonumber\\
+  (L'_{L})^i = (U_{L_L})^i_j L_L^j,\quad (u'_{R})^i = (U_{u_R})^i_j u^j.\nonumber
 \end{align}
+と関係づけられる.
 
+双ユニタリー変換により
+\begin{align}
+  M_{d\,\mathrm{diag}} = U_{d_L}^\dagger M_u U_{d_R},\qquad
+  M_{u\,\mathrm{diag}} = U_{u_L}^\dagger M_d U_{u_R} \nonumber
+\end{align}
+と対角化される.
+この変換によって対角化された行列の成分はすべて実数となる.
+
+この変換によって弱い相互作用において$W^\pm$ボゾンとの相互作用では世代間混合が起こる.
+いま$W^\pm$ボゾンとの相互作用によるチャージを$j_W^\mu$とすると
+\begin{align}
+  j_W^\mu &= \frac{1}{\sqrt{2}}\left(\overline{\nu_L} \gamma^\mu l_L + \overline{u_L}\gamma^\mu d_L\right) + \mathrm{h.c.} \nonumber\\
+          &= \frac{1}{\sqrt{2}}\left(\overline{\nu_L} \gamma^\mu l_l + \overline{u_L}V_{\mathrm{CKM}}\gamma^\mu d_L\right) +\mathrm{h.c.} \nonumber\\
+\end{align}
+となり, 第2項が示すように$W^\pm$ボゾンとの弱い相互作用は世代間混合を起こしている.
+ここで新しく定義された
+\begin{align}
+  V_{\mathrm{CKM}}\equiv U_{u_L}^\dagger U_{d_L}
+\end{align}
+はカビボ-小林-益川(CKM)行列と呼ばれ, 世代構造に重要な量となる.
+
+CKM行列は$3\times3$成分の行列であるから9つのパラメータを持つ.
+CKM行列はユニタリ行列でることや, クォーク$u_L, d_L$の場を再定義することで自由度を取り除くことができる.
+このことから, 4つの自由度$\{\theta_{ij} (=\theta_{12},\theta_{23}, \theta_{13}),\,\delta\}$でCKM行列を書くことができる.
+ここで $c_{ij}\equiv \cos\theta_{ij}$, $s_{ij} = \sin\theta_{ij}\,$とすると
+\begin{align}
+  V_{\mathrm{CKM}} =\begin{pmatrix}
+    c_{12} c_{13} & s_{12} c_{13} & s_{13}e^{-i\delta} \\
+   -s_{12} c_{23} - c_{12} s_{23} s_{13} e^{i\delta} & c_{12} c_{23} -s_{12} s_{23} s_{13} e^{i\delta} & s_{23}c_{13} \\
+   s_{12} s_{23} - c_{12} c_{23} s_{13}e^{i\delta} & -c_{12}s_{23}-s_{12}c_{23}s_{13}e^{i\delta} & c_{23}c_{13}
+  \end{pmatrix}
+\end{align}
+となる.
+$\theta_{ij}$は3つの世代の混合角であり, $\theta$が弱い相互作用におけるCP対称性を破る複素位相である.
+
+弱い相互作用がCP対称性を破る可能性はJ. W. Cronin, V. L. Fitch によりK中間子を用いた観測により指摘されていた\cite{christensonEvidence$2ensuremathpi$Decay1964}.
+CKM行列の複素位相によりCP対称性の破れを理論的に説明できたこととなる.
+
+\subsection{標準模型のラグランジアン}
+\begin{align}
+  \mathcal{L}_{\mathrm{SM}} = \mathcal{L}_{\mathrm{gauge}} + \mathcal{L}_{\mathrm{Dirac}} +\mathcal{L}_H + \mathcal{L}_Y
+\end{align}
 
 %EOF

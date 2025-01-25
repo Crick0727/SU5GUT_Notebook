@@ -116,10 +116,10 @@ $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 \end{align}
 と表せる.
 \section{フェルミオン}
-標準模型粒子ではクォーク, レプトンは物質粒子という枠組みで説明され, スピンが$\frac{1}{2}$のフェルミ粒子である.
+標準模型粒子ではクォーク, レプトンは物質粒子という枠組みで説明され, スピンが$\cfrac{1}{2}$のフェルミ粒子である.
 
 標準模型では物質粒子は世代と呼ばれる構造をもつ.
-現在の標準模型は3世代模型として考えられており, 弱い相互作用でのCP対称性の破れに重要な役割を果たす.[]
+現在の標準模型は3世代模型として考えられており, 弱い相互作用でのCP対称性の破れに重要な役割を果たす.\cite{cabibbo_unitary_1963,kobayashi_cp-violation_1973}
 
 物質粒子はカイラリティと呼ばれる右巻き粒子と左巻き粒子の状態によって区別される.
 \textcolor{red}{カイラリティの説明をするべきか?}
@@ -129,11 +129,31 @@ $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 \end{align}
 ここで, $\gamma^5= i\gamma^0 \gamma^1 \gamma^2 \gamma^3$とし, $\gamma^\mu$は
 \begin{align}
-  \{ \gamma^\mu \gamma^\nu \} = 2g^{\mu\nu}
+  \{ \gamma^\mu, \gamma^\nu \} = 2g^{\mu\nu}
 \end{align}
 を満たす.
 
-クォークは$SU(3)_c$対称性について
+はじめに, クォークのもつゲージ対称性を考える.
+クォークは$SU(3)_c$対称性について赤(r), 青(b), 緑(g)と呼称される量子数を持つ.
+より正確に述べると, クォークは$SU(3)_c$対称性の基本表現である$\bm{3}$表現で表されている.
+$SU(2)_L$対称性には$SU(2)_L$の基本表現である$\bm{2}$表現で表され, 二重項をなす.
+一方で右巻きのカイラリティを持つ$u_R$と$d_R$は$SU(2)_L$ゲージ変換の対称性を持たないため, 一重項で書かれている.
+\begin{align}
+Q^i \begin{pmatrix}
+      u^r & u^b & u^g \\
+      d^r & d^b & d^g
+    \end{pmatrix}_{iL} = \left(\bm{3}, \bm{2}, -\cfrac{1}{6}\right)
+\end{align}
+\begin{align}
+  u_R = \begin{pmatrix} 
+    u^r & u^b & u^g
+  \end{pmatrix} = \left(\bm{\bar{3}} ,\bm{1}, -\frac{2}{3}\right),\quad
+  d_R = \begin{pmatrix} 
+    d^r & d^b & d^g
+  \end{pmatrix} = \left(\bm{\bar{3}} ,\bm{1}, \frac{1}{3}\right)
+\end{align}
+
+これらを踏まえてディラック相互沙翁
 \begin{align}
   \mathcal{L}_{\mathrm{Dirac}} = i\overline{\Psi}\gamma^\mu D_\mu \Psi,
 \end{align}

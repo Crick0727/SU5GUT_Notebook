@@ -3,7 +3,7 @@
 %  Standard model
 %  Standard_Model.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 22 2025
+%  Last Modified Jan 25 2025
 %
 % ---------------------------------------
 この章では素粒子物理学における標準模型についてまとめた.
@@ -271,7 +271,7 @@ $i=1,2,3$を世代数として, 図\ref{fig_sm}のようにまとめられる.
   \caption{標準模型粒子と量子数}
   \begin{center}
     \begin{tabular}{cc|cc}\hline
-  クォーク場　& 量子数 & レプトン場 & 量子数 \\\hline\hline
+  クォーク場& 量子数 & レプトン場 & 量子数 \\\hline\hline
   $Q_i\equiv\begin{pmatrix}
     u_i \\
     d_i
@@ -286,24 +286,45 @@ $i=1,2,3$を世代数として, 図\ref{fig_sm}のようにまとめられる.
     \end{tabular}
   \end{center}
 \end{table}
-\subsection{レプトン場の質量生成}
+\subsection{クォーク, レプトンの質量生成とCKM行列}
 はじめにレプトンの質量について考える.
 レプトン場とヒッグス場からなる$\mathcal{G}_{\mathrm{SM}}$不変な湯川相互作用は
 \begin{align}
   \mathcal{L}_Y \supset -Y_{l}^{ij} \overline{L_i}\Phi l_{jR} +\mathrm{h.c.}
 \end{align}
 と表される.
-ヒッグス場が真空期待値を(\ref{Higgs_VEV})のようにとると質量項を書くことができる.
+ヒッグス場が真空期待値を(\ref{Higgs_VEV})のようにとることで質量項を書くことができる.
 \begin{align}
   \mathcal{L}_{Mass} \supset -m_e\bar{e}e -m_\mu \bar{\mu} \mu - m_\tau \bar{\tau}\tau\nonumber
 \end{align}
+このとき, $M_l$を$3\times 3$の正方行列として
 \begin{align}
-  M_l = Y_l\frac{v}{\sqrt{2}}
+  M_l = Y_l\frac{v}{\sqrt{2}} \label{Mass_M_l}
 \end{align}
-\subsection{クォーク場の質量生成}
-クォーク場とヒッグス場からなる$\mathcal{G}_{\mathrm{SM}}$不変な湯川相互作用は
+のように表し, これを質量行列と呼ぶ.
+クォーク場に於いてもレプトン場と同様にヒッグス場からなる$\mathcal{G}_{\mathrm{SM}}$不変な湯川相互作用は
 \begin{align}
   \mathcal{L}_Y \supset -Y_{d}^{ij} \overline{Q_i}\Phi d_{jR} -Y_{u}^{ij} \overline{Q_i}i\sigma^2\Phi u_{iR} +\mathrm{h.c.}
 \end{align}
 と表せる.
+これにより質量行列は
+\begin{align}
+  M_d = Y_d\frac{v}{\sqrt{2}},\quad M_u = Y_u \frac{v}{\sqrt{2}}\label{Mass_M_q}
+\end{align}
+と表すことができる.
 
+ここまでに導入された質量行列(\ref{Mass_M_l}),(\ref{Mass_M_q})は一般には複素行列であり, 対角化されていない.
+これは素粒子の相互作用を表す固有状態と物理的質量を記述する固有状態が異なることを表しており, 前者を弱固有状態と呼び, 後者を質量固有状態と呼ぶ.
+このことはCabibbo\cite{cabibbo_unitary_1963}により初めて指摘され, クォークには2つの固有状態が存在し, さらに世代と呼ばれる構造があることを示した.
+さらに小林, 益川\cite{kobayashi_cp-violation_1973}の2名によってこの世代構造が3世代以上の場合であれば弱い相互作用はCP対称性を破ることを説明できることを指摘した.
+これらは次のように説明される.
+
+スピノール$q$に対して弱固有状態を記述する基底を$q'$と表すと, 質量固有状態$q$とは次のような関係を持つ.
+\begin{align}
+  (d'_{L})^i = (U_{d_L})^i_j d_L^j,\quad (d'_{R})^i = (U_{d_R})^i_j d^j\nonumber\\
+  (u'_{L})^i = (U_{q_L})^i_j u_L^j,\quad (u'_{R})^i = (U_{u_R})^i_j u^j\nonumber\\
+  (L'_{L})^i = (U_{L_L})^i_j L_L^j,\quad (u'_{R})^i = (U_{u_R})^i_j u^j\nonumber\\
+\end{align}
+
+
+%EOF

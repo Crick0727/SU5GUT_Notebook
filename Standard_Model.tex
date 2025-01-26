@@ -3,7 +3,7 @@
 %  Standard model
 %  Standard_Model.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 25 2025
+%  Last Modified Jan 26 2025
 %
 % ---------------------------------------
 この章では素粒子物理学における標準模型についてまとめた.
@@ -99,9 +99,26 @@ $\theta^a$は実定数であり, $n=\mathrm{dim}(G)$はリー群の次元であ�
 となる.
 ここでは一般的なリー群に基づいたゲージ変換を考えたが, $SU(2), SU(3)$群を考えることで弱い相互作用と強い相互作用を記述することができる.
 また, ここで述べたものは非可換ゲージ理論であるが, 電磁相互作用を記述する$U(1)$対称性はこれらの記述を可換なものとして扱えば良い.
-その場合, 式(\ref{gauge-5})の第3項は存在しない.
+その場合, 式(\ref{gauge-5})の第3項は存在しない. 
+
+以上を踏まえて, 標準模型に現れるゲージ粒子を表\ref{table:Gauge_particle}にまとめた.
+$SU(3)_c$に対応するゲージ場が$G_\mu^a\,(a=1,\cdots,8)$, $SU(2)_L$に対応するゲージ場が$W_\mu^i\,(i=1,2,3)$, $U(1)_Y$ゲージ場に対応するゲージ場は$B_\mu$である.
+また量子数は$\left(SU(3)_c, SU(2)_L, U(1)_Y\right)$に対応するように示している.
+弱超電荷$Y$は$I_3$を$SU(2)_L$のアイソスピンの第3成分であり, 電荷が$Q=I_3+Y$を満たすように定めた. 
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{cc}\hline
+    ゲージ場 & 量子数\\\hline\hline
+    $G_\mu^a $ & $(\bm{8}, \bm{1}, 0 )$ \\
+    $W_\mu^i $ & $(\bm{1}, \bm{3}, 0 )$ \\
+    $B_\mu   $ & $(\bm{1}, \bm{1}, 0 )$\\\hline
+  \end{tabular}
+  \label{table:Gauge_particle}
+  \caption{標準模型に存在する粒子とその量子数の対応}
+\end{table}
 \subsection{ゲージ粒子のラグランジアン}
-これまで述べたことを踏まえて, $B_{\mu\nu}$を電磁相互作用を記述する$U(1)$ゲージ場, $W_{\mu\nu}^i\,(i=1,2,3)$を弱い相互作用を記述する$SU(2)$ゲージ場, $G_{\mu\nu}^a\,(a=1,\cdots,8)$を強い相互作用を記述する$SU(3)$ゲージ場とすると, 素粒子標準模型に現れる場の強さテンソルは式(\ref{gauge-5})より次のように表される.
+これまで述べたことを踏まえて, $B_{\mu\nu}$を電磁相互作用を記述する$U(1)$ゲージ場, $W_{\mu\nu}^i\,(i=1,2,3)$を弱い相互作用を記述する$SU(2)$ゲージ場, $G_{\mu\nu}^a\,(a=1,\cdots,8)$を強い相互作用を記述する$SU(3)$ゲージ場の場の強さテンソルとする.
+素粒子標準模型に現れる場の強さテンソルは式(\ref{gauge-5})より次のように表される.
 \begin{align}
   B_{\mu\nu} &= \partial_\mu B_\nu - \partial_\nu B_\mu \label{gauge.B}\\
   W_{\mu\nu}^i &= \partial_\mu W_\nu^i - \partial_\nu W_\mu^i+g_2\varepsilon^{ijk}W_\mu^j W_\nu^k \label{gauge.W}\\
@@ -112,10 +129,10 @@ $\theta^a$は実定数であり, $n=\mathrm{dim}(G)$はリー群の次元であ�
 $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 また, 標準模型のゲージ場の運動項は式(\ref{gauge-6})より
 \begin{align}
-  \mathcal{L}_{\text{gauge}} = -\frac{1}{4}B_{\mu\nu} B^{\mu\nu} - \frac{1}{4}W_{\mu\nu}^i W^{i\mu\nu} -\frac{1}{4}G_{\mu\nu}^i G^{i\mu\nu}\label{gauge.kin}
+  \mathcal{L}_{\text{gauge}} = -\frac{1}{4}B_{\mu\nu} B^{\mu\nu} - \frac{1}{4}W_{\mu\nu}^i W^{i\mu\nu} -\frac{1}{4}G_{\mu\nu}^a G^{a\mu\nu}\label{gauge.kin}
 \end{align}
 と表せる.
-\section{フェルミオン}
+\section{クォーク, レプトン}
 標準模型粒子ではクォーク, レプトンは物質粒子という枠組みで説明され, スピンが$\cfrac{1}{2}$のフェルミ粒子である.
 
 標準模型では物質粒子は世代と呼ばれる構造をもつ.
@@ -136,31 +153,51 @@ $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 はじめに, クォークのもつゲージ対称性を考える.
 クォークは$SU(3)_c$対称性について赤(r), 青(b), 緑(g)と呼称される量子数を持つ.
 より正確に述べると, クォークは$SU(3)_c$対称性の基本表現である$\bm{3}$表現で表されている.
-$SU(2)_L$対称性には$SU(2)_L$の基本表現である$\bm{2}$表現で表され, 二重項をなす.
-一方で右巻きのカイラリティを持つ$u_R$と$d_R$は$SU(2)_L$ゲージ変換の対称性を持たないため, 一重項で書かれている.
+$SU(2)_L$対称性について, 左巻きクォークは$SU(2)_L$の基本表現である$\bm{2}$表現で表され, 二重項をなす.
+一方で右巻きのカイラリティを持つ$u_R$と$d_R$は$SU(2)_L$ゲージ変換の対称性を持たない.
+したがって, 一重項で書かれている.
 \begin{align}
-Q^i \begin{pmatrix}
+Q^i_L = \begin{pmatrix}
       u^r & u^b & u^g \\
       d^r & d^b & d^g
-    \end{pmatrix}_{iL} = \left(\bm{3}, \bm{2}, -\cfrac{1}{6}\right)
+    \end{pmatrix}_{iL} = \left(\bm{3}, \bm{2}, \cfrac{1}{6}\right)
 \end{align}
 \begin{align}
-  u_R = \begin{pmatrix} 
+  u_{iR} = \begin{pmatrix} 
     u^r & u^b & u^g
-  \end{pmatrix} = \left(\bm{\bar{3}} ,\bm{1}, -\frac{2}{3}\right),\quad
-  d_R = \begin{pmatrix} 
+  \end{pmatrix}_i = \left(\bm{3} ,\bm{1}, \frac{2}{3}\right),\quad
+  d_{iR} = \begin{pmatrix} 
     d^r & d^b & d^g
-  \end{pmatrix} = \left(\bm{\bar{3}} ,\bm{1}, \frac{1}{3}\right)
+  \end{pmatrix}_i = \left(\bm{3} ,\bm{1}, -\frac{1}{3}\right)
 \end{align}
+ここで$i=1,2,3$は世代を表す.
+これによりクォークの構成を表すことができた.
 
-これらを踏まえてディラック相互沙翁
+次に, レプトンを構成する.
+レプトンは強い相互作用をしない.
+また, 左巻きのカイラリティを持つもののみ弱い相互作用と電磁相互作用を行う.
+右巻きのカイラリティはクォークと同様に電磁相互作用のみ記述される.
+したがって, 次のようになる.
 \begin{align}
-  \mathcal{L}_{\mathrm{Dirac}} = i\overline{\Psi}\gamma^\mu D_\mu \Psi,
+  L_{iL} = \begin{pmatrix}
+    \nu_l \\
+    l
+  \end{pmatrix}_{iL} = \left(\bm{1}, \bm{2}, -\frac{1}{2}\right),\quad
+  l_{iR} = \left(\bm{1}, \bm{1}, -1\right)
+\end{align}
+レプトンもクォークと同じく3つの世代で構造される.
+
+以上より, 標準模型は1つの世代に5つのカイラルスピノールによって記述される.
+世代構造を考慮すると15個のカイラルスピノールによって構成される.
+カイラルスピノールの自由場とゲージ相互作用はディラック方程式によって表すことができる.
+\begin{align}
+  \mathcal{L}_{\mathrm{Dirac}} = i\overline{\Psi}\gamma^\mu D_\mu \Psi,\quad \left(\Psi\in\{Q^i_L, u_{iR}, d_{iR}, L_L, l_{iR} \}\right)
 \end{align}
 ここで, 共変微分$D_\mu$は次のように定義される.
 \begin{align}
   D_\mu \equiv \partial_\mu -ig_3 G_\mu^a \frac{1}{2}\lambda^a -ig_2 W_\mu^i\frac{1}{2}\sigma^i -ig_Y Y B_\mu
 \end{align}
+
 
 \section{ヒッグス機構}
 標準模型はゲージ対称性により記述される理論で大きな成功をおさめた.
@@ -404,9 +441,12 @@ $\theta_{ij}$は3つの世代の混合角であり, $\theta$が弱い相互作�
 弱い相互作用がCP対称性を破る可能性はJ. W. Cronin, V. L. Fitch によりK中間子を用いた観測により指摘されていた\cite{christensonEvidence$2ensuremathpi$Decay1964}.
 CKM行列の複素位相によりCP対称性の破れを理論的に説明できたこととなる.
 
-\subsection{標準模型のラグランジアン}
+\section{標準模型のラグランジアン}
+これまでの内容を踏まえて, 標準模型のラグランジアンは次のように表される\footnote{ゲージ固定項とそれにより生じるゲージファデエフ=ポポフゴーストのラグランジアンは省略した}.
 \begin{align}
   \mathcal{L}_{\mathrm{SM}} = \mathcal{L}_{\mathrm{gauge}} + \mathcal{L}_{\mathrm{Dirac}} +\mathcal{L}_H + \mathcal{L}_Y
 \end{align}
+ヒッグス粒子のラグランジアンを除くと場の量子論とゲージ理論によって記述された簡潔な表現がされている.
+素粒子実験の結果を極めて精度良く説明できる理論である.
 
 %EOF

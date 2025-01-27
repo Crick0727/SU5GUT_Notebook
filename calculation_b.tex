@@ -1,0 +1,94 @@
+ここではゲージ結合定数に関係するくりこみ群方程式を, 標準模型粒子でどのように$b_i$を計算したか記録する\cite{royCalculating$v$functionCoefficients2019}
+ここでは量子補正の1次の項までのみを考えている.
+
+
+Dynkin指数$S(R)$は既約表現を用いて次のように定義される.
+\begin{align}
+ \mathrm{Tr}[S^aS^a] = S(R_i)\delta^{ab}
+\end{align}
+$SU(N)$群における基本表現に対して, 一般的に$S(R) = \frac{1}{2}$と規格化される.
+また, カシミア演算子$C_2(R)$とDynkin指数については
+\begin{align}
+  d(G)S(R) = d(R)C_2(R)
+\end{align}
+と対応付けられる.
+ここで, $d(R)$は表現$R$の時点であり, $d(G)$はゲージ群$G$の随伴表現の次元である.
+
+ここから標準模型の場合どのような計算がされるか実際に見る.
+\begin{align}
+  C_R^3 (i) = \left\{\begin{array}{cc}
+      \cfrac{4}{3} & \Psi = Q, \bar{u},\bar{d} \\\\
+      0 & \Psi_i L, \bar{e}, H
+  \end{array} \right.\nonumber\\
+  C_R^2 (i) = \left\{\begin{array}{cc}
+      \cfrac{3}{4} & \Psi = Q, L, H \\\\
+      0 & \Psi_i = \bar{u}, \bar{d}, \bar{e}
+  \end{array} \right.\nonumber\\ 
+  C_R^3 (i) = \begin{array}{cc}
+    \cfrac{3Y^2_i}{5}& \text{超電荷の値を加える.}
+  \end{array}\nonumber
+\end{align}
+
+また, Dynkin指数についても
+\begin{align}
+  S_2(R) = \left\{ \begin{array}{cc}
+      \cfrac{3}{5}Y^2_{\Psi_i} & U(1) \\\\
+      \cfrac{1}{2} & SU(N)
+    \end{array}\right.
+\end{align}
+となる.
+これを踏まえて実際に数を勘定すると次のようになる.
+\begin{eqnarray}
+\label{b1funcSM}
+b_1 &=&0+\frac{4}{3}\cdot\frac{1}{\tikzmark{b1SM1}2}\cdot\bigg(\sum_{\mathrm{fermions}}\frac{3}{5}Y_{\mathrm{fermions}}^2\bigg)+\frac{1}{6}\cdot\tikzmark{b1SM2}2\cdot\bigg(\sum_{\mathrm{scalars}}\frac{3}{5}Y_{\mathrm{scalars}}^2\bigg)~~[\mathrm{ただし}~ U(1), C_2(G)=0]\nonumber\\\nonumber\\
+&=& \frac{2}{3}\cdot\sum_{\mathrm{fermions}}\frac{3}{5}Y_{\mathrm{fermions}}^2+\frac{1}{3}\cdot\sum_{\mathrm{scalars}}\frac{3}{5}Y_{\mathrm{scalars}}^2 \nonumber\\\nonumber\\
+&=& \frac{2}{5}\bigg[\tikzmark{b1SM3}(3\cdot\tikzmark{b1SM4}2)\cdot(\frac{1}{6})^2+(3\cdot 1)\cdot(-\frac{2}{3})^2+(3\cdot 1)\cdot(\frac{1}{3})^2+\tikzmark{b1SM5}2\cdot(-\frac{1}{2})^2+\tikzmark{b1SM6}1\cdot 1^2\bigg]N_f+ \frac{1}{5}\bigg[2\cdot(-\frac{1}{2})^2\bigg]N_H \nonumber\\
+\begin{tikzpicture}[remember picture,overlay]
+\draw[<-] 
+  ([shift={(2pt,-2pt)}]pic cs:b1SM1) |- ([shift={(-14pt,-12pt)}]pic cs:b1SM1) 
+  node[anchor=east] {$\scriptstyle \text{Weyl fermion}$}; 
+\draw[<-] 
+  ([shift={(2pt,-2pt)}]pic cs:b1SM2) |- ([shift={(-14pt,-14pt)}]pic cs:b1SM2) 
+  node[anchor=east] {$\scriptstyle \text{Complex scalar}$};   
+\draw[<-] 
+  ([shift={(2pt,-2pt)}]pic cs:b1SM3) |- ([shift={(-14pt,-14pt)}]pic cs:b1SM3) 
+  node[anchor=east] {$\scriptstyle \text{Color}$}; 
+\draw[<-] 
+  ([shift={(2pt,-2pt)}]pic cs:b1SM4) |- ([shift={(16pt,-16pt)}]pic cs:b1SM4) 
+  node[anchor=west] {$\scriptstyle \text{Doublet}$}; 
+\draw[<-] 
+  ([shift={(2pt,-2pt)}]pic cs:b1SM5) |- ([shift={(16pt,-16pt)}]pic cs:b1SM5) 
+  node[anchor=west] {$\scriptstyle \text{Doublet}$}; 
+\draw[<-] 
+  ([shift={(2pt,-2pt)}]pic cs:b1SM6) |- ([shift={(16pt,-16pt)}]pic cs:b1SM6) 
+  node[anchor=west] {$\scriptstyle \text{Singlet}$}; 
+\end{tikzpicture}
+&=& \frac{4}{3}N_f+\frac{1}{10}N_H 
+\end{eqnarray}
+ただし, $N_f$はフェルミオンの世代数であり, $N_H$はヒッグス二重項の数である.
+同じように$b_2$も計算すると次のようになる.
+\begin{eqnarray}
+\label{b2funcSM}
+b_2 &=& \frac{2}{3}\cdot\frac{1}{2}\big[(\tikzmark{b2SM1}3\cdot 1)+(1\cdot 1)\big]N_f+\frac{1}{3}\cdot\frac{1}{2}(1\cdot 1)N_H-\frac{11}{3}\cdot 2
+\begin{tikzpicture}[remember picture,overlay]
+\draw[<-] 
+  ([shift={(2pt,-2pt)}]pic cs:b2SM1) |- ([shift={(14pt,-14pt)}]pic cs:b2SM1) 
+  node[anchor=west] {$\scriptstyle \text{Color}$}; 
+\end{tikzpicture}
+\nonumber\\
+&=& \frac{4}{3}N_f+\frac{1}{6}N_H-\frac{22}{3}.
+\end{eqnarray}
+
+最後に$b_3$についても次のように計算される.
+\begin{eqnarray}
+\label{b3funcSM}
+b_3 &=& \frac{2}{3}.\frac{1}{2}(\tikzmark{b3SM1}2+1+1)N_f-\frac{11}{3}.3
+\begin{tikzpicture}[remember picture,overlay]
+\draw[<-] 
+  ([shift={(2pt,-2pt)}]pic cs:b3SM1) |- ([shift={(14pt,-14pt)}]pic cs:b3SM1) 
+  node[anchor=west] {$\scriptstyle \text{Doublet}$}; 
+\end{tikzpicture}
+\nonumber\\
+&=& \frac{4}{3}N_f-11,
+\end{eqnarray}
+%EOF

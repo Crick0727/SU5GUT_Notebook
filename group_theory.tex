@@ -3,16 +3,16 @@
 %  Group theory
 %  group_theory.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jul 18 2024
+%  Last Modified Jan 27 2025
 %
 % ----------------------------------------
- この章では, 大統一理論に必要な数学の内容をまとめている.
- 詳しい証明や例については数学の専門書を参考にすること.
- 次のことを認め, 話を進める.
- 
- $X$を集合とする.
- 写像$\phi: X\times X \rightarrow X$のことを集合$X$上の演算と言う.
- これ以降では$a,b,\in X$に対する写像を$\phi(a, b)$の代わりに$ab$と書く.
+この章では, 大統一理論に必要な数学の内容を非常に簡単にまとめた.
+本文でもほとんど触れられているが, 数学の部分のみを取り出してまとめている.
+次のことを認め, 話を進める.
+
+$X$を集合とする.
+写像$\phi: X\times X \rightarrow X$のことを集合$X$上の演算と言う.
+これ以降では$a,b,\in X$に対する写像を$\phi(a, b)$の代わりに$ab$と書く.
 \section{群}
 群とは次の性質を持つものである.
 \begin{dfn}[群]
@@ -26,10 +26,22 @@
 特に, 性質3. は結合法則と呼ばれている.
 群の元$a, b\in G$に対して$ab=ba$が成り立つとき, $a, b$は可換である.
 $G$の任意の元$a, b$が可換なら, $G$を可換群(Abel群)と呼ぶ.
-
 \section{Lie群}
+Lie群は連続なパラメータにより特徴づけられる群であり, 生成子$t^a$によって
+\begin{align}
+  g(\alpha) = \exp(i\alpha^a t^a)
+\end{align}
+となる.
+この生成子$t^a$は, リー括弧によって
+\begin{align}
+  [t^a, t^b] = if^{abc}t^c
+\end{align}
+を満たす.
+ここで, $f^{abc}$はリー代数の構造定数である.
 \section{表現}
-\section{カルタン分類}
+表現とは, 群を行列に対応させる写像である.
+この写像は$\mathcal{R}: G\rightarrow GL(n)$で定義される.
+表現の次元は行列の次元と等しい.
 
 
 %EOF

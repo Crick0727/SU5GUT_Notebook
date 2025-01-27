@@ -26,7 +26,7 @@ $\mathrm{SU}(3)_c$群は核子に作用する強い相互作用を記述する�
 他にも, ラグランジアン密度に含める項は, 繰り込み可能であり, ローレンツ対称性を満足するものを決めることで全て書き下すことができる.
 ここからは標準模型に現れる粒子と, その対称性について考える.
 \section{ローレンツ代数とスピノール表現}
-物質場の基本的な構成をするために, スピノール場を定義する.
+物質場の基本的な構成をするために, スピノール場を簡単に導入する.
 スピノール場はローレンツ群$SL(2,\mathbb{C})$の変換をうける.
 
 はじめに, ローレンツ群の表現行列は
@@ -34,12 +34,26 @@ $\mathrm{SU}(3)_c$群は核子に作用する強い相互作用を記述する�
   D(\Lambda) = \exp\left(-\frac{i}{2\hbar}\omega^{\alpha\beta}S_{\alpha\beta}\right)
 \end{eqnarray}
 と表される.
-$\omega_{\alpha\beta}$は
-に対して, 基本表現は
+$\omega_{\alpha\beta}$
+はローレンツ群の無限小のパラメータである.
+スピノールの表現は次のように変換される.
+基本表現の場合は
 \begin{eqnarray}
   \psi_\alpha' = U_\alpha^\beta \psi_\beta\label{spi_1}
 \end{eqnarray}
+と変換を受ける.
+一方, 複素表現は
+\begin{eqnarray}
+  \overline{\chi_{\dot{\alpha}}}' = U_{\dot{\alpha}}^{\dot{\beta}*} \bar{\chi}_{\dot{\beta}}\label{spi_2}
+\end{eqnarray}
+と変換される.
+スピノールはローレンツ群の表現により変換を受ける.
 
+また, スピノールは$2\times2$の完全反対称テンソルを用いて
+\begin{align}
+  \varepsilon^{\alpha\beta} = \varepsilon^{\dot{\alpha}\dot{\beta}} = -\varepsilon_{\alpha\beta} = -\varepsilon_{\dot{\alpha}\dot{\beta}} 
+\end{align}
+となる.
 \section{ゲージ粒子}
 量子場の理論は量子力学と特殊相対論を組み合わせたものである.
 素粒子の反応を記述することは量子場の理論のみではできないが, ゲージ対称性を理論に課すことにより相互作用を記述することができる.
@@ -139,7 +153,6 @@ $f^{abc}, \varepsilon_{ijk} $はそれぞれの構造定数を表す.
 現在の標準模型は3世代模型として考えられており, 弱い相互作用でのCP対称性の破れに重要な役割を果たす.\cite{cabibbo_unitary_1963,kobayashi_cp-violation_1973}
 
 物質粒子はカイラリティと呼ばれる右巻き粒子と左巻き粒子の状態によって区別される.
-\textcolor{red}{カイラリティの説明をするべきか?}
 ディラックスピノール場$\psi_D$について, 射影演算子$P_L = \cfrac{1-\gamma^5}{2}, P_R= \cfrac{1+\gamma^5}{2}$を用いて次のように表される.
 \begin{align}
   \psi_R = P_R \psi_D,\qquad \psi_L=P_L \psi_D

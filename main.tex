@@ -23,6 +23,8 @@
 \usepackage[dvipdfmx]{graphicx}
 %\usepackage{etoolbox}
 %\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
 \usepackage[compat=1.1.0]{tikz-feynhand}
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{pxjahyper} % (u)pLaTeXのときのみかく
@@ -68,19 +70,21 @@
 \tableofcontents
 \clearpage
 
-\chapter*{acknowledgement}
-\input{acknowledgement.tex}
 % ----- Abstract ------------------------------------
 \begin{abstract}
-  素粒子標準模型とは, $SU(3)_\times SU(2)_L\times U(1)_Y $ ゲージ群によって素粒子の相互作用を記述する理論であり, 素粒子がもたらす実験や観測を非常によく説明する.
-  ところが標準模型では説明できない現象も数多く存在する.
-  例えば, 標準模型ではニュートリノには質量が存在しないが, カミオカンデでニュートリノ振動が観測され, ニュートリノに質量が損z内することが明らかにされた.
-  他にも様々な側面から標準模型を超えた理論への拡張が迫られており, 大統一理論はその候補の一つとして挙げられる.
+素粒子標準模型とは, $SU(3)_\times SU(2)_L\times U(1)_Y $ ゲージ群によって素粒子の相互作用を記述する理論であり, 素粒子がもたらす実験や観測を非常によく説明する.
+ところが標準模型では説明できない現象も数多く存在する.
+例えば, 標準模型ではニュートリノには質量が存在しないが, カミオカンデでニュートリノ振動が観測され, ニュートリノに質量が存在することが明らかにされた.
+他にも様々な側面から標準模型を超えた理論への拡張が迫られており, 大統一理論はその候補の一つとして挙げられる.
 
-  大統一理論とは, 標準模型のゲージ軍を部分群として含む単純群によって構成され, 物質粒子やゲージ粒子を統一的に記述する.
-  標準模型では陽子と電子の電荷が量子化されていないことを理論的に説明することができないが, 大統一理論によって理論的な説明がなされるため, 大統一理論を研究する大きな動機となる.
-  相互作用が統一的に記述されるため, 高いエネルギースケールでは相互作用の大きさも統一されるべきと考えるが, H.GeorgiとS.L.Glashowによって初めて考案された$SU(5)$大統一模型はゲージ結合定数の統一は叶わず, また標準模型でも課題であったニュートリノ質量を説明することはできなかった.
-  そのため, $SU(5)$大統一理論を実現するためには$SU(5)$ゲージ群の枠組みの中で理論を拡張することで, 標準模型の課題を解決できる整合性の取れた理論にする必要がある.
+大統一理論とは, 標準模型のゲージ軍を部分群として含む単純群によって構成され, 物質粒子やゲージ粒子を統一的に記述する.
+標準模型では陽子と電子の電荷が量子化されていないことを理論的に説明することができないが, 大統一理論によって理論的な説明がなされるため, 大統一理論を研究する大きな動機となる.
+相互作用が統一的に記述されるため, 高いエネルギースケールでは相互作用の大きさも統一されるべきと考えるが, H.GeorgiとS.L.Glashowによって初めて考案された$SU(5)$大統一模型はゲージ結合定数の統一は叶わず, また標準模型でも課題であったニュートリノ質量を説明することはできなかった.
+そのため, $SU(5)$大統一理論を実現するためには$SU(5)$ゲージ群の枠組みの中で理論を拡張することで, 標準模型の課題を解決できる整合性の取れた理論にする必要がある.
+本論文では初めに標準模型のレビューを行い, 実験的にどのような課題が存在するのかをまとめた.
+また, 標準模型を大統一理論へ拡張するために$SU(5)$大統一理論の一般的な構築を行った.
+最後に, 最小$SU(5)$模型ではゲージ結合定数の大きさが統一することができないことを受け, I.Dorsnerらが行った最小$SU(5)$大統一理論に対して$\bm{15}$表現ヒッグスを拡張する模型を再現した.
+これによりゲージ結合定数の大きさが大統一スケールで近づくことを確認した.
 \end{abstract}
 
 % =========================
@@ -89,20 +93,20 @@
 % ----- 1st part -----
 %\part{教科書の部分}
 
-\chapter{記法}
-\input{notations.tex}
+%\chapter{記法}
+%\input{notations.tex}
 
 \chapter{素粒子標準模型}
 \input{Standard_Model.tex}
 
-\chapter{場の理論における繰り込みと結合定数}
-\input{rge.tex}
-
-\chapter{素粒子標準模型では説明できない物理}
+%\chapter{素粒子標準模型では説明できない物理}
 \input{SM_problems.tex}
 
 \section{ニュートリノ質量}
 \input{neutrino.tex}
+
+\chapter{場の理論における繰り込みと結合定数}
+\input{rge.tex}
 
 \input{grand_unified_theory.tex}
 
@@ -112,11 +116,25 @@
 \chapter{SU(5)大統一理論の拡張模型}
 \input{extend_SU5.tex}
 
+\newpage
+\noindent
+{\large \bf{結論}}
+
+\input{conclusion.tex}
+
 % ----- Appendix -----
 \appendix
 \chapter{群論}
 \input{group_theory.tex}
 
+\chapter{標準模型でのくりこみ群方程式の係数の計算}
+\input{calculation_b.tex}
+
+\newpage
+\noindent
+{\large \bf{謝辞}}
+
+\input{acknowledgement.tex}
 % ----- Bibliography -----
 \bibliographystyle{junsrt}
 \bibliography{
@@ -136,7 +154,10 @@ bibs/CP_violation.bib, % Chronin fitch
 bibs/BEGN.bib,
 bibs/GUT_others.bib,
 bibs/mdmsmass.bib,
-bibs/15rep.bib
+bibs/15rep.bib,
+bibs/proton_stability.bib,
+bibs/no_p.bib,
+bibs/b_calc.bib
 }
 
 \end{document}

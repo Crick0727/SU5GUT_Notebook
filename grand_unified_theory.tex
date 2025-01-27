@@ -3,7 +3,7 @@
 %  Grand Unified Theory
 %  grand_unified_theory.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 24 2025
+%  Last Modified Jan 27 2025
 %
 % ----------------------------------------
 \chapter{SU(5)大統一理論}
@@ -84,7 +84,7 @@ ${\bm{10}}$表現は
      u_2^c & -u_1^c &      0 & u_3 & d_3 \\
     -u_1   &   -u_2 &   -u_3 &   0 & e^c \\
       -d_1 &   -d_2 &   -d_3 &-e^c &   0 \\
-    \end{pmatrix}\label{GUT-10rep}
+    \end{pmatrix} = u^c\left(3^*,1,-\frac{2}{3}\right)\oplus q\left(3,2,\frac{1}{6}\right)\oplus e^c(1,1,1)\label{GUT-10rep}
 % Note
 % 10表現であれば内部に規格化定数を入れる場合があるがここで必要ではないのか確認しなければならない.
 % Dec 10: up quark massを出す際に規格化されている必要があるので, この規格化定数は必要.
@@ -375,10 +375,9 @@ $SU(5)$模型にある24個のゲージボゾンのうち, 標準模型には現
 \end{align}
 と質量を持つことになる.
 \subsection{階層性問題}
-\textcolor{red}{とりあえず移動させた}
-
-大統一理論や超弦理論を考えた場合, 一般的にエネルギースケールの階層性が問題となる.
-ここでは大統一理論に表れる階層性に集中してこの問題について取り扱う.
+ここまでで標準模型よりも高い対称性を持つ理論を構築した場合, どのように対称性を破り, 標準模型の対称性を実現するのかをみた.
+ところが, 大統一理論を考えた場合, 一般的にエネルギースケールの階層性が問題となる.
+ここでは大統一理論に存在する階層性問題について触れる.
 % 1st version: Based on 素粒子の標準模型を超えて
 
 素粒子標準模型は電弱スケールである$M_W\sim100\,[\mathrm{GeV}]$まで高エネルギー加速器実験結果を説明することができる.
@@ -542,10 +541,56 @@ $SU(5)$大統一理論では式(\ref{XY_bosons})で見たように, 新たに$X,
       \propag [charged boson] (x_out) to [edge label =$X$] (x_in);
     \end{feynhand}
   \end{tikzpicture}
-  \label{fig_X_proton_decay}
   \caption{$X$ボゾンを介した陽子崩壊のファインマン図}
+  \label{fig_X_proton_decay}
 \end{figure}
 
+ここで陽子の崩壊率を導く.
+まず, ゲージボゾン$X$の質量項は式(\ref{PD_L})から
+\begin{align}
+  \mathcal{M_X} = -\frac{M_X^2}{2}(\overline{X_\mu})^\alpha_a (X^\mu)^a_\alpha \label{eqofX}
+\end{align}
+となる.
+式(\ref{eqofX})にて導入した$(\overline{X_\mu})^\alpha_a $と$(X^\mu)^a_\alpha$はそれぞれ
+\begin{align}
+  (\overline{X_\mu})^\alpha_a &= \frac{1}{\sqrt{2}}\frac{g_5}{M_X^2}\left[\overline{(d^c)}^\alpha \gamma_\mu \epsilon_{ab} L^d -\overline{e^c}\epsilon_{ba}\gamma_\mu q^{\alpha b} + \overline{q}_{\beta a}\gamma_\mu \epsilon^{\alpha\beta\gamma} u_\gamma^c   \right] \nonumber\\
+  (X^\mu)^a_\alpha  &=\frac{1}{\sqrt{2}} \frac{g_5}{M_X^2} \left[ (\overline{L})_b \epsilon^{ba}\gamma_\mu d_\alpha^c -\overline{q}_{b\alpha} \gamma_\mu \epsilon^{ab}e^c + \epsilon_{\gamma \beta \alpha} (\overline{u}^c)^\gamma \gamma_\mu q^{a\beta}  \right] \nonumber
+\end{align}
+となる.
+これらを式(\ref{PD_L})に代入し, 次元6の陽子崩壊を導くラグランジアンは
+\begin{align}
+  \mathcal{L}_{d=6} = \frac{g_5^2}{M_X^2} \epsilon_{\alpha\beta\gamma} (\overline{u^c})^\alpha \gamma_\mu q^{a\beta}\{\overline{e^c}\epsilon_{ab}\gamma^\mu q^{\gamma b} + (\overline{d^c})^\gamma \gamma^\mu \epsilon_{ab} L^b \} + \mathrm{h.c.}
+\end{align}
+となる.
+
+陽子崩壊の崩壊パターンの可能性は様々なものがあるが, 図\ref{fig_X_proton_decay}で示されている
+\begin{align}
+  p \quad \longrightarrow\quad \pi^0 \quad + \quad e^c\nonumber
+\end{align}
+の例を取り上げる.
+
+これらの崩壊を引き起こす演算子は
+\begin{align}
+  O^{I} &= \frac{g_5^2}{M_X^2} \epsilon_{\alpha\beta\gamma} (\overline{u^c})^\alpha \gamma_\mu u^\beta \overline{e^c}\gamma^\mu d^\gamma,\nonumber\\
+  O^{II} &= \frac{g_5^2}{M_X^2} \epsilon_{\alpha\beta\gamma} (\overline{u^c})^\alpha \gamma_\mu u^\beta  \gamma^\mu d\nonumber
+\end{align}
+の2つを考えることができる. Nathらにより\cite{nathProtonStabilityGrand2007}これらの演算子による崩壊率は計算されているが, おおよそ
+\begin{align}
+  \Gamma(p\rightarrow \pi^0 e^+) \sim \alpha_5 \frac{m_p^5}{M_X^4}\label{decayrate}
+\end{align}
+である.
+このことから$X,Y$ボゾンによる陽子の崩壊率はそれぞれのボゾンの質量の4乗の項によりおおよそ決められる.
+
+典型的な大統一スケールや結合定数の値を考えると
+\begin{align}
+  \tau(p\rightarrow \pi^0 e^+) \sim 4\times 10^{29} \,[\mathrm{yr}] \label{plife_th}
+\end{align}
+となる.
+一方で, スーパーカミオカンデでは陽子崩壊の候補となるようなシグナルは発見されていないため, 陽子の寿命の下限が定められる\cite{collaborationSearchProtonDecay2020}.
+\begin{align}
+  \tau(p\rightarrow \pi^0 e^+) \sim 2.4\times10^{34}\,[\mathrm{yr}]\nonumber
+\end{align}
+これは理論的に導かれた式(\ref{plife_th})の寿命の予想を上回るため, $SU(5)$大統一理論は観測の制限と整合性が取れないことがわかる.
 \begin{comment}
 \subsection{電荷の量子化}
 式(\ref{quantum_Q})で述べているが, 標準模型では予言されない電荷の量子化が行える.

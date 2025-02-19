@@ -1,0 +1,257 @@
+% ---------------------------------------
+%
+%  Neutrino Mass
+%  neutrino.tex
+%  Program modified by Yasutoki Takamura
+%  Last Modified Jan 23 2025
+%
+% ---------------------------------------
+素粒子標準模型では, ニュートリノには質量がない.
+これは, レプトンセクターではニュートリノは$SU(2)_L$二重項にのみ存在し, カイラルパートナーである右巻きニュートリノが存在せず, 他の粒子のようにヒッグス機構を考えることができないためである.
+ところが, カミオカンデによる観測により, ニュートリノ振動と呼ばれるニュートリノのフレーバーが変化する現象が発見された\cite{collaborationDirectEvidenceNeutrino2002,collaborationEvidenceOscillationAtmospheric1998,collaborationFirstResultsKamLAND2003}.
+これはニュートリノに質量が無い限り起こり得ない現象である\cite{pontecorvoNeutrinoExperimentsProblem1967,makiRemarksUnifiedModel1962}ため, 何らかの機構でニュートリノにも質量があると考えなければならない.
+%NOTE: この辺の記述はちょっと怪しいから参考文献について訂正が必要.
+
+\subsection{マヨラナフェルミオンと質量項}
+ここでは, ニュートリノの質量項を導入するためにマヨラナ場を導入する.
+量子場の理論では, 質量を持った粒子は4成分のディラックスピノール場を用いて記述されていた.
+このディラックスピノール場を$\psi_D$とする.
+ディラックスピノールとカイラルスピノールには射影演算子$P_L = \cfrac{1-\gamma^5}{2}$, $P_R = \cfrac{1+\gamma^5}{2}$を用いて次のように示される.
+\begin{align}
+  \psi_R = P_R \psi,\quad \psi_L = P_L \psi\nonumber
+\end{align}
+4成分スピノール場$\psi$は2つのカイラルスピノールの和で書くことができる.
+\begin{align}
+  \psi &= \psi_L + \psi_R\nonumber\\
+       &= \frac{1+\gamma^5}{2}\psi + \frac{1-\gamma^5}{2}\psi\nonumber\\
+       &= P_L\psi + P_R\psi\label{Mj_1}
+\end{align}
+ここから, $\gamma$行列はカイラル基底をとる.
+これによってカイラルスピノールを2成分のスピノールとして扱うことができる.
+具体的には,パウリ行列$\sigma^{i}\,(i=1,2,3)$に対して
+\begin{align}
+  \sigma ^\mu &= ( I, \sigma^i )\nonumber\\
+  \bar{\sigma} ^\mu &= (I, -\sigma^i ) \nonumber
+\end{align}
+と定義すると, 
+$\gamma$行列は
+\begin{align}
+  \gamma ^{\mu} = \left(\begin{array}{cc}
+                             0 &  \sigma ^{\mu}     \\
+                             \bar{\sigma}^{\mu} & 0 \\
+                           \end{array}
+                           \right)
+\end{align}
+と書くことができる.
+このことから, カイラルスピノールは
+\begin{align}
+  \psi_L = \left( \begin{array}{c}
+                   \eta_\alpha \\
+                   0 \\
+                 \end{array}
+                 \right);\,\,(\alpha =1,2)\nonumber\\
+  \psi_R = \left(\begin{array}{c}
+                   0 \\
+                   \bar{\xi}^{\dot{\alpha}} \\
+                 \end{array}
+           \right);\,\,(\dot{\alpha} = 1,2)
+\end{align}
+となり, それぞれ2成分の複素ベクトルで表すことができる.
+また, ローレンツ群の生成子$\sigma^{\mu\nu}$は
+\begin{align}
+  \Sigma ^{\mu\nu} = \frac{i}{2}\left(\begin{array}{cc}
+      \sigma ^{\mu\nu} & 0 \\
+                             0                & \bar{\sigma}^{\mu\nu} \\
+                           \end{array}
+                         \right),\qquad(\sigma^{\mu\nu}\equiv \sigma^\mu\bar{\sigma}^\nu,\quad\bar{\sigma}^{\mu\nu}\equiv\bar{\sigma}^\mu\sigma^\nu\quad(\mu\neq\nu))
+\end{align}
+となり, ローレンツ変換の下で異なるカイラリティを持つ場が混合しない.
+数学的には群$SL(2,\mathbb{C})$の既約表現を成すことが明確になる.
+
+カイラル基底ではC変換は $C = i\gamma^0\gamma^2$と行列で表すことができた.
+これよりカイラルフェルミオンは
+\begin{align}
+  (\psi_L)^c &= C\bar{\psi}_L^t = -i\gamma^2 (\psi_L)^*\nonumber\\
+             &= \left(\begin{array}{c}
+                        0 \\
+                        \bar{\eta}^{\dot{\alpha}}
+                      \end{array}\right)
+\end{align}
+と異なるカイラリティを持つカイラルフェルミオンを構成することができる.
+
+これまでで, ディラックスピノールは
+\begin{align}
+  \psi_D = \psi_L + \psi_R = \left(\begin{array}{c}
+                                  \eta_\alpha \\
+                                  \bar{\xi}^{\dot{\alpha}}
+                                \end{array}
+                                \right)
+\end{align}
+と表せる.
+さらに, C変換はカイラリティを変化させることから, ある左巻きのカイラルフェルミオンとその反粒子でスピノールを構成することが可能であることがわかる.
+\begin{align}
+  \psi_{ML} = \psi_L + (\psi_L)^c = \left(\begin{array}{c}
+                                  \eta_\alpha \\
+                                  \bar{\eta}^{\dot{\alpha}}
+                                \end{array}
+                                \right)
+\end{align}
+あるいは右巻きのカイラルフェルミオンを用いると
+\begin{align}
+  \psi_{MR} = \psi_R + (\psi_R)^c = \left(\begin{array}{c}
+                                  \xi_\alpha \\
+                                  \bar{\xi}^{\dot{\alpha}}
+                                \end{array}
+                                \right)
+\end{align}
+のように, スピノールを構成することが可能となる.
+このようにして構成されたスピノールはマヨラナスピノールと呼ばれる.
+
+マヨラナスピノールの重要な点として, P変換とC変換を2回施すと元の状態に戻る.
+以上のことから, マヨラナスピノールは粒子と反粒子の区別がない中性のフェルミオンを表す.
+
+ここで, 数学的な側面に言及する.
+$\eta, \bar{\xi}$ はローレンツ群$SL(2,\mathbb{C})$の基本表現とその反表現としての振る舞いをする.
+これらはLevi-Civitaテンソルを用いて
+\begin{align}
+  \bar{\eta}^{\dot{\alpha}} = \epsilon^{\dot{\alpha}\dot{\beta}}\bar{\eta}_{\dot{\beta}}
+\end{align}
+となり, Levi-Civitaテンソルが計量としての役割を持つ.
+
+ここで, 任意の2つの左巻きスピノール$\eta, \chi$の縮約を考える.
+\begin{align}
+  \eta_\alpha \chi ^\alpha = \epsilon^{\alpha\beta}\eta_\alpha \chi_\beta \nonumber
+\end{align}
+は$SL(2,\mathbb{C})$変換のもとで不変であるから, ローレンツ不変量であることがわかる.
+これは$SU(2)$群において基本表現の2重項を反対称に組むことによって1重項を成し, $SU(2)$不変量を成すことを表している.
+\footnote{これは時空をミンコフスキー的ではなくユークリッド的とすると, ローレンツ変換が$SO(4)\simeq SU(2)\times SU(2)$となり, 独立な$SU(2)$で記述できることと対応している.}
+
+マヨラナスピノールの構成を行ったことにより, マヨラナ型の質量項を構成することができる.
+\begin{eqnarray}
+  -m_L \overline{\psi_{ML}}\psi_{ML} = -m_L(\overline{\nu_L^c}\nu_L +\mathrm{h.c.}) = m_L(\eta^\alpha \eta_\alpha + \mathrm{h.c.})\label{Mj_L}\\
+  -m_R \overline{\psi_{MR}}\psi_{MR} = -m_R(\overline{\nu_R^c}\nu_R +\mathrm{h.c.}) = m_R(\xi^\alpha \xi_\alpha + \mathrm{h.c.})\label{Mj_R}
+\end{eqnarray}
+一方で, 左巻きニュートリノのカイラルパートナーとして右巻きのニュートリノを理論に含めたことにより, 他のフェルミオンと同じようにディラック型の質量項を考えることができる.
+\begin{eqnarray}
+  -m_D\bar{\psi_D}\psi_D = -m_D(\bar{\psi_L}\psi_R + \bar{\psi_R}\psi_L)\label{D_n}
+\end{eqnarray}
+これらをまとめると, ニュートリノの質量項は式(\ref{Mj_L}), (\ref{Mj_R}), (\ref{D_n})を用いて, 一般的に
+\begin{eqnarray}
+  \mathcal{L}_{\mathrm{mass}} = -\frac{1}{2}m_L(\overline{\nu_L^c}\nu_L +\mathrm{h.c.}) -\frac{1}{2}m_R(\overline{\nu_R^c}\nu_R +\mathrm{h.c.}) -m_D(\bar{\nu_L}\nu_R + \bar{\nu_R}\nu_L)\label{Lagrangian_nMass}
+\end{eqnarray}
+と表すことができる.
+
+ここで, 式(\ref{Lagrangian_nMass})を行列でまとめる.
+\begin{eqnarray}
+  \mathcal{L}_{\mathrm{mass}} = -\frac{1}{2}\left( 
+  \begin{array}{cc}
+    \overline{(\nu_L)^c} & \overline{\nu_R}
+  \end{array}\right)
+        \left( \begin{array}{cc}
+        m_L & m_D \\
+        m_D & m_R 
+    \end{array}\right)
+    \left( \begin{array}{c}
+     \nu_L  \\
+     (\nu_R)^c \end{array}\right)
+     + \mathrm{h.c.}\label{Lagrangian_mt_nMass}
+\end{eqnarray}
+一般的に質量行列は複素行列である.
+このとき, 複素対称行列はユニタリー行列とその転地行列により対角化することができる.
+\begin{eqnarray}
+  \left( \begin{array}{cc}
+        m_L & m_D \\
+        m_D & m_R 
+    \end{array}\right)
+ =
+  U^T\left( \begin{array}{cc}
+        m_a & 0 \\
+          0 & m_s 
+    \end{array}\right)U
+\end{eqnarray}
+このとき, 対角化行列$U$, $\nu_L$と$(\nu_R)^c$の混合角$\theta_\nu$はそれぞれ
+\begin{eqnarray}
+  U =\left(
+  \begin{array}{cc}
+        -i\cos\theta_\nu & \sin\theta_\nu  \\
+         i\sin\theta_\nu & \cos\theta_\nu
+     \end{array}\right),\quad \tan2\theta_\nu = \frac{2m_D}{m_R-m_L}
+\end{eqnarray}
+となる.
+質量固有状態とカイラル固有状態は
+\begin{eqnarray}
+  \left(\begin{array}{c}
+      \nu_a \\
+      \nu_s
+    \end{array}
+    \right) = U^\dagger
+  \left(\begin{array}{c}
+      \nu_L \\
+      (\nu_R)^c
+    \end{array}
+    \right)
+\end{eqnarray}
+という関係となる.
+
+以上により2つの質量固有値$m_a$, $m_s$とそれぞれの質量固有状態$\nu_a$, $\nu_s$を得ることができる.
+\begin{eqnarray}
+  m_a &=& \frac{1}{2}\left[ \sqrt{(m_R - m_L)^2 + 4m_D^2} - (m_R+m_L)\right]\nonumber\\
+  m_s &=& \frac{1}{2}\left[ \sqrt{(m_R - m_L)^2 + 4m_D^2} + (m_R+m_L)\right]\nonumber\\
+  \nu_a &=& i\left(\nu_L\cos\theta_\nu - (\nu_R)^c\sin\theta_\nu\right)\nonumber\\
+  \nu_s &=& \nu_L\sin\theta_\nu + (\nu_R)^c\cos\theta_\nu\nonumber
+\end{eqnarray}
+質量固有状態$\nu_a$と$\nu_s$によって, 1つの世代から独立な2つのマヨラナフェルミオンの質量項を書くことができ,
+\begin{eqnarray}
+  \mathcal{L} = -\frac{1}{2}m_s\bar{\nu_s}\nu_s -\frac{1}{2}m_a\bar{\nu_a}{\nu_a} + \mathrm{h.c.}
+\end{eqnarray}
+となる.
+ここまででマヨラナフェルミオンとディラックフェルミオンからニュートリノの質量項を一般的に導くことを行った.
+ニュートリノが質量を持つ機構についてはいくつか考えられており, 主に
+\begin{itemize}
+  \item ディラック型$\cdots$マヨラナ質量を持たずにディラック型の質量項のみを考える.
+  \item シーソー機構$\cdots$ディラック質量より非常に大きなマヨラナ質量が存在する.
+  \item 擬ディラック・ニュートリノ$\cdots$ディラック質量より非常に小さなマヨラナ質量が存在する.
+\end{itemize}
+が提案されている.
+この中でもシーソー機構はニュートリノが他のフェルミオンに比べて非常に小さな質量を持つことを自然に説明することができる.
+\subsection{シーソー機構}
+シーソー機構は大きく質量が異なるマヨラナニュートリノの存在により, 小さなニュートリノ質量の説明を行うものである.
+はじめに, 質量に次のような階層があると仮定する.
+\begin{align}
+  m_L \ll m_D \ll m_R \label{hneu}
+\end{align}
+このとき, 混合角は
+\begin{align}
+  \theta \simeq \frac{m_D}{m_R} \ll 1
+\end{align}
+と近似できる.
+同じように$\nu_a,\,\nu_s$についても
+\begin{align}
+  \nu_a &\simeq i\left((\nu_L)-(\nu_R)^c\theta_\nu \right)\nonumber\\
+  \nu_s &\simeq \nu_L\theta_\nu + (\nu_R)^c\nonumber
+\end{align}
+となるから,
+\begin{align}
+  m_a \simeq \frac{m_D^2}{m_R} - m_L,\quad m_s \simeq \frac{m_D^2}{m_R} + m_R\nonumber
+\end{align}
+と質量を表せる.
+質量の階層性の仮定である式(\ref{hneu})から$m_a,\,m_s$の質量の大きな階層性を導いた.
+ここまでで, 左巻きニュートリノの質量$m_L$について詳細を述べていないが, 実際に$m_L\neq0$とマヨラナ質量があることを考えるためには$SU(2)$三重項ヒッグスを理論に含める必要がある.
+これは左巻きニュートリノのマヨラナ質量項
+\begin{align}
+  -\frac{1}{2}m_L\overline{\nu_L^c}\nu_L + \mathrm{h.c.} \nonumber
+\end{align}
+に含まれる$\nu_L$は$SU(2)_L$不変性を持たないため, もしこの項をゲージ不変な形で実現するためには三重項ヒッグスで考えることになる.
+そのため$m_L =0$という仮定をおく.
+すると
+\begin{align}
+  m_a \simeq \frac{m_D^2}{m_R}\ll m_D,\quad m_s \simeq m_R\nonumber
+\end{align}
+となり, マヨラナニュートリノは
+\begin{align}
+  \nu_a \simeq i\left(\nu_L - (\nu_L)^c\right),\quad \nu_s \simeq \nu_R + \nu_R^c
+\end{align}
+となる.
+
+
+%EOF

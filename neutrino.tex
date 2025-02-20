@@ -3,38 +3,37 @@
 %  Neutrino Mass
 %  neutrino.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Jan 23 2025
+%  Last Modified Feb 20 2025
 %
 % ---------------------------------------
-$BAGN3;RI8=`LO7?$G$O(B, $B%K%e!<%H%j%N$K$O<ANL$,$J$$(B.
-$B$3$l$O(B, $B%l%W%H%s%;%/%?!<$G$O%K%e!<%H%j%N$O(B$SU(2)_L$$BFs=E9`$K$N$_B8:_$7(B, $B%+%$%i%k%Q!<%H%J!<$G$"$k1&4,$-%K%e!<%H%j%N$,B8:_$;$:(B, $BB>$NN3;R$N$h$&$K%R%C%0%95!9=$r9M$($k$3$H$,$G$-$J$$$?$a$G$"$k(B.
-$B$H$3$m$,(B, $B%+%_%*%+%s%G$K$h$k4QB,$K$h$j(B, $B%K%e!<%H%j%N?6F0$H8F$P$l$k%K%e!<%H%j%N$N%U%l!<%P!<$,JQ2=$9$k8=>]$,H/8+$5$l$?(B\cite{collaborationDirectEvidenceNeutrino2002,collaborationEvidenceOscillationAtmospheric1998,collaborationFirstResultsKamLAND2003}.
-$B$3$l$O%K%e!<%H%j%N$K<ANL$,L5$$8B$j5/$3$jF@$J$$8=>]$G$"$k(B\cite{pontecorvoNeutrinoExperimentsProblem1967,makiRemarksUnifiedModel1962}$B$?$a(B, $B2?$i$+$N5!9=$G%K%e!<%H%j%N$K$b<ANL$,$"$k$H9M$($J$1$l$P$J$i$J$$(B.
-%NOTE: $B$3$NJU$N5-=R$O$A$g$C$H2x$7$$$+$i;29MJ88%$K$D$$$FD{@5$,I,MW(B.
+素粒子標準模型では, ニュートリノが質量を持つことは禁止されている.
+これは, レプトンセクターにおいてニュートリノは$SU(2)_L$二重項のみが存在し, カイラルパートナーである右巻きニュートリノが存在しないため, クォークや荷電レプトンのようにヒッグス機構を考えることができないためである.
+ところが, カミオカンデによる観測により, ニュートリノ振動と呼ばれるニュートリノのフレーバーが変化する現象が発見された\cite{collaborationDirectEvidenceNeutrino2002,collaborationEvidenceOscillationAtmospheric1998,collaborationFirstResultsKamLAND2003}.
+これはニュートリノに質量が無い限り起こり得ない現象である\cite{pontecorvoNeutrinoExperimentsProblem1967,makiRemarksUnifiedModel1962}ため, 何らかの機構でニュートリノにも質量があると考えなければならない.
 
-\subsection{$B%^%h%i%J%U%'%k%_%*%s$H<ANL9`(B}
-$B$3$3$G$O(B, $B%K%e!<%H%j%N$N<ANL9`$rF3F~$9$k$?$a$K%^%h%i%J>l$rF3F~$9$k(B.
-$BNL;R>l$NM}O@$G$O(B, $B<ANL$r;}$C$?N3;R$O(B4$B@.J,$N%G%#%i%C%/%9%T%N!<%k>l$rMQ$$$F5-=R$5$l$F$$$?(B.
-$B$3$N%G%#%i%C%/%9%T%N!<%k>l$r(B$\psi_D$$B$H$9$k(B.
-$B%G%#%i%C%/%9%T%N!<%k$H%+%$%i%k%9%T%N!<%k$K$O<M1F1i;;;R(B$P_L = \cfrac{1-\gamma^5}{2}$, $P_R = \cfrac{1+\gamma^5}{2}$$B$rMQ$$$F<!$N$h$&$K<($5$l$k(B.
+\subsection{マヨラナフェルミオンと質量項}
+ここでは, ニュートリノの質量項を導入するためにマヨラナ場を導入する.
+量子場の理論では, 質量を持った粒子は4成分のディラックスピノール場を用いて記述されていた.
+このディラックスピノール場を$\psi_D$とする.
+ディラックスピノールとカイラルスピノールには射影演算子$P_L = \cfrac{1-\gamma^5}{2}$, $P_R = \cfrac{1+\gamma^5}{2}$を用いて次のように示される.
 \begin{align}
   \psi_R = P_R \psi,\quad \psi_L = P_L \psi\nonumber
 \end{align}
-4$B@.J,%9%T%N!<%k>l(B$\psi$$B$O(B2$B$D$N%+%$%i%k%9%T%N!<%k$NOB$G=q$/$3$H$,$G$-$k(B.
+4成分スピノール場$\psi$は2つのカイラルスピノールの和で書くことができる.
 \begin{align}
   \psi &= \psi_L + \psi_R\nonumber\\
        &= \frac{1+\gamma^5}{2}\psi + \frac{1-\gamma^5}{2}\psi\nonumber\\
        &= P_L\psi + P_R\psi\label{Mj_1}
 \end{align}
-$B$3$3$+$i(B, $\gamma$$B9TNs$O%+%$%i%k4pDl$r$H$k(B.
-$B$3$l$K$h$C$F%+%$%i%k%9%T%N!<%k$r(B2$B@.J,$N%9%T%N!<%k$H$7$F07$&$3$H$,$G$-$k(B.
-$B6qBNE*$K$O(B,$B%Q%&%j9TNs(B$\sigma^{i}\,(i=1,2,3)$$B$KBP$7$F(B
+ここから, $\gamma$行列はカイラル基底をとる.
+これによってカイラルスピノールを2成分のスピノールとして扱うことができる.
+具体的には,パウリ行列$\sigma^{i}\,(i=1,2,3)$に対して
 \begin{align}
   \sigma ^\mu &= ( I, \sigma^i )\nonumber\\
   \bar{\sigma} ^\mu &= (I, -\sigma^i ) \nonumber
 \end{align}
-$B$HDj5A$9$k$H(B, 
-$\gamma$$B9TNs$O(B
+と定義すると, 
+$\gamma$行列は
 \begin{align}
   \gamma ^{\mu} = \left(\begin{array}{cc}
                              0 &  \sigma ^{\mu}     \\
@@ -42,8 +41,8 @@ $\gamma$$B9TNs$O(B
                            \end{array}
                            \right)
 \end{align}
-$B$H=q$/$3$H$,$G$-$k(B.
-$B$3$N$3$H$+$i(B, $B%+%$%i%k%9%T%N!<%k$O(B
+と書くことができる.
+このことから, カイラルスピノールは
 \begin{align}
   \psi_L = \left( \begin{array}{c}
                    \eta_\alpha \\
@@ -56,8 +55,8 @@ $\gamma$$B9TNs$O(B
                  \end{array}
            \right);\,\,(\dot{\alpha} = 1,2)
 \end{align}
-$B$H$J$j(B, $B$=$l$>$l(B2$B@.J,$NJ#AG%Y%/%H%k$GI=$9$3$H$,$G$-$k(B.
-$B$^$?(B, $B%m!<%l%s%D72$N@8@.;R(B$\sigma^{\mu\nu}$$B$O(B
+となり, それぞれ2成分の複素ベクトルで表すことができる.
+また, ローレンツ群の生成子$\sigma^{\mu\nu}$は
 \begin{align}
   \Sigma ^{\mu\nu} = \frac{i}{2}\left(\begin{array}{cc}
       \sigma ^{\mu\nu} & 0 \\
@@ -65,11 +64,11 @@ $\gamma$$B9TNs$O(B
                            \end{array}
                          \right),\qquad(\sigma^{\mu\nu}\equiv \sigma^\mu\bar{\sigma}^\nu,\quad\bar{\sigma}^{\mu\nu}\equiv\bar{\sigma}^\mu\sigma^\nu\quad(\mu\neq\nu))
 \end{align}
-$B$H$J$j(B, $B%m!<%l%s%DJQ49$N2<$G0[$J$k%+%$%i%j%F%#$r;}$D>l$,:.9g$7$J$$(B.
-$B?t3XE*$K$O72(B$SL(2,\mathbb{C})$$B$N4{LsI=8=$r@.$9$3$H$,L@3N$K$J$k(B.
+となり, ローレンツ変換の下で異なるカイラリティを持つ場が混合しない.
+数学的には群$SL(2,\mathbb{C})$の既約表現を成すことが明確になる.
 
-$B%+%$%i%k4pDl$G$O(BC$BJQ49$O(B $C = i\gamma^0\gamma^2$$B$H9TNs$GI=$9$3$H$,$G$-$?(B.
-$B$3$l$h$j%+%$%i%k%U%'%k%_%*%s$O(B
+カイラル基底ではC変換は $C = i\gamma^0\gamma^2$と行列で表すことができた.
+これよりカイラルフェルミオンは
 \begin{align}
   (\psi_L)^c &= C\bar{\psi}_L^t = -i\gamma^2 (\psi_L)^*\nonumber\\
              &= \left(\begin{array}{c}
@@ -77,9 +76,9 @@ $\gamma$$B9TNs$O(B
                         \bar{\eta}^{\dot{\alpha}}
                       \end{array}\right)
 \end{align}
-$B$H0[$J$k%+%$%i%j%F%#$r;}$D%+%$%i%k%U%'%k%_%*%s$r9=@.$9$k$3$H$,$G$-$k(B.
+と異なるカイラリティを持つカイラルフェルミオンを構成することができる.
 
-$B$3$l$^$G$G(B, $B%G%#%i%C%/%9%T%N!<%k$O(B
+これまでで, ディラックスピノールは
 \begin{align}
   \psi_D = \psi_L + \psi_R = \left(\begin{array}{c}
                                   \eta_\alpha \\
@@ -87,8 +86,8 @@ $\gamma$$B9TNs$O(B
                                 \end{array}
                                 \right)
 \end{align}
-$B$HI=$;$k(B.
-$B$5$i$K(B, C$BJQ49$O%+%$%i%j%F%#$rJQ2=$5$;$k$3$H$+$i(B, $B$"$k:84,$-$N%+%$%i%k%U%'%k%_%*%s$H$=$NH?N3;R$G%9%T%N!<%k$r9=@.$9$k$3$H$,2DG=$G$"$k$3$H$,$o$+$k(B.
+と表せる.
+さらに, C変換はカイラリティを変化させることから, ある左巻きのカイラルフェルミオンとその反粒子でスピノールを構成することが可能であることがわかる.
 \begin{align}
   \psi_{ML} = \psi_L + (\psi_L)^c = \left(\begin{array}{c}
                                   \eta_\alpha \\
@@ -96,7 +95,7 @@ $\gamma$$B9TNs$O(B
                                 \end{array}
                                 \right)
 \end{align}
-$B$"$k$$$O1&4,$-$N%+%$%i%k%U%'%k%_%*%s$rMQ$$$k$H(B
+あるいは右巻きのカイラルフェルミオンを用いると
 \begin{align}
   \psi_{MR} = \psi_R + (\psi_R)^c = \left(\begin{array}{c}
                                   \xi_\alpha \\
@@ -104,44 +103,44 @@ $\gamma$$B9TNs$O(B
                                 \end{array}
                                 \right)
 \end{align}
-$B$N$h$&$K(B, $B%9%T%N!<%k$r9=@.$9$k$3$H$,2DG=$H$J$k(B.
-$B$3$N$h$&$K$7$F9=@.$5$l$?%9%T%N!<%k$O%^%h%i%J%9%T%N!<%k$H8F$P$l$k(B.
+のように, スピノールを構成することが可能となる.
+このようにして構成されたスピノールはマヨラナスピノールと呼ばれる.
 
-$B%^%h%i%J%9%T%N!<%k$N=EMW$JE@$H$7$F(B, P$BJQ49$H(BC$BJQ49$r(B2$B2s;\$9$H85$N>uBV$KLa$k(B.
-$B0J>e$N$3$H$+$i(B, $B%^%h%i%J%9%T%N!<%k$ON3;R$HH?N3;R$N6hJL$,$J$$Cf@-$N%U%'%k%_%*%s$rI=$9(B.
+マヨラナスピノールの重要な点として, P変換とC変換を2回施すと元の状態に戻る.
+以上のことから, マヨラナスピノールは粒子と反粒子の区別がない中性のフェルミオンを表す.
 
-$B$3$3$G(B, $B?t3XE*$JB&LL$K8@5Z$9$k(B.
-$\eta, \bar{\xi}$ $B$O%m!<%l%s%D72(B$SL(2,\mathbb{C})$$B$N4pK\I=8=$H$=$NH?I=8=$H$7$F$N?6$kIq$$$r$9$k(B.
-$B$3$l$i$O(BLevi-Civita$B%F%s%=%k$rMQ$$$F(B
+ここで, 数学的な側面に言及する.
+$\eta, \bar{\xi}$ はローレンツ群$SL(2,\mathbb{C})$の基本表現とその反表現としての振る舞いをする.
+これらはLevi-Civitaテンソルを用いて
 \begin{align}
   \bar{\eta}^{\dot{\alpha}} = \epsilon^{\dot{\alpha}\dot{\beta}}\bar{\eta}_{\dot{\beta}}
 \end{align}
-$B$H$J$j(B, Levi-Civita$B%F%s%=%k$,7WNL$H$7$F$NLr3d$r;}$D(B.
+となり, Levi-Civitaテンソルが計量としての役割を持つ.
 
-$B$3$3$G(B, $BG$0U$N(B2$B$D$N:84,$-%9%T%N!<%k(B$\eta, \chi$$B$N=LLs$r9M$($k(B.
+ここで, 任意の2つの左巻きスピノール$\eta, \chi$の縮約を考える.
 \begin{align}
   \eta_\alpha \chi ^\alpha = \epsilon^{\alpha\beta}\eta_\alpha \chi_\beta \nonumber
 \end{align}
-$B$O(B$SL(2,\mathbb{C})$$BJQ49$N$b$H$GITJQ$G$"$k$+$i(B, $B%m!<%l%s%DITJQNL$G$"$k$3$H$,$o$+$k(B.
-$B$3$l$O(B$SU(2)$$B72$K$*$$$F4pK\I=8=$N(B2$B=E9`$rH?BP>N$KAH$`$3$H$K$h$C$F(B1$B=E9`$r@.$7(B, $SU(2)$$BITJQNL$r@.$9$3$H$rI=$7$F$$$k(B.
-\footnote{$B$3$l$O;~6u$r%_%s%3%U%9%-!<E*$G$O$J$/%f!<%/%j%C%IE*$H$9$k$H(B, $B%m!<%l%s%DJQ49$,(B$SO(4)\simeq SU(2)\times SU(2)$$B$H$J$j(B, $BFHN)$J(B$SU(2)$$B$G5-=R$G$-$k$3$H$HBP1~$7$F$$$k(B.}
+は$SL(2,\mathbb{C})$変換のもとで不変であるから, ローレンツ不変量であることがわかる.
+これは$SU(2)$群において基本表現の2重項を反対称に組むことによって1重項を成し, $SU(2)$不変量を成すことを表している.
+\footnote{これは時空をミンコフスキー的ではなくユークリッド的とすると, ローレンツ変換が$SO(4)\simeq SU(2)\times SU(2)$となり, 独立な$SU(2)$で記述できることと対応している.}
 
-$B%^%h%i%J%9%T%N!<%k$N9=@.$r9T$C$?$3$H$K$h$j(B, $B%^%h%i%J7?$N<ANL9`$r9=@.$9$k$3$H$,$G$-$k(B.
+マヨラナスピノールの構成を行ったことにより, マヨラナ型の質量項を構成することができる.
 \begin{eqnarray}
   -m_L \overline{\psi_{ML}}\psi_{ML} = -m_L(\overline{\nu_L^c}\nu_L +\mathrm{h.c.}) = m_L(\eta^\alpha \eta_\alpha + \mathrm{h.c.})\label{Mj_L}\\
   -m_R \overline{\psi_{MR}}\psi_{MR} = -m_R(\overline{\nu_R^c}\nu_R +\mathrm{h.c.}) = m_R(\xi^\alpha \xi_\alpha + \mathrm{h.c.})\label{Mj_R}
 \end{eqnarray}
-$B0lJ}$G(B, $B:84,$-%K%e!<%H%j%N$N%+%$%i%k%Q!<%H%J!<$H$7$F1&4,$-$N%K%e!<%H%j%N$rM}O@$K4^$a$?$3$H$K$h$j(B, $BB>$N%U%'%k%_%*%s$HF1$8$h$&$K%G%#%i%C%/7?$N<ANL9`$r9M$($k$3$H$,$G$-$k(B.
+一方で, 左巻きニュートリノのカイラルパートナーとして右巻きのニュートリノを理論に含めたことにより, 他のフェルミオンと同じようにディラック型の質量項を考えることができる.
 \begin{eqnarray}
   -m_D\bar{\psi_D}\psi_D = -m_D(\bar{\psi_L}\psi_R + \bar{\psi_R}\psi_L)\label{D_n}
 \end{eqnarray}
-$B$3$l$i$r$^$H$a$k$H(B, $B%K%e!<%H%j%N$N<ANL9`$O<0(B(\ref{Mj_L}), (\ref{Mj_R}), (\ref{D_n})$B$rMQ$$$F(B, $B0lHLE*$K(B
+これらをまとめると, ニュートリノの質量項は式(\ref{Mj_L}), (\ref{Mj_R}), (\ref{D_n})を用いて, 一般的に
 \begin{eqnarray}
   \mathcal{L}_{\mathrm{mass}} = -\frac{1}{2}m_L(\overline{\nu_L^c}\nu_L +\mathrm{h.c.}) -\frac{1}{2}m_R(\overline{\nu_R^c}\nu_R +\mathrm{h.c.}) -m_D(\bar{\nu_L}\nu_R + \bar{\nu_R}\nu_L)\label{Lagrangian_nMass}
 \end{eqnarray}
-$B$HI=$9$3$H$,$G$-$k(B.
+と表すことができる.
 
-$B$3$3$G(B, $B<0(B(\ref{Lagrangian_nMass})$B$r9TNs$G$^$H$a$k(B.
+ここで, 式(\ref{Lagrangian_nMass})を行列でまとめる.
 \begin{eqnarray}
   \mathcal{L}_{\mathrm{mass}} = -\frac{1}{2}\left( 
   \begin{array}{cc}
@@ -156,8 +155,8 @@ $\eta, \bar{\xi}$ $B$O%m!<%l%s%D72(B$SL(2,\mathbb{C})$$B$N4pK\I=8=$H$=$NH?I=8
      (\nu_R)^c \end{array}\right)
      + \mathrm{h.c.}\label{Lagrangian_mt_nMass}
 \end{eqnarray}
-$B0lHLE*$K<ANL9TNs$OJ#AG9TNs$G$"$k(B.
-$B$3$N$H$-(B, $BJ#AGBP>N9TNs$O%f%K%?%j!<9TNs$H$=$NE>CO9TNs$K$h$jBP3Q2=$9$k$3$H$,$G$-$k(B.
+一般的に質量行列は複素行列である.
+このとき, 複素対称行列はユニタリー行列とその転地行列により対角化することができる.
 \begin{eqnarray}
   \left( \begin{array}{cc}
         m_L & m_D \\
@@ -169,7 +168,7 @@ $\eta, \bar{\xi}$ $B$O%m!<%l%s%D72(B$SL(2,\mathbb{C})$$B$N4pK\I=8=$H$=$NH?I=8
           0 & m_s 
     \end{array}\right)U
 \end{eqnarray}
-$B$3$N$H$-(B, $BBP3Q2=9TNs(B$U$, $\nu_L$$B$H(B$(\nu_R)^c$$B$N:.9g3Q(B$\theta_\nu$$B$O$=$l$>$l(B
+このとき, 対角化行列$U$, $\nu_L$と$(\nu_R)^c$の混合角$\theta_\nu$はそれぞれ
 \begin{eqnarray}
   U =\left(
   \begin{array}{cc}
@@ -177,8 +176,8 @@ $\eta, \bar{\xi}$ $B$O%m!<%l%s%D72(B$SL(2,\mathbb{C})$$B$N4pK\I=8=$H$=$NH?I=8
          i\sin\theta_\nu & \cos\theta_\nu
      \end{array}\right),\quad \tan2\theta_\nu = \frac{2m_D}{m_R-m_L}
 \end{eqnarray}
-$B$H$J$k(B.
-$B<ANL8GM->uBV$H%+%$%i%k8GM->uBV$O(B
+となる.
+質量固有状態とカイラル固有状態は
 \begin{eqnarray}
   \left(\begin{array}{c}
       \nu_a \\
@@ -191,67 +190,177 @@ $\eta, \bar{\xi}$ $B$O%m!<%l%s%D72(B$SL(2,\mathbb{C})$$B$N4pK\I=8=$H$=$NH?I=8
     \end{array}
     \right)
 \end{eqnarray}
-$B$H$$$&4X78$H$J$k(B.
+という関係となる.
 
-$B0J>e$K$h$j(B2$B$D$N<ANL8GM-CM(B$m_a$, $m_s$$B$H$=$l$>$l$N<ANL8GM->uBV(B$\nu_a$, $\nu_s$$B$rF@$k$3$H$,$G$-$k(B.
+以上により2つの質量固有値$m_a$, $m_s$とそれぞれの質量固有状態$\nu_a$, $\nu_s$を得ることができる.
 \begin{eqnarray}
   m_a &=& \frac{1}{2}\left[ \sqrt{(m_R - m_L)^2 + 4m_D^2} - (m_R+m_L)\right]\nonumber\\
   m_s &=& \frac{1}{2}\left[ \sqrt{(m_R - m_L)^2 + 4m_D^2} + (m_R+m_L)\right]\nonumber\\
   \nu_a &=& i\left(\nu_L\cos\theta_\nu - (\nu_R)^c\sin\theta_\nu\right)\nonumber\\
   \nu_s &=& \nu_L\sin\theta_\nu + (\nu_R)^c\cos\theta_\nu\nonumber
 \end{eqnarray}
-$B<ANL8GM->uBV(B$\nu_a$$B$H(B$\nu_s$$B$K$h$C$F(B, 1$B$D$N@$Be$+$iFHN)$J(B2$B$D$N%^%h%i%J%U%'%k%_%*%s$N<ANL9`$r=q$/$3$H$,$G$-(B,
+質量固有状態$\nu_a$と$\nu_s$によって, 1つの世代から独立な2つのマヨラナフェルミオンの質量項を書くことができ,
 \begin{eqnarray}
   \mathcal{L} = -\frac{1}{2}m_s\bar{\nu_s}\nu_s -\frac{1}{2}m_a\bar{\nu_a}{\nu_a} + \mathrm{h.c.}
 \end{eqnarray}
-$B$H$J$k(B.
-$B$3$3$^$G$G%^%h%i%J%U%'%k%_%*%s$H%G%#%i%C%/%U%'%k%_%*%s$+$i%K%e!<%H%j%N$N<ANL9`$r0lHLE*$KF3$/$3$H$r9T$C$?(B.
-$B%K%e!<%H%j%N$,<ANL$r;}$D5!9=$K$D$$$F$O$$$/$D$+9M$($i$l$F$*$j(B, $B<g$K(B
+となる.
+ここまででマヨラナフェルミオンとディラックフェルミオンからニュートリノの質量項を一般的に導くことを行った.
+ニュートリノが質量を持つ機構についてはいくつか考えられており, 主に
 \begin{itemize}
-  \item $B%G%#%i%C%/7?(B$\cdots$$B%^%h%i%J<ANL$r;}$?$:$K%G%#%i%C%/7?$N<ANL9`$N$_$r9M$($k(B.
-  \item $B%7!<%=!<5!9=(B$\cdots$$B%G%#%i%C%/<ANL$h$jHs>o$KBg$-$J%^%h%i%J<ANL$,B8:_$9$k(B.
-  \item $B5<%G%#%i%C%/!&%K%e!<%H%j%N(B$\cdots$$B%G%#%i%C%/<ANL$h$jHs>o$K>.$5$J%^%h%i%J<ANL$,B8:_$9$k(B.
+  \item ディラック型$\cdots$マヨラナ質量を持たずにディラック型の質量項のみを考える.
+  \item シーソー機構$\cdots$ディラック質量より非常に大きなマヨラナ質量が存在する.
+  \item 擬ディラック・ニュートリノ$\cdots$ディラック質量より非常に小さなマヨラナ質量が存在する.
 \end{itemize}
-$B$,Ds0F$5$l$F$$$k(B.
-$B$3$NCf$G$b%7!<%=!<5!9=$O%K%e!<%H%j%N$,B>$N%U%'%k%_%*%s$KHf$Y$FHs>o$K>.$5$J<ANL$r;}$D$3$H$r<+A3$K@bL@$9$k$3$H$,$G$-$k(B.
-\subsection{$B%7!<%=!<5!9=(B}
-$B%7!<%=!<5!9=$OBg$-$/<ANL$,0[$J$k%^%h%i%J%K%e!<%H%j%N$NB8:_$K$h$j(B, $B>.$5$J%K%e!<%H%j%N<ANL$N@bL@$r9T$&$b$N$G$"$k(B.
-$B$O$8$a$K(B, $B<ANL$K<!$N$h$&$J3,AX$,$"$k$H2>Dj$9$k(B.
+が提案されている.
+この中でもシーソー機構はニュートリノが他のフェルミオンに比べて非常に小さな質量を持つことを自然に説明することができる.
+\subsection{シーソー機構}
+シーソー機構は大きく質量が異なるマヨラナニュートリノの存在により, 小さなニュートリノ質量の説明を行うものである.
+はじめに, 質量に次のような階層があると仮定する.
 \begin{align}
   m_L \ll m_D \ll m_R \label{hneu}
 \end{align}
-$B$3$N$H$-(B, $B:.9g3Q$O(B
+このとき, 混合角は
 \begin{align}
   \theta \simeq \frac{m_D}{m_R} \ll 1
 \end{align}
-$B$H6a;w$G$-$k(B.
-$BF1$8$h$&$K(B$\nu_a,\,\nu_s$$B$K$D$$$F$b(B
+と近似できる.
+同じように$\nu_a,\,\nu_s$についても
 \begin{align}
   \nu_a &\simeq i\left((\nu_L)-(\nu_R)^c\theta_\nu \right)\nonumber\\
   \nu_s &\simeq \nu_L\theta_\nu + (\nu_R)^c\nonumber
 \end{align}
-$B$H$J$k$+$i(B,
+となるから,
 \begin{align}
   m_a \simeq \frac{m_D^2}{m_R} - m_L,\quad m_s \simeq \frac{m_D^2}{m_R} + m_R\nonumber
 \end{align}
-$B$H<ANL$rI=$;$k(B.
-$B<ANL$N3,AX@-$N2>Dj$G$"$k<0(B(\ref{hneu})$B$+$i(B$m_a,\,m_s$$B$N<ANL$NBg$-$J3,AX@-$rF3$$$?(B.
-$B$3$3$^$G$G(B, $B:84,$-%K%e!<%H%j%N$N<ANL(B$m_L$$B$K$D$$$F>\:Y$r=R$Y$F$$$J$$$,(B, $B<B:]$K(B$m_L\neq0$$B$H%^%h%i%J<ANL$,$"$k$3$H$r9M$($k$?$a$K$O(B$SU(2)$$B;0=E9`%R%C%0%9$rM}O@$K4^$a$kI,MW$,$"$k(B.
-$B$3$l$O:84,$-%K%e!<%H%j%N$N%^%h%i%J<ANL9`(B
+と質量を表せる.
+質量の階層性の仮定である式(\ref{hneu})から$m_a,\,m_s$の質量の大きな階層性を導いた.
+ここまでで, 左巻きニュートリノの質量$m_L$について詳細を述べていないが, 実際に$m_L\neq0$とマヨラナ質量があることを考えるためには$SU(2)$三重項ヒッグスを理論に含める必要がある.
+これは左巻きニュートリノのマヨラナ質量項
 \begin{align}
   -\frac{1}{2}m_L\overline{\nu_L^c}\nu_L + \mathrm{h.c.} \nonumber
 \end{align}
-$B$K4^$^$l$k(B$\nu_L$$B$O(B$SU(2)_L$$BITJQ@-$r;}$?$J$$$?$a(B, $B$b$7$3$N9`$r%2!<%8ITJQ$J7A$G<B8=$9$k$?$a$K$O;0=E9`%R%C%0%9$G9M$($k$3$H$K$J$k(B.
-$B$=$N$?$a(B$m_L =0$$B$H$$$&2>Dj$r$*$/(B.
-$B$9$k$H(B
+に含まれる$\nu_L$は$SU(2)_L$不変性を持たないため, もしこの項をゲージ不変な形で実現するためには三重項ヒッグスで考えることになる.
+そのため$m_L =0$という仮定をおく.
+すると
 \begin{align}
   m_a \simeq \frac{m_D^2}{m_R}\ll m_D,\quad m_s \simeq m_R\nonumber
 \end{align}
-$B$H$J$j(B, $B%^%h%i%J%K%e!<%H%j%N$O(B
+となり, マヨラナニュートリノは
 \begin{align}
   \nu_a \simeq i\left(\nu_L - (\nu_L)^c\right),\quad \nu_s \simeq \nu_R + \nu_R^c
 \end{align}
-$B$H$J$k(B.
+となる.
+
+\subsection{Type-II seesaw 機構}
+新しいスカラー3重項を導入する.
+\begin{align}
+  \vec{\Delta} = (\Delta_1, \Delta_2, \Delta_3) \nonumber
+\end{align}
+このとき, $SU(2)$三重項は
+\begin{align}
+  \Delta \equiv = \frac{1}{\sqrt{2}}\vec{\sigma}\cdot\vec{\Delta} = \frac{1}{\sqrt{2}}
+  \begin{pmatrix}
+    \Delta_3 & \Delta_1 -i\Delta_2 \\
+    \Delta_1 +i\Delta_2 & \Delta_3
+  \end{pmatrix}\nonumber
+\end{align}
+となる.
+これによって$SU(2)$不変なラグランジアンを構成することが可能になる.
+左巻きニュートリノの質量を生成するラグランジアンは
+\begin{align}
+  \mathcal{L}_Y^{II} \supset -(Y_\Delta)_{\alpha\beta} \psi_{\alpha L}^T C i\sigma_2 \Delta \psi_{\beta L} + \mathrm{h.c.}
+\end{align}
+と書くことができる.
+ここで, 新しく加えた$SU(2)$三重項ヒッグスによる湯川結合定数を$Y_\Delta$とした.
+$C$は荷電協約変換の演算子である.
+
+新たに加えた粒子$\Delta$の電荷について, ラグランジアンに於ける電荷の保存から決めることができる.
+具体的に計算すると
+\begin{align}
+  \mathcal{L}_Y^{II} &\supset -(Y_\Delta)_{\alpha\beta}\left[ \overline{\nu_{\alpha L}^c}\frac{\Delta_1 + i\Delta_2}{\sqrt{2}}\nu_{\beta L} + \overline{l_{\alpha L}^c}\frac{-\Delta_3}{\sqrt{2}}\nu_L \right]\nonumber\\
+  &\qquad-(Y_\Delta)_{\alpha\beta}\left[ \overline{\nu_{\alpha L}^c}\frac{-\Delta_3}{\sqrt{2}}l_{\beta L} + \overline{l_{\alpha L}^c}\frac{-\Delta_1 + i\Delta_2}{\sqrt{2}}l_{\beta L} \right]
+\end{align}
+となるから, 電荷は
+\begin{align}
+  \Delta_3 &= \Delta^+ \nonumber\\
+  \frac{\Delta_1 +i\Delta_2}{\sqrt{2}} &= \Delta^0\nonumber\\
+  \frac{\Delta_1 -i\Delta_2}{\sqrt{2}} &= \Delta^{++}\nonumber
+\end{align}
+となる.
+改めて$\Delta$を書くと
+\begin{align}
+  \Delta = \frac{1}{\sqrt{2}}\begin{pmatrix}
+    \Delta^+ & \sqrt{2}\Delta^{++} \\
+    \sqrt{2}\Delta^0 & -\Delta^{+}
+  \end{pmatrix}\nonumber
+\end{align}
+である.
+これらの粒子による相互作用は
+\begin{align}
+  \mathcal{L}_Y^{II} = (Y_\Delta)_{\alpha\beta}\overline{l_{\alpha L}^c} l_{\beta L} \Delta^{++} + \sqrt{2}(Y_\Delta)_{\alpha\beta} \overline{\nu_{\alpha L}^c} l_{\beta L} -(Y_\Delta)_{\alpha\beta} \overline{\nu_{\alpha L}^c} \nu_{\beta L} \Delta^0 + \mathrm{h.c.} \label{int_delta}
+\end{align}
+となる.
+式(\ref{int_delta})にある第3項目によって左巻きのカイラリティを持つニュートリノの質量を生成する.
+
+\subsubsection{SU(3)三重項スカラーポテンシャルと最小値}
+新しいスカラー場である$\Delta$を理論に加えたことによって, 標準模型に存在するヒッグス粒子との相互作用を考えることができる.
+このことを考える.
+
+スカラー場のラグランジアンは
+\begin{align}
+  \mathcal{L} \supset (D_\mu \Phi)^\dagger (D^\mu \Phi) + (D_\mu \Delta)^\dagger (D^\mu \Delta) - V\label{lagrangian_delta}
+\end{align}
+となる.
+ここで新しく加わった$SU(3)$三重項の共変微分は
+\begin{align}
+  D_\mu\Delta \equiv \partial_\mu \Delta -i\frac{g}{2}[\sigma^i W_\mu^i, \Delta ] - ig_Y B_\mu \Delta\nonumber
+\end{align}
+である.
+新たにスカラーポテンシャル$V$を定義したが, これは
+\begin{align}
+  V = V(\Phi) + V(\Delta) + V(\Phi, \Delta) \nonumber
+\end{align}
+と標準模型のヒッグス$\Phi$のみの相互作用, $\Delta$のみの相互作用, $\Phi$と$\Delta$の相互作用を考えることができる.
+ポテンシャルは
+\begin{align}
+  V(\Phi) = -\mu_H(\Phi^\dagger \Phi) + \lambda_H (\Phi^\dagger \Phi)^2\nonumber
+\end{align}
+\begin{align}
+  V(\Delta) = M_\Delta^2 \mathrm{Tr}(\Delta^\dagger \Delta) + \frac{\lambda_2}{2}\left( (\mathrm{Tr}(\Delta^\dagger \Delta))^2 - \mathrm{Tr}(\Delta^\dagger \Delta)^2\right)
+\end{align}
+\begin{align}
+  V(\Phi, \Delta) &= \lambda_4(\Phi^\dagger \Phi)\mathrm{Tr}(\Delta^\dagger \Delta) + \lambda_5 \Phi^\dagger [\Delta^\dagger , \Delta]\Phi\nonumber\\
+                  &\qquad + \left[\mu_\Delta \Phi^T i\sigma^2 \Delta^\dagger \Phi + \frac{\lambda_6}{M_p}(\Phi^T i\sigma^2 \Delta^\dagger \Phi)(\Phi^\dagger \Phi) + \frac{\lambda_6'}{M_p}(H^Ti\sigma^2\Delta^\dagger\Phi)(\Delta^\dagger \Delta) + \cdots +\mathrm{h.c.}\right]\nonumber
+\end{align}
+次に見るように, 新しく$\mu_\Delta$は$\Delta$が真空期待値を持つときの値に関係する量となる.
+ここでは議論しないが, 繰り込み不可能な項ははインフレーション理論において重要な役割を果たすと考えられている.
+また, これらの係数$\lambda_i$は$\lambda_i>0$となるように考える.
+これにより新たなスカラー粒子$\Delta$の対称性は標準模型と変わらないようにとることができる.
+
+ここから, 標準模型の二重項と新たな粒子$\Delta$が対称性を破ることを考える.
+ここでは2つのスカラー粒子を真空期待値の周りで展開して考える.
+\begin{align}
+  \Phi = \begin{pmatrix}
+    \phi^+ \\
+    \frac{v_H + \phi  +i\chi}{\sqrt{2}}
+  \end{pmatrix},\quad
+  \Delta =\frac{1}{\sqrt{2}}\begin{pmatrix}
+    \Delta^+ & \sqrt{2}\Delta^{++} \\
+    v_\Delta + \delta + i\eta & -\Delta^+
+  \end{pmatrix} \label{vev_newh}
+\end{align}
+真空期待値は中性成分でもつため
+\begin{align}
+  \langle \Phi \rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}
+    0 \\
+    v_H
+    \end{pmatrix},\quad \langle \Delta \rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}
+    0 & 0 \\
+    v_\Delta & 0 
+  \end{pmatrix}
+\end{align}
+となる.
 
 
 %EOF

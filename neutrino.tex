@@ -3,9 +3,8 @@
 %  Neutrino Mass
 %  neutrino.tex
 %  Program modified by Yasutoki Takamura
-%  Last Modified Feb 20 2025
-%
-% ---------------------------------------
+%  Last Modified Feb 21 2025
+% % ---------------------------------------
 素粒子標準模型では, ニュートリノが質量を持つことは禁止されている.
 これは, レプトンセクターにおいてニュートリノは$SU(2)_L$二重項のみが存在し, カイラルパートナーである右巻きニュートリノが存在しないため, クォークや荷電レプトンのようにヒッグス機構を考えることができないためである.
 ところが, カミオカンデによる観測により, ニュートリノ振動と呼ばれるニュートリノのフレーバーが変化する現象が発見された\cite{collaborationDirectEvidenceNeutrino2002,collaborationEvidenceOscillationAtmospheric1998,collaborationFirstResultsKamLAND2003}.
@@ -314,7 +313,7 @@ $C$は荷電協約変換の演算子である.
 となる.
 ここで新しく加わった$SU(3)$三重項の共変微分は
 \begin{align}
-  D_\mu\Delta \equiv \partial_\mu \Delta -i\frac{g}{2}[\sigma^i W_\mu^i, \Delta ] - ig_Y B_\mu \Delta\nonumber
+  D_\mu\Delta \equiv \partial_\mu \Delta -i\frac{g_2}{2}[\sigma^i W_\mu^i, \Delta ] - ig_Y B_\mu \Delta\nonumber
 \end{align}
 である.
 新たにスカラーポテンシャル$V$を定義したが, これは
@@ -324,16 +323,16 @@ $C$は荷電協約変換の演算子である.
 と標準模型のヒッグス$\Phi$のみの相互作用, $\Delta$のみの相互作用, $\Phi$と$\Delta$の相互作用を考えることができる.
 ポテンシャルは
 \begin{align}
-  V(\Phi) = -\mu_H(\Phi^\dagger \Phi) + \lambda_H (\Phi^\dagger \Phi)^2\nonumber
+  V(\Phi) = -\mu_H^2(\Phi^\dagger \Phi) + \lambda_H (\Phi^\dagger \Phi)^2\nonumber
 \end{align}
 \begin{align}
-  V(\Delta) = M_\Delta^2 \mathrm{Tr}(\Delta^\dagger \Delta) + \frac{\lambda_2}{2}\left( (\mathrm{Tr}(\Delta^\dagger \Delta))^2 - \mathrm{Tr}(\Delta^\dagger \Delta)^2\right)
+  V(\Delta) = M_\Delta^2 \mathrm{Tr}[(\Delta^\dagger\Delta)]+{\lambda_1}[\mathrm{Tr}(\Delta^\dagger\Delta)]^2 + \lambda_2\left( (\mathrm{Tr}(\Delta^\dagger \Delta))^2 - \mathrm{Tr}(\Delta^\dagger \Delta)^2\right)
 \end{align}
 \begin{align}
   V(\Phi, \Delta) &= \lambda_4(\Phi^\dagger \Phi)\mathrm{Tr}(\Delta^\dagger \Delta) + \lambda_5 \Phi^\dagger [\Delta^\dagger , \Delta]\Phi\nonumber\\
                   &\qquad + \left[\mu_\Delta \Phi^T i\sigma^2 \Delta^\dagger \Phi + \frac{\lambda_6}{M_p}(\Phi^T i\sigma^2 \Delta^\dagger \Phi)(\Phi^\dagger \Phi) + \frac{\lambda_6'}{M_p}(H^Ti\sigma^2\Delta^\dagger\Phi)(\Delta^\dagger \Delta) + \cdots +\mathrm{h.c.}\right]\nonumber
 \end{align}
-次に見るように, 新しく$\mu_\Delta$は$\Delta$が真空期待値を持つときの値に関係する量となる.
+次に見るように, $\mu_\Delta$は$\Delta$が真空期待値を持つときの値に関係する量となる.
 ここでは議論しないが, 繰り込み不可能な項ははインフレーション理論において重要な役割を果たすと考えられている.
 また, これらの係数$\lambda_i$は$\lambda_i>0$となるように考える.
 これにより新たなスカラー粒子$\Delta$の対称性は標準模型と変わらないようにとることができる.
@@ -358,9 +357,70 @@ $C$は荷電協約変換の演算子である.
     \end{pmatrix},\quad \langle \Delta \rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}
     0 & 0 \\
     v_\Delta & 0 
-  \end{pmatrix}
+  \end{pmatrix}\label{vev_Higgs_delta}
+\end{align}
+となる.
+ここで, $v_H$は標準模型に存在する$SU(2)$二重項の真空期待値, $v_\Delta$は$SU(2)$三重項の真空期待値の値である.
+真空期待値はポテンシャルが最小値のときの値であるから,
+\begin{align}
+  \left.\frac{\partial \langle V\rangle}{\partial \phi}\right|_{\phi=0, \delta=0, \eta=0, \chi=0} \hspace{-60pt}&= 0\nonumber\\
+    \left.\frac{\partial \langle V\rangle}{\partial \delta}\right|_{\phi=0, \delta=0, \eta=0, \chi=0}\hspace{-60pt} &= 0\nonumber
+\end{align}
+の条件を満たす.
+
+したがって, 二重項スカラーに対して
+\begin{align}
+  \left.\frac{\partial \langle V\rangle}{\partial \phi}\right|_{\phi=0, \delta=0, \eta=0, \chi=0} &= -\mu_H^2 v_H + \lambda_H \frac{v_H^3}{2} + (\lambda_4-\lambda_5)v_\Delta^2\frac{v_H}{2}-\sqrt{2}\mu_\Delta v_H v_\Delta\nonumber\\
+    \therefore\quad\mu_H^2 &= \frac{1}{2}\lambda_H v_H^2 -\sqrt{2}\mu_\Delta v_H^2 +\frac{1}{2}(\lambda_4 - \lambda_5)v_\Delta^2
+\end{align}
+という関係が得られる.
+さらに, 三重項スカラーについて, 
+\begin{align}
+  \left.\frac{\partial \langle V\rangle}{\partial \phi}\right|_{\phi=0, \delta=0, \eta=0, \chi=0} &= \mu_\Delta^2 v_\Delta + \lambda_1 \frac{v_\Delta^2}{2} + (\lambda_4-\lambda_5)v_\Delta\frac{v_H^2}{2}-\mu_\Delta\frac{v_H^2}{\sqrt{2}}\nonumber\\
+    \therefore \quad m_\Delta^2 &= \frac{1}{\sqrt{2}}\frac{\mu_\Delta v_H^2}{v_\Delta} - \frac{1}{2}(\lambda_4 - \lambda_5)v_H^2 -\lambda_1 v_\Delta^2\label{m_delta}
+\end{align}
+となる.
+これらより, 標準模型に存在する$SU(2)$二重項ヒッグス粒子と三重項ヒッグスの質量をそれぞれ求めることができた.
+式(\ref{m_delta})からわかるように, 新たに加わるヒッグス粒子$\Delta$と標準模型におけるヒッグス粒子の質量は関係を持つ.
+そのため三重項ヒッグスの真空期待値の値は小さくなければならない.
+
+\subsubsection{電弱精密測定への影響}
+ここまで新しいヒッグス粒子の存在を考え, 対称性を破ることを考えた.
+この新しい粒子$\Delta$は標準模型に存在する$SU(2)$二重項と同じエネルギースケールで対称性を破り真空期待値をもつため, 粒子$\Delta$が存在した場合は弱ボゾンに質量を与える.
+ここでは新粒子$\Delta$の対称性が破れ, $W, Z$ボゾンへ質量を与えることを見る.
+また, 実験の制限として重要な値である$\rho$パラメータへの影響を考察する.
+標準模型のヒッグス粒子と$SU(2)$三重項のヒッグス粒子のラグランジアンは(\ref{lagrangian_delta})で与えられるため, 運動項は
+\begin{align}
+  \mathcal{L} \supset (D_\mu\Phi)^\dagger (D^\mu \Phi) + (D_\mu \Delta)^\dagger (D^\mu \Delta)
+\end{align}
+となる.
+真空期待値は(\ref{vev_Higgs_delta})のようにとると,
+\begin{align}
+  \mathcal{L} \supset (D_\mu\langle\Phi\rangle)^\dagger (D^\mu \langle\Phi\rangle) + (D_\mu \langle\Delta\rangle)^\dagger (D^\mu \langle \Delta\rangle)\label{vev_Higgs_delta2}
+\end{align}
+となる.
+式(\ref{vev_Higgs_delta2})の第1項目は標準模型と等しいため, 式(\ref{eq2-23})と同じである.
+一方で第2項目は
+\begin{align}
+  g_2^2 v_\Delta^2 \left( \frac{W_\mu^+ W^{-\,\mu}}{2} + \frac{Z_\mu Z^\mu}{2\cos\theta_W}\right)
+\end{align}
+となる.
+以上より, 弱ボゾンの質量はそれぞれ
+\begin{align}
+  m_W^2 = \frac{g_2}{4}\left(v_H^2 + 2v_\Delta^2\right),\quad m_Z^2 = \frac{g_2^2}{4\cos\theta_W}\left(v_H^2 + 4v_\Delta\right)
 \end{align}
 となる.
 
+ここで, 電弱精密測定では
+\begin{align}
+  \rho = \frac{m_W^2}{m_Z\cos\theta_W} = 1 - \frac{2v_\Delta^2}{v_H^2 + 4v_\Delta^2}
+\end{align}
+新しい粒子は電弱スケールでの現在の実験の値に影響を及ぼすため, それを考える.
+最新の精密電弱測定の値は
+\begin{align}
+  \rho =1 + (3.6 ± 1.9)\times10^{-4}
+\end{align}
+となる.
+ヒッグス粒子が存在する運動項を考える.
 
 %EOF
